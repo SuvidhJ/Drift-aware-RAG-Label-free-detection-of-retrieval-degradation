@@ -1,0 +1,76 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  # Keep uv from picking up .python-version, which pins 3.11 and would otherwise
+  # override the matrix on the 3.12 job.
+  UV_PYTHON_DOWNLOADS: automatic
+
+jobs:
+  tests:
+    name: tests (python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+          cache-dependency-glob: uv.lock
+
+      - name: Sync the environment
+        # --locked fails if uv.lock has drifted from pyproject.toml rather than
+        # silently re-resolving, which is what makes CI a real check on the lock.
+        # The default path is deliberately light: the `heavy` extra (torch,
+        # chromadb, ragas) is not installed, and the modules needing it import
+        # lazily, so its absence must not fail the suite.
+        run: uv sync --locked --extra dev --python ${{ matrix.python-version }}
+
+      - name: Run tests
+        # Tests needing the all-MiniLM-L6-v2 checkpoint are marked `needs_model`
+        # and skip cleanly without it, so CI does not download an 88 MB model.
+        run: uv run --no-sync pytest tests -m "not slow" --durations=10
+
+  build:
+    name: build the distribution
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+          cache-dependency-glob: uv.lock
+
+      - name: Build the wheel and sdist
+        run: uv build
+
+      - name: Check the package imports from the built wheel
+        # The project is a flat set of top-level packages rather than one module,
+        # so the wheel contents are easy to get wrong. Install it clean and import.
+        run: |
+          uv venv --python 3.11 .venv-build
+          uv pip install --python .venv-build/bin/python dist/*.whl
+          .venv-build/bin/python -c "import main, configs, drift, retrieval, policy, evaluation, streaming, embeddings, data, dashboard; print('wheel imports OK')"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: distribution
+          path: dist/
