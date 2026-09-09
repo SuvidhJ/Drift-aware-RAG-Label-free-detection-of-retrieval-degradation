@@ -1,0 +1,9 @@
+{
+  "h_calibrated": 3.0,
+  "arl0_frozen": 149.59333333333333,
+  "arl0_repo_rolling": 49.03,
+  "gradual_detect_delay_frozen_median": 7.5,
+  "gradual_detect_delay_repo_median": 7.0,
+  "gradual_miss_rate_frozen": 0.25333333333333335,
+  "gradual_miss_rate_repo": 0.3
+}

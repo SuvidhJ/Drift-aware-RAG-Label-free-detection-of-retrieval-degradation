@@ -1,0 +1,131 @@
+{
+  "summary": {
+    "r_max": 0.35,
+    "T": 16,
+    "t_event": 6,
+    "n_seeds": 5,
+    "ttd_adj_raw": [
+      1.5,
+      0.4
+    ],
+    "ttd_adj_z": [
+      2.0,
+      1.0
+    ],
+    "ttd_fix_z": [
+      2.0,
+      1.0
+    ],
+    "cusum_frozen_delay_median": 2.0,
+    "cusum_frozen_detected": 1.0,
+    "cusum_repo_delay_median": 2.0,
+    "cusum_repo_detected": 1.0
+  },
+  "trajectory": [
+    {
+      "t": 1,
+      "adj_raw": 0.00266,
+      "adj_z": -0.09327,
+      "fix_z": NaN,
+      "unanswerable": 0.00435
+    },
+    {
+      "t": 2,
+      "adj_raw": 0.00245,
+      "adj_z": 0.44339,
+      "fix_z": -0.23854,
+      "unanswerable": 0.00729
+    },
+    {
+      "t": 3,
+      "adj_raw": 0.00266,
+      "adj_z": -0.10829,
+      "fix_z": 0.39064,
+      "unanswerable": 0.00904
+    },
+    {
+      "t": 4,
+      "adj_raw": 0.00296,
+      "adj_z": -0.16349,
+      "fix_z": 0.42683,
+      "unanswerable": 0.01178
+    },
+    {
+      "t": 5,
+      "adj_raw": 0.00314,
+      "adj_z": 0.16849,
+      "fix_z": 0.3935,
+      "unanswerable": 0.01453
+    },
+    {
+      "t": 6,
+      "adj_raw": 0.00275,
+      "adj_z": 0.24118,
+      "fix_z": 0.61106,
+      "unanswerable": 0.01755
+    },
+    {
+      "t": 7,
+      "adj_raw": 0.00336,
+      "adj_z": 0.22215,
+      "fix_z": 0.85637,
+      "unanswerable": 0.05788
+    },
+    {
+      "t": 8,
+      "adj_raw": 0.00334,
+      "adj_z": 1.0587,
+      "fix_z": 3.2205,
+      "unanswerable": 0.09826
+    },
+    {
+      "t": 9,
+      "adj_raw": 0.00313,
+      "adj_z": 0.79187,
+      "fix_z": 8.0474,
+      "unanswerable": 0.13503
+    },
+    {
+      "t": 10,
+      "adj_raw": 0.00285,
+      "adj_z": 1.13173,
+      "fix_z": 10.83453,
+      "unanswerable": 0.17903
+    },
+    {
+      "t": 11,
+      "adj_raw": 0.00298,
+      "adj_z": 1.50649,
+      "fix_z": 17.23235,
+      "unanswerable": 0.21551
+    },
+    {
+      "t": 12,
+      "adj_raw": 0.00318,
+      "adj_z": 0.93053,
+      "fix_z": 17.60345,
+      "unanswerable": 0.25268
+    },
+    {
+      "t": 13,
+      "adj_raw": 0.00292,
+      "adj_z": 0.83651,
+      "fix_z": 19.67031,
+      "unanswerable": 0.29166
+    },
+    {
+      "t": 14,
+      "adj_raw": 0.00282,
+      "adj_z": 1.62151,
+      "fix_z": 28.40754,
+      "unanswerable": 0.33177
+    },
+    {
+      "t": 15,
+      "adj_raw": 0.00315,
+      "adj_z": 0.86967,
+      "fix_z": 26.62902,
+      "unanswerable": 0.36949
+    }
+  ]
+}

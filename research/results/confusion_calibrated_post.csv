@@ -1,0 +1,5 @@
+true_regime,stable,query_drift,corpus_drift,joint_drift
+stable,28,2,0,0
+query_drift,0,59,0,1
+corpus_drift,30,1,23,6
+joint_drift,2,27,0,31
