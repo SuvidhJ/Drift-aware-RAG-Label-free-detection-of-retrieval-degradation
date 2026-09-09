@@ -1,0 +1,21 @@
+# Normalise line endings in the repository to LF, regardless of the platform the
+# commit was made on. Without this the repo was authored on Windows and every file
+# would land with CRLF for contributors on Linux and macOS.
+* text=auto eol=lf
+
+# Binary and already-compressed formats: never touch.
+*.parquet binary
+*.npz     binary
+*.npy     binary
+*.safetensors binary
+*.png     binary
+*.jpg     binary
+*.pdf     binary
+*.docx    binary
+*.pptx    binary
+*.xlsx    binary
+
+# Generated / vendored data — collapse in diffs and exclude from language stats.
+research/gates/results/** linguist-generated=true
+research/results/**       linguist-generated=true
+uv.lock                   linguist-generated=true

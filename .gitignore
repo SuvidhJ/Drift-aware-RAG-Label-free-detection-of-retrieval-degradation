@@ -1,0 +1,46 @@
+# Quarantine — files moved out of the repo during cleanup. Never published.
+quarantine/
+
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments (.venv-build is created by the CI wheel-import check)
+.venv/
+.venv-*/
+
+# Tooling, editor and OS directories
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.idea/
+.vscode/
+.claude/
+.DS_Store
+Thumbs.db
+
+# Secrets. .env.example is the tracked template.
+.env*
+!.env.example
+
+# Pipeline outputs — all regenerable with `python main.py run-all`.
+# Anchored to the repo root so research/gates/results/ (tracked validation data,
+# and the default DATA_CORPUS_DIR) is not caught by the same pattern.
+/results/
+/logs/
+data/snapshots/
+data/raw/
+embeddings/cache/
+retrieval/chroma_db/
+
+# research/ run logs; the results they produce are tracked.
+research/results/*.log
+research/gates/results/*.log
+
+# Scratch run scripts and their logs
+run_*.sh
+run_*.log
