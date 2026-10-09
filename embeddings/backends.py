@@ -111,6 +111,20 @@ def resolve_minilm_dir(explicit: str | pathlib.Path | None = None) -> pathlib.Pa
     )
 
 
+def _detect_pooling(root: pathlib.Path) -> str:
+    """Pooling mode from a sentence-transformers snapshot, defaulting to mean.
+
+    The default matches all-MiniLM-L6-v2, whose snapshot this module was first
+    written against and which is often fetched without its 1_Pooling directory.
+    """
+    cfg = root / "1_Pooling" / "config.json"
+    if cfg.is_file():
+        c = json.loads(cfg.read_text())
+        if c.get("pooling_mode_cls_token"):
+            return "cls"
+    return "mean"
+
+
 # --------------------------------------------------------------------------- tokenizer
 
 
@@ -218,7 +232,10 @@ class MiniLMNumpyBackend:
     name = "all-MiniLM-L6-v2 (numpy)"
 
     def __init__(
-        self, model_dir: str | pathlib.Path | None = None, max_len: int = 256
+        self,
+        model_dir: str | pathlib.Path | None = None,
+        max_len: int = 256,
+        pooling: str | None = None,
     ) -> None:
         root = resolve_minilm_dir(model_dir)
         self.root = root
@@ -231,6 +248,22 @@ class MiniLMNumpyBackend:
         self.n_heads = int(cfg.get("num_attention_heads", 12))
         self.n_layers = int(cfg.get("num_hidden_layers", 6))
         self.max_len = max_len
+
+        # Any BERT-shaped checkpoint runs through this forward pass; what differs is
+        # the pooling. sentence-transformers records it in 1_Pooling/config.json
+        # (bge-small-en-v1.5 uses the CLS token, all-MiniLM-L6-v2 the mean).
+        self.pooling = pooling or _detect_pooling(root)
+        if self.pooling not in ("mean", "cls"):
+            raise ValueError(f"pooling must be 'mean' or 'cls', got {self.pooling!r}")
+
+        # The Encoder keys its on-disk cache on this name. Two models sharing it would
+        # silently mix their vectors in one cache file, so only the original MiniLM
+        # keeps the legacy name (existing caches stay valid); anything else is named
+        # after its own checkpoint.
+        if self.pooling == "mean" and self.n_layers == 6:
+            self.name = "all-MiniLM-L6-v2 (numpy)"
+        else:
+            self.name = f"{root.name} (numpy, {self.pooling} pooling)"
         self.head_dim = self.dim // self.n_heads
         # float32 constant: a Python float here would promote every attention
         # score matrix to float64.
@@ -279,8 +312,11 @@ class MiniLMNumpyBackend:
                 x + h, W[p + "output.LayerNorm.weight"], W[p + "output.LayerNorm.bias"]
             )
 
-        m = mask[:, :, None].astype(np.float32)
-        pooled = (x * m).sum(1) / np.maximum(m.sum(1), np.float32(1e-9))
+        if self.pooling == "cls":
+            pooled = x[:, 0, :]
+        else:
+            m = mask[:, :, None].astype(np.float32)
+            pooled = (x * m).sum(1) / np.maximum(m.sum(1), np.float32(1e-9))
         return pooled / np.maximum(
             np.linalg.norm(pooled, axis=1, keepdims=True), np.float32(1e-12)
         )
@@ -329,7 +365,9 @@ class SentenceTransformerBackend:
 def make_backend(kind: str, **kwargs) -> EmbeddingBackend:
     if kind in ("minilm-numpy", "numpy", "minilm"):
         return MiniLMNumpyBackend(
-            kwargs.get("model_dir"), max_len=kwargs.get("max_len", 256)
+            kwargs.get("model_dir"),
+            max_len=kwargs.get("max_len", 256),
+            pooling=kwargs.get("pooling"),
         )
     if kind in ("sentence-transformers", "st"):
         return SentenceTransformerBackend(
