@@ -33,7 +33,7 @@ Calibrating the threshold makes the detector honest, not sensitive.
 """
 from __future__ import annotations
 
-from dataclasses import asdict, dataclass
+from dataclasses import dataclass
 from typing import Callable
 
 import numpy as np
@@ -57,9 +57,6 @@ class NullCalibration:
     n_x: int
     n_y: int
     alpha: float
-
-    def as_dict(self, prefix: str = "") -> dict:
-        return {f"{prefix}{k}": v for k, v in asdict(self).items()}
 
 
 def permutation_null(

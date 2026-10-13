@@ -1,8 +1,0 @@
-{
-  "n_rows": 180,
-  "holds_exact_rate": 1.0,
-  "holds_sliced_mean_rate": 0.37777777777777777,
-  "holds_sliced_mean_rate_driftrows": 0.3333333333333333,
-  "median_tightness_exact": 0.05432846842656411,
-  "note": "LHS<=RHS should hold ~always for exact W1, and be violated for sliced-mean W1 (a lower bound on W1)."
-}

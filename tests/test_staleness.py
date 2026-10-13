@@ -9,7 +9,7 @@ from __future__ import annotations
 import numpy as np
 import pytest
 
-from research.staleness import facts, measure, queries
+from research.staleness import data, facts, measure, queries
 from research.staleness.answer_level import control_questions
 
 S1 = "Our method reaches an accuracy of 84.3 percent on the benchmark suite we study."
@@ -134,3 +134,76 @@ def test_spoken_values_match_digits():
 
 def test_version_strings_are_kept_verbatim():
     assert facts.norm("3.8.0") == "3.8.0"
+
+
+# ------------------------------------------------------------ corpus cleaning
+FOOTER = ("Previous topic Codec registry Next topic Object Protocol This page Report a bug "
+          "Show source « Navigation index modules | next | previous | Python » 3.13.15 "
+          "Documentation » | © Copyright 2001-2026, Python Software Foundation.")
+
+
+def test_sphinx_footer_is_stripped():
+    assert data.strip_sphinx_chrome(f"{S1} {FOOTER}") == S1
+
+
+def test_sphinx_sidebar_is_stripped_even_when_the_footer_was_truncated():
+    toc = "Table of Contents 3. Data model 3.1. Objects, values and types 3.2. The standard"
+    assert data.strip_sphinx_chrome(f"{S1} {toc}") == S1
+
+
+def test_body_text_survives_chrome_stripping():
+    """IDLE's '(Table of Contents) button' is prose; 'Navigation' alone is prose too."""
+    t = f"Click the TOC (Table of Contents) button. See the Editing and Navigation section. {S2}"
+    assert data.strip_sphinx_chrome(t) == t
+
+
+def test_cross_listed_rows_are_counted_once():
+    rows = [{"pageid": "a", "hub": "cs.CL"}, {"pageid": "b", "hub": "cs.CL"},
+            {"pageid": "a", "hub": "cs.LG"}]
+    assert data.dedup(rows) == rows[:2]
+
+
+# ---------------------------------------------------------- embedding cache
+class _CountingBackend:
+    def __init__(self):
+        self.calls = 0
+
+    def embed(self, texts, batch_size=64):
+        self.calls += 1
+        return np.array([[len(t), 1.0] for t in texts])
+
+
+def test_cache_is_keyed_by_content(tmp_path, monkeypatch):
+    """A changed pool definition must not reuse vectors cached for the old one."""
+    fake = _CountingBackend()
+    monkeypatch.setattr(data, "CACHE", tmp_path)
+    monkeypatch.setitem(data._backends, "minilm", fake)
+    a = data.cached("minilm", "c", "q", lambda: ["one", "three"])
+    assert data.cached("minilm", "c", "q", lambda: ["one", "three"]) is not a
+    assert fake.calls == 1                                   # second call read the disk
+    b = data.cached("minilm", "c", "q", lambda: ["one", "three!"])
+    assert fake.calls == 2 and b[1, 0] == 6                  # new content, new vectors
+    assert data.cached("minilm", "c", "q", lambda: ["one", "three"])[1, 0] == 5
+
+
+def test_cache_key_separates_models():
+    assert data.digest("minilm", ["x"]) != data.digest("bge", ["x"])
+
+
+# --------------------------------------------------------- truncation window
+def test_edit_past_the_window_is_invisible(tmp_path, monkeypatch):
+    from embeddings.backends import WordPieceTokenizer
+
+    vocab = tmp_path / "vocab.txt"
+    vocab.write_text("\n".join(["[PAD]", "[UNK]", "[CLS]", "[SEP]", "w", "84", "86"]) + "\n")
+    monkeypatch.setitem(data._tokenizers, "minilm", WordPieceTokenizer(vocab))
+    pad = " ".join(["w"] * (data.MAX_LEN - 3))              # fills the window but one slot
+    assert data.visible("minilm", f"{pad} 84", f"{pad} 86")            # last visible slot
+    assert not data.visible("minilm", f"{pad} w 84", f"{pad} w 86")    # one past it
+
+
+def test_repeated_sentence_is_one_question():
+    t0 = f"{S1} {S2} {S1}"
+    t1 = f"{S1_REV} {S2} {S1_REV}"
+    qs, gold, _ = facts.fact_questions([_doc(t0, t1)])
+    assert gold == [0] and len(qs) == 1

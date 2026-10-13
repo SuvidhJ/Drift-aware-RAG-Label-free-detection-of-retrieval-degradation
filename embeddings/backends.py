@@ -1,18 +1,10 @@
-"""Embedding backends.
+"""Embedding backend.
 
-Two are provided:
+``MiniLMNumpyBackend``   a BERT-shaped sentence encoder (all-MiniLM-L6-v2,
+                        bge-small-en-v1.5, ...) evaluated in pure numpy, straight from
+                        the safetensors checkpoint.  No torch, no transformers.
 
-``MiniLMNumpyBackend``   all-MiniLM-L6-v2 evaluated in pure numpy, straight from the
-                        safetensors checkpoint.  No torch, no transformers.  This is
-                        the default because it is the only backend that runs on a
-                        machine without a multi-gigabyte deep-learning install, and
-                        every result in FINDINGS.md 11-12 was produced with it.
-
-``SentenceTransformerBackend``  the original path (BGE-M3 etc.).  Requires the
-                        ``heavy`` extra; imported lazily so its absence costs nothing.
-
-Both return L2-normalised float32 arrays of shape (n, d), so downstream code never
-needs to know which one produced them.
+It returns L2-normalised float32 arrays of shape (n, d).
 """
 from __future__ import annotations
 
@@ -335,33 +327,6 @@ class MiniLMNumpyBackend:
         return np.vstack(chunks)
 
 
-class SentenceTransformerBackend:
-    """The original heavyweight path. Requires the ``heavy`` extra."""
-
-    def __init__(self, model_name: str = "BAAI/bge-m3", device: str = "cpu") -> None:
-        try:
-            from sentence_transformers import SentenceTransformer
-        except ImportError as exc:  # pragma: no cover - depends on optional extra
-            raise ImportError(
-                "backend 'sentence-transformers' needs the heavy extra:\n"
-                "  uv pip install -e .[heavy]\n"
-                f"(original error: {exc})"
-            ) from exc
-        self._model = SentenceTransformer(model_name, device=device)
-        self.name = model_name
-        self.dim = int(self._model.get_sentence_embedding_dimension())
-
-    def embed(self, texts: list[str], batch_size: int = 32) -> np.ndarray:
-        if not texts:
-            return np.zeros((0, self.dim), dtype=np.float32)
-        return self._model.encode(
-            texts,
-            batch_size=batch_size,
-            normalize_embeddings=True,
-            convert_to_numpy=True,
-        ).astype(np.float32)
-
-
 def make_backend(kind: str, **kwargs) -> EmbeddingBackend:
     if kind in ("minilm-numpy", "numpy", "minilm"):
         return MiniLMNumpyBackend(
@@ -369,11 +334,4 @@ def make_backend(kind: str, **kwargs) -> EmbeddingBackend:
             max_len=kwargs.get("max_len", 256),
             pooling=kwargs.get("pooling"),
         )
-    if kind in ("sentence-transformers", "st"):
-        return SentenceTransformerBackend(
-            kwargs.get("model_name", "BAAI/bge-m3"), kwargs.get("device", "cpu")
-        )
-    raise ValueError(
-        f"unknown embedding backend {kind!r}; "
-        "expected 'minilm-numpy' or 'sentence-transformers'"
-    )
+    raise ValueError(f"unknown embedding backend {kind!r}; expected 'minilm-numpy'")

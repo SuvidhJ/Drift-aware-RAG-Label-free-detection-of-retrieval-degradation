@@ -68,7 +68,7 @@ jobs:
         run: |
           uv venv --python 3.11 .venv-build
           uv pip install --python .venv-build/bin/python dist/*.whl
-          .venv-build/bin/python -c "import main, configs, drift, retrieval, policy, evaluation, streaming, embeddings, data, dashboard; print('wheel imports OK')"
+          .venv-build/bin/python -c "import configs, drift, embeddings, evaluation, research.staleness.facts, research.staleness.measure, research.staleness.answer_level, research.staleness.generation; print('wheel imports OK')"
 
       - uses: actions/upload-artifact@v4
         with:

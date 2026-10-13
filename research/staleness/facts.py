@@ -114,11 +114,14 @@ def aligned_edits(docs: list[dict], min_jaccard: float = 0.5) -> list[tuple[int,
 def fact_questions(docs: list[dict], definition: str = "aligned"):
     """(question texts, gold doc ids, answer sets) for edits with a distinctive answer."""
     edits = aligned_edits(docs) if definition == "aligned" else strict_edits(docs)
-    qs, gold, answers = [], [], []
+    qs, gold, answers, seen = [], [], [], set()
     for i, s, o in edits:
         old_v = values(o)
         new = {x for x in NUM.findall(s) if norm(x) not in old_v and len(x) >= MIN_ANSWER}
-        if new:
+        # a sentence repeated within one document (e.g. the same 'Changed in version'
+        # note on six attributes) is one question, not six
+        if new and (strip_nums(s), i) not in seen:
+            seen.add((strip_nums(s), i))
             qs.append(strip_nums(s))
             gold.append(i)
             answers.append(new)

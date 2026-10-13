@@ -2,7 +2,6 @@
 name = "drift-aware-rag"
 version = "0.2.0"
 description = "Label-free RAG monitoring via embedding-space geometry"
-readme = "README.md"
 # Aryan Garg wrote the base pipeline; Aditi Saxena owned the repository this work was
 # forked from and ran the first analysis pass. See NOTICE.md for the full provenance.
 authors = [
@@ -75,32 +74,20 @@ dev = [
     "pytest>=8.0",
 ]
 
-[project.scripts]
-drift-rag = "main:app"
-
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
-# The project is a flat collection of top-level packages driven by `main.py`, not a
-# single importable module, so the build lists them explicitly. (It previously named a
-# `src/drift_aware_rag` module that held only a generated `uv init` stub and none of
-# the real code.)
+# The project is a flat collection of top-level packages, not a single importable
+# module, so the build lists them explicitly.
 [tool.hatch.build.targets.wheel]
 packages = [
     "configs",
-    "dashboard",
-    "data",
     "drift",
     "embeddings",
     "evaluation",
-    "policy",
     "research",
-    "retrieval",
-    "streaming",
 ]
-[tool.hatch.build.targets.wheel.force-include]
-"main.py" = "main.py"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

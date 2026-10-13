@@ -1,4 +1,4 @@
-"""Embedding backend and the content-addressed cache.
+"""Embedding backend.
 
 The numpy MiniLM implementation has no reference output shipped with it -- the model
 card prints embeddings, not a similarity -- so it is validated by properties that a
@@ -11,7 +11,7 @@ from __future__ import annotations
 import numpy as np
 import pytest
 
-from embeddings.backends import WordPieceTokenizer, gelu, layer_norm, resolve_minilm_dir
+from embeddings.backends import gelu, layer_norm, resolve_minilm_dir
 
 pytestmark = pytest.mark.needs_model
 
@@ -129,26 +129,3 @@ def test_bad_env_override_errors(monkeypatch):
     monkeypatch.setenv("DRIFT_MINILM_DIR", "/also/not/a/model/dir")
     with pytest.raises(FileNotFoundError, match="DRIFT_MINILM_DIR"):
         resolve_minilm_dir()
-
-
-def test_cache_is_content_addressed(tmp_path, model):
-    from configs.settings import settings
-    from embeddings.encoder import Encoder
-
-    original = settings.embedding.cache_dir
-    settings.embedding.cache_dir = tmp_path
-    try:
-        enc = Encoder(backend=model)
-        a = enc.encode_cached(["alpha text one here", "beta text two here"], "first")
-        b = enc.encode_cached(["beta text two here", "alpha text one here"], "second")
-        assert np.array_equal(a[0], b[1]) and np.array_equal(a[1], b[0])
-
-        # a fresh Encoder must reuse the vectors on disk
-        again = Encoder(backend=model).encode_cached(["alpha text one here"], "third")
-        assert np.array_equal(again[0], a[0])
-
-        # duplicates within one call are encoded once and returned twice
-        dup = enc.encode_cached(["gamma repeated", "gamma repeated"], "fourth")
-        assert np.array_equal(dup[0], dup[1])
-    finally:
-        settings.embedding.cache_dir = original

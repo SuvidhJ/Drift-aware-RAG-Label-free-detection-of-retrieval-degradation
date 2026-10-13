@@ -10,12 +10,13 @@ taken from a results file in this repository (listed in §9); nothing is rounded
 
 When a document collection is revised and the retrieval index is not refreshed, the
 stale index still **retrieves the right document as often as a refreshed index does**:
-on questions whose answer was changed by the revision, the retrieval gap is 0.000 to
-−0.017 (hit@10, two models, two corpora). But the stale copy it retrieves **holds the
+on questions whose answer was changed by the revision, the retrieval gap is −0.029 to
++0.010 (hit@10, two models, two corpora). But the stale copy it retrieves **holds the
 outdated fact**, so the correct answer is present in the retrieved context far less
-often (gap +0.53 to +0.76). A real generator then states the outdated value: on arXiv,
+often (gap +0.52 to +0.79). A real generator then states the outdated value: on arXiv,
 81% of the answers a 1.5B model committed to from the stale index were the replaced
-number, against 0% from the fresh index. On facts that did not change, stale and fresh
+number, against 0% from the fresh index (measured before the 2026-10-09 corpus cleanup,
+§4.3). On facts that did not change, stale and fresh
 agree at every level. **Staleness is a retrieval success on outdated content, so
 retrieval-level metrics cannot measure it.**
 
@@ -67,8 +68,8 @@ metrics they will see almost nothing.
 
 | Item | Where | Notes |
 |---|---|---|
-| arXiv corpus, two versions per paper | `research/gates/results/ax_big_corpus.json` | 6,835 abstracts, v1 vs latest version, from the arXiv API; 1,742 differ in raw text, 1,739 after whitespace/case canonicalisation |
-| Python docs corpus | `research/gates/results/pd_corpus.json` | 1,751 Python 3.8 → 3.13 documentation sections, 1,383 revised |
+| arXiv corpus, two versions per paper | `research/gates/results/ax_big_corpus.json` | 6,835 rows = 6,247 papers (cross-listed papers appear once per category; `data.load_corpus` keeps the first row per `pageid`), v1 vs latest version, from the arXiv API; 1,571 differ in raw text, 1,568 after whitespace/case canonicalisation |
+| Python docs corpus | `research/gates/results/pd_corpus.json` | 1,751 Python 3.8 → 3.13 documentation sections; `data.load_corpus` cuts the Sphinx sidebar and footer, after which 1,346 are revised (1,383 before the cut: 37 differed only in page chrome) |
 | Two embedding models | `embeddings/backends.py` | all-MiniLM-L6-v2 (mean pooling), bge-small-en-v1.5 (CLS pooling), run in the repo's numpy BERT, validated against HuggingFace |
 | Query pools | `research/staleness/queries.py` | `new`, `retained`, `unchanged` text, gold document known |
 | Fact-edit definitions | `research/staleness/facts.py` | text-only, no embeddings, numbers compared by value |
@@ -76,7 +77,7 @@ metrics they will see almost nothing.
 | Answer-level evaluation | `research/staleness/answer_level.py` | same questions, plus a control set |
 | Generator confirmation | `research/staleness/generation.py`, `generate_hf.py` | Qwen2.5-1.5B-Instruct, greedy decoding, top-3 context |
 | Tests | `tests/test_staleness.py` | pins every definition the numbers depend on |
-| Supporting engineering | `drift/freshness.py`, `drift/topics.py` | version registry and topic-mixture reporting; see §6 |
+| Text primitives | `drift/freshness.py` | `canonical`, `shingles`, `jaccard`; the version registry and `drift/topics.py` are in `quarantine/` (§6) |
 
 Wikipedia (`wp_corpus.json`) was used in the earlier `FINDINGS.md` work but not in the
 answer-level experiments.
@@ -95,16 +96,19 @@ each pool's share of the corpus), 95% bootstrap CI (`results_headline.json`):
 
 | model / corpus | hit@1 | hit@10 | MRR |
 |---|---|---|---|
-| MiniLM / arXiv | +0.0053 [+0.0012, +0.0094] | +0.0028 [+0.0006, +0.0049] | +0.0042 [+0.0019, +0.0067] |
-| bge / arXiv | +0.0047 [+0.0010, +0.0085] | +0.0021 [−0.0001, +0.0043] | +0.0041 [+0.0020, +0.0063] |
-| MiniLM / Python docs | −0.0099 [−0.0208, +0.0012] | −0.0020 [−0.0108, +0.0070] | −0.0088 [−0.0158, −0.0015] |
-| bge / Python docs | **−0.0120 [−0.0211, −0.0032]** | −0.0063 [−0.0128, −0.0001] | −0.0095 [−0.0156, −0.0036] |
+| MiniLM / arXiv | +0.0050 [+0.0017, +0.0084] | +0.0034 [+0.0011, +0.0058] | +0.0039 [+0.0019, +0.0060] |
+| bge / arXiv | +0.0015 [−0.0017, +0.0044] | +0.0016 [−0.0005, +0.0037] | +0.0028 [+0.0008, +0.0047] |
+| MiniLM / Python docs | **−0.0112 [−0.0207, −0.0015]** | −0.0106 [−0.0184, −0.0029] | −0.0094 [−0.0159, −0.0030] |
+| bge / Python docs | −0.0042 [−0.0128, +0.0046] | −0.0072 [−0.0148, +0.0006] | −0.0060 [−0.0118, −0.0000] |
 
 On Python docs, refreshing makes retrieval slightly **worse**. The per-pool breakdown
-gives the reason: refreshing helps queries about newly added text (hit@1 +0.04 to
-+0.08) and hurts queries about retained text (−0.019 to −0.024 in 3 of 4 settings,
-CIs excluding zero; MiniLM/arXiv +0.002, not significant). Retained text is 68% of
-Python-docs query traffic and 19% of arXiv's. Our explanation is that added text
+gives the reason: refreshing helps queries about newly added text (hit@1 +0.046 to
++0.074) and hurts queries about retained text (−0.014 to −0.021 in 3 of 4 settings,
+CIs excluding zero; MiniLM/arXiv +0.001, not significant). Retained text is 67% of
+Python-docs query traffic and 19% of arXiv's. On MiniLM / Python docs the
+unchanged-document pool also moves (hit@1 −0.011 [−0.022, −0.003]): those documents
+are identical in both indexes, so this is competitor documents being refreshed around
+them, not a change in the documents themselves. Our explanation is that added text
 dilutes a whole-document embedding; this is consistent with the per-pool signs, but it
 was not isolated by a dedicated experiment.
 
@@ -116,15 +120,28 @@ correct value. Wilson CIs are in `results_answer_level.json`.
 
 | model / corpus | questions | retrieval@10 stale / fresh (gap) | answer@10 stale / fresh (gap) |
 |---|---|---|---|
-| MiniLM / arXiv | 76 | 0.803 / 0.803 (0.000) | 0.039 / 0.803 (+0.763) |
-| bge / arXiv | 76 | 0.776 / 0.776 (0.000) | 0.039 / 0.776 (+0.737) |
-| MiniLM / Python docs | 294 | 0.626 / 0.609 (−0.017) | 0.075 / 0.609 (+0.534) |
-| bge / Python docs | 294 | 0.707 / 0.697 (−0.010) | 0.065 / 0.697 (+0.632) |
+| MiniLM / arXiv | 70 | 0.829 / 0.829 (0.000) | 0.043 / 0.829 (+0.786) |
+| bge / arXiv | 70 | 0.800 / 0.800 (0.000) | 0.043 / 0.800 (+0.757) |
+| MiniLM / Python docs | 103 | 0.748 / 0.718 (−0.029) | 0.204 / 0.718 (+0.515) |
+| bge / Python docs | 103 | 0.728 / 0.738 (+0.010) | 0.175 / 0.738 (+0.563) |
 
-**Control:** numbers in sentences identical in both versions (169 arXiv, 543 Python
-docs questions). Stale and fresh agree; all four gaps lie within −0.006 to +0.006, at
-retrieval and at answer level. The answer metric therefore does not favour fresh
-indexes by construction.
+Before the 2026-10-09 cleanup this table had 76 arXiv questions (cross-listed papers
+counted twice) and 294 Python-docs questions, 187 of which came from the page footer
+("3.8.20 Documentation", "© 2001-2025"). The stale copy could never hold the new
+footer's version string, so those questions inflated the gap; removing them raised the
+stale answer@10 on Python docs from 0.065–0.075 to 0.175–0.204. Six further Python-docs
+questions were the same sentence repeated within one document and are now counted once.
+
+**Control:** numbers in sentences identical in both versions (152 arXiv, 531 Python
+docs questions). Stale and fresh agree; all four gaps lie within −0.013 to +0.007, at
+retrieval and at answer level. In this control set answer@10 equals retrieval@10 by
+construction (the value is in both versions), so it can only detect a retrieval bias
+toward fresh documents; it does not test the containment metric itself.
+
+**Question quality on Python docs.** Even after the footer cut, many Python-docs
+questions are not facts a reader would ask about: 21 of the 103 are version notes
+("Changed in version 3.12: ..."), and others come from code samples, ISBNs and RFC
+numbers. arXiv is the cleaner evidence.
 
 Answer@k is a **ceiling**: it says the correct value is available in the retrieved
 text, not that a generator uses it. §4.3 tests the generator.
@@ -132,7 +149,9 @@ text, not that a generator uses it. §4.3 tests the generator.
 ### 4.3 A real generator states the outdated value
 
 Top-3 retrieved documents passed to Qwen2.5-1.5B-Instruct, asked to fill the blanked
-number from the context only (`results_generation.json`). Shares are among answers
+number from the context only (`results_generation.json`). **These numbers predate the
+2026-10-09 corpus cleanup** (arXiv duplicates, Python-docs footer) and must be
+regenerated before they are cited: the Python-docs rows include footer questions. Shares are among answers
 where the model committed to a number; Wilson 95% CIs.
 
 | corpus | index | committed / asked | outdated value | correct value |
@@ -158,14 +177,14 @@ Read with care:
 
 ### 4.4 How common fact-changing revisions are
 
-Share of revised documents (1,739 arXiv, 1,383 Python docs) with at least one numeric
+Share of revised documents (1,568 arXiv, 1,346 Python docs) with at least one numeric
 fact edit, numbers compared by value (`facts.py`):
 
 | definition | arXiv | Python docs |
 |---|---|---|
-| strict: only a number changed in the sentence | 1.4% | 2.2% |
-| aligned: closest old sentence (shingle Jaccard ≥ 0.5) has different numbers | 8.7% | 24.7% |
-| the document's set of number values differs at all | 28.9% | 53.4% |
+| strict: only a number changed in the sentence | 1.5% | 2.2% |
+| aligned: closest old sentence (shingle Jaccard ≥ 0.5) has different numbers | 8.9% | 13.6% |
+| the document's set of number values differs at all | 29.0% | 43.8% |
 
 The paper uses *aligned*. Only numeric facts are counted, so this is a **lower bound**
 on fact-bearing revisions.
@@ -175,9 +194,10 @@ on fact-bearing revisions.
 ## 5. Definitions the results depend on
 
 - **Fact question:** a revised sentence whose closest old counterpart (Jaccard ≥ 0.5 on
-  word shingles) carries a different set of numbers, with all numbers removed so the
+  character 5-gram shingles) carries a different set of numbers, with all numbers removed so the
   question cannot contain its answer. The answer is the set of numbers, of at least 3
-  characters, new in the revision. Short integers are excluded because they occur in
+  characters, new in the revision. A sentence repeated within one document gives one
+  question. Short integers are excluded because they occur in
   old documents by coincidence.
 - **Numbers are compared by value:** `84.3%` = `84.3`, `20,000` = `20000`,
   `450K` = `450,000`, `1.20` = `1.2`, "1.5 million" = `1.5M`. Version strings such as
@@ -205,15 +225,15 @@ on fact-bearing revisions.
   already show it. The contribution is the **paired measurement**: the same questions,
   the same retrieval success, a different answer. That makes the blind spot of
   retrieval metrics explicit and quantified.
-- No new detector is proposed. `drift/freshness.py` (content-hash version registry) is
-  engineering. Detecting that indexed text changed is exact by construction, which is a
+- No new detector is proposed. The content-hash version registry (formerly in
+  `drift/freshness.py`, now in `quarantine/`) is engineering. Detecting that indexed text changed is exact by construction, which is a
   property of hashing, not a result. Against independent source metadata, the registry
   found 56.8% / 79.0% / 89.2% of edits (arXiv / Python docs / Wikipedia) at 100%
   precision. On arXiv the misses are revisions that left the abstract untouched (43% of
   revisions), so there was nothing in the index to detect. This was a one-off check and
   is not packaged as a results file.
-- `drift/topics.py` (query topic-mixture reporting) is unevaluated as research and is
-  not part of the paper.
+- `drift/topics.py` (query topic-mixture reporting, now in `quarantine/`) is
+  unevaluated as research and is not part of the paper.
 - The dilution explanation (§4.1) is consistent with the data but not isolated.
 
 ---
@@ -225,7 +245,9 @@ on fact-bearing revisions.
 - **Two corpora**, both with abstract- or section-length documents; no chunking in the
   main results.
 - **Synthetic questions:** sentence windows with numbers removed, not real user queries.
-- **Small sample on arXiv** (76 changed-fact questions), large CIs on the generator rows.
+- **Small sample on arXiv** (70 changed-fact questions), large CIs on the generator rows.
+- **Python-docs questions are noisy** (§4.2): version notes, code samples and reference
+  numbers make up much of the set.
 - **One small generator** (1.5B, local) that abstains often. A larger model might
   abstain less, and might also resist outdated context differently.
 - **Extreme conditions:** fully stale vs fully fresh. Partially refreshed or duplicated
@@ -252,7 +274,7 @@ queries.
 2. A second, larger generator (7B+ or an API model) on the same prompts.
 3. Answer-level evaluation of a **mixed** index containing both versions, the realistic
    failure under the default framework behaviour in §2.3.
-4. Non-numeric fact edits (entities, dates), to raise the 76-question arXiv set.
+4. Non-numeric fact edits (entities, dates), to raise the 70-question arXiv set.
 5. A third corpus (Wikipedia revisions are already available).
 
 **Authorship:** the motivating negative results (`FINDINGS.md` §3–§13) were produced by
@@ -275,6 +297,10 @@ python -m research.staleness.generation build # §4.3  prompts
 python -m research.staleness.generation score # §4.3  -> results_generation.json
 python -m pytest tests/test_staleness.py
 ```
+
+Corpora are cleaned at load time (`data.load_corpus`); the JSON files are the raw
+collector output. Embeddings are cached under a digest of the exact texts, so changing a
+corpus or a question definition recomputes them.
 
 | Section | Source |
 |---|---|
