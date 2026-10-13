@@ -1,0 +1,16 @@
+LEAK: 0 sampled questions whose text contains an answer value: []
+YEARS: 3 sampled questions with a 19xx/20xx value: [('The num employees of MACOM Technology Solutions is ___.', ['2,000'], ['1,700']), ('The num employees of Silicon Labs is ___.', ['1,900'], ['1,889']), ('The num employees of MicroStrategy is ___.', ['1,539'], ['1,934'])]
+new == old overlap: 0
+value-length < 3 chars: 0
+values in 1900-2100 numerically: [('The num employees of MACOM Technology Solutions is ___.', ['2,000'], ['1,700']), ('The num employees of Alnylam Pharmaceuticals is ___.', ['2,500'], ['2,100']), ('The equity of Neogen is ___.', ['2,017.3'], ['887.37']), ('The num employees of Silicon Labs is ___.', ['1,900'], ['1,889']), ('The num employees of MicroStrategy is ___.', ['1,539'], ['1,934'])]
+M1 [minilm] replace gold-page hit@3 = 1.000
+   replace: rank3/4 exact ties 0; selected(by facts.values) 387; records 387; same set True; selected by my literal check 387; selected but value NOT literally in context: 0
+M1 [minilm] append  gold-page hit@3 = 1.000
+   append: rank3/4 exact ties 0; selected(by facts.values) 322; records 322; same set True; selected by my literal check 322; selected but value NOT literally in context: 0
+M1 [minilm] stale   gold-page hit@3 = 1.000
+M1 [bge] replace gold-page hit@3 = 1.000
+   replace: rank3/4 exact ties 0; selected(by facts.values) 363; records 363; same set True; selected by my literal check 363; selected but value NOT literally in context: 0
+M1 [bge] append  gold-page hit@3 = 1.000
+   append: rank3/4 exact ties 0; selected(by facts.values) 283; records 283; same set True; selected by my literal check 283; selected but value NOT literally in context: 0
+M1 [bge] stale   gold-page hit@3 = 1.000
+append cases by value source: {'field passage in context': 605}

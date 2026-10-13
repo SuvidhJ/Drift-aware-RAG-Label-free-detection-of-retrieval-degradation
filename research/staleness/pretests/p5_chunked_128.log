@@ -1,0 +1,24 @@
+minilm/arxiv_big THETA 0.3: answer@10 stale 0.014 full 0.957 keep 0.871 append 0.943 | new hit@10 full 0.974 keep 0.952 | retained full 0.972 keep 0.964 | embeds full 5955 diff 4641 keep 1942
+    K1 FAIL  K2 FAIL  K3 pass
+minilm/arxiv_big THETA 0.5: answer@10 stale 0.014 full 0.957 keep 0.914 append 0.943 | new hit@10 full 0.974 keep 0.964 | retained full 0.972 keep 0.970 | embeds full 5955 diff 4641 keep 2998
+    K1 FAIL  K2 pass  K3 pass
+minilm/arxiv_big THETA 0.7: answer@10 stale 0.014 full 0.957 keep 0.957 append 0.943 | new hit@10 full 0.974 keep 0.970 | retained full 0.972 keep 0.971 | embeds full 5955 diff 4641 keep 3761
+    K1 pass  K2 pass  K3 FAIL
+bge/arxiv_big THETA 0.3: answer@10 stale 0.029 full 0.929 keep 0.857 append 0.929 | new hit@10 full 0.972 keep 0.950 | retained full 0.957 keep 0.946 | embeds full 5955 diff 4641 keep 1942
+    K1 FAIL  K2 FAIL  K3 pass
+bge/arxiv_big THETA 0.5: answer@10 stale 0.029 full 0.929 keep 0.914 append 0.929 | new hit@10 full 0.972 keep 0.962 | retained full 0.957 keep 0.954 | embeds full 5955 diff 4641 keep 2998
+    K1 pass  K2 FAIL  K3 pass
+bge/arxiv_big THETA 0.7: answer@10 stale 0.029 full 0.929 keep 0.929 append 0.929 | new hit@10 full 0.972 keep 0.968 | retained full 0.957 keep 0.957 | embeds full 5955 diff 4641 keep 3761
+    K1 pass  K2 pass  K3 FAIL
+minilm/python_docs THETA 0.3: answer@10 stale 0.184 full 0.893 keep 0.864 append 0.883 | new hit@10 full 0.978 keep 0.951 | retained full 0.988 keep 0.986 | embeds full 14161 diff 7494 keep 2465
+    K1 FAIL  K2 FAIL  K3 pass
+minilm/python_docs THETA 0.5: answer@10 stale 0.184 full 0.893 keep 0.893 append 0.883 | new hit@10 full 0.978 keep 0.963 | retained full 0.988 keep 0.989 | embeds full 14161 diff 7494 keep 3867
+    K1 pass  K2 FAIL  K3 pass
+minilm/python_docs THETA 0.7: answer@10 stale 0.184 full 0.893 keep 0.903 append 0.883 | new hit@10 full 0.978 keep 0.973 | retained full 0.988 keep 0.989 | embeds full 14161 diff 7494 keep 5315
+    K1 pass  K2 pass  K3 FAIL
+bge/python_docs THETA 0.3: answer@10 stale 0.175 full 0.903 keep 0.874 append 0.893 | new hit@10 full 0.980 keep 0.948 | retained full 0.986 keep 0.985 | embeds full 14161 diff 7494 keep 2465
+    K1 FAIL  K2 FAIL  K3 pass
+bge/python_docs THETA 0.5: answer@10 stale 0.175 full 0.903 keep 0.874 append 0.893 | new hit@10 full 0.980 keep 0.965 | retained full 0.986 keep 0.988 | embeds full 14161 diff 7494 keep 3867
+    K1 FAIL  K2 FAIL  K3 pass
+bge/python_docs THETA 0.7: answer@10 stale 0.175 full 0.903 keep 0.893 append 0.893 | new hit@10 full 0.980 keep 0.974 | retained full 0.986 keep 0.987 | embeds full 14161 diff 7494 keep 5315
+    K1 pass  K2 pass  K3 FAIL

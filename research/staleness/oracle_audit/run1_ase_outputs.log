@@ -1,0 +1,59 @@
+script sha256 8af01093d1da4b62203b7b6bfcf2e4a992802923c864217aa71cdb9657438315
+
+[repliqa pre_chunk] CN records 217; {'preserving_or_unjudged': 64, 'altering': 153, 'violated': 23, 'M1_viol_gt': 23}
+  M1 violated answers matching GT: 23/23 (0.857, 1.0)
+
+[repliqa post_chunk] CN records 300; {'preserving_or_unjudged': 144, 'altering': 156, 'violated': 42, 'M1_viol_gt': 41}
+  M1 violated answers matching GT: 41/42 (0.877, 0.996)
+
+[ConvFinQA pre_chunk] CN records 228; {'altering': 148, 'lookup': 77, 'M2_n': 58, 'M2_other': 14, 'preserving_or_unjudged': 80, 'violated': 36, 'M1_viol_gt': 36}
+  M1 violated answers matching GT: 36/36 (0.904, 1.0)
+  M2 satisfied (lookup) matching neither GT nor CF: 14/58 (0.15, 0.365)
+  M3 {('CF_after', True): 5, ('CF_before', False): 34, ('CF_after', False): 7, ('CF_before', True): 8}
+  M4 {('SATISFIED', 'FOLLOWED'): 44, ('VIOLATED', 'KEPT'): 14, ('SATISFIED', 'OTHER'): 14, ('SATISFIED', 'ACK'): 5}
+
+[ConvFinQA post_chunk] CN records 300; {'altering': 113, 'lookup': 68, 'M2_n': 36, 'M2_other': 9, 'preserving_or_unjudged': 187, 'violated': 52, 'M1_viol_gt': 52}
+  M1 violated answers matching GT: 52/52 (0.931, 1.0)
+  M2 satisfied (lookup) matching neither GT nor CF: 9/36 (0.138, 0.411)
+  M4 {('SATISFIED', 'FOLLOWED'): 27, ('VIOLATED', 'KEPT'): 30, ('SATISFIED', 'OTHER'): 9, ('SATISFIED', 'ACK'): 2}
+
+[FinQA pre_chunk] CN records 205; {'preserving_or_unjudged': 89, 'altering': 116, 'violated': 32, 'M1_viol_gt': 32, 'lookup': 4, 'M2_n': 3, 'M2_other': 1}
+  M1 violated answers matching GT: 32/32 (0.893, 1.0)
+  M2 satisfied (lookup) matching neither GT nor CF: 1/3 (0.061, 0.792)
+  M3 {('CF_before', True): 1, ('CF_before', False): 1}
+  M4 {('VIOLATED', 'KEPT'): 1, ('SATISFIED', 'FOLLOWED'): 2, ('SATISFIED', 'OTHER'): 1}
+
+[FinQA post_chunk] CN records 300; {'altering': 98, 'violated': 55, 'M1_viol_gt': 55, 'preserving_or_unjudged': 202, 'lookup': 4, 'M2_n': 1, 'M2_other': 1}
+  M1 violated answers matching GT: 55/55 (0.935, 1.0)
+  M2 satisfied (lookup) matching neither GT nor CF: 1/1 (0.207, 1.0)
+  M4 {('VIOLATED', 'KEPT'): 3, ('SATISFIED', 'OTHER'): 1}
+
+[TAT-DQA pre_chunk] CN records 231; {'preserving_or_unjudged': 96, 'altering': 135, 'violated': 48, 'M1_viol_gt': 48, 'lookup': 60, 'M2_n': 34, 'M2_other': 7}
+  M1 violated answers matching GT: 48/48 (0.926, 1.0)
+  M2 satisfied (lookup) matching neither GT nor CF: 7/34 (0.103, 0.368)
+  M3 {('CF_before', False): 17, ('CF_before', True): 8, ('CF_after', True): 11, ('CF_after', False): 11}
+  M4 {('SATISFIED', 'FOLLOWED'): 27, ('VIOLATED', 'KEPT'): 21, ('SATISFIED', 'OTHER'): 7, ('SATISFIED', 'ACK'): 5}
+
+[TAT-DQA post_chunk] CN records 300; {'preserving_or_unjudged': 207, 'altering': 93, 'violated': 53, 'M1_viol_gt': 53, 'lookup': 41, 'M2_n': 17, 'M2_other': 5}
+  M1 violated answers matching GT: 53/53 (0.932, 1.0)
+  M2 satisfied (lookup) matching neither GT nor CF: 5/17 (0.133, 0.531)
+  M4 {('VIOLATED', 'KEPT'): 20, ('SATISFIED', 'FOLLOWED'): 12, ('SATISFIED', 'OTHER'): 5, ('SATISFIED', 'ACK'): 4}
+
+[VQAonBD pre_chunk] CN records 290; {'altering': 197, 'lookup': 112, 'M2_n': 68, 'M2_other': 4, 'preserving_or_unjudged': 93, 'violated': 68, 'M1_viol_gt': 68}
+  M1 violated answers matching GT: 68/68 (0.947, 1.0)
+  M2 satisfied (lookup) matching neither GT nor CF: 4/68 (0.023, 0.142)
+  M3 {('CF_before', False): 34, ('CF_before', True): 28, ('CF_after', False): 30, ('CF_after', True): 12}
+  M4 {('SATISFIED', 'FOLLOWED'): 64, ('VIOLATED', 'KEPT'): 40, ('SATISFIED', 'ACK'): 4, ('SATISFIED', 'OTHER'): 4}
+
+[VQAonBD post_chunk] CN records 300; {'altering': 154, 'lookup': 94, 'M2_n': 61, 'M2_other': 3, 'preserving_or_unjudged': 146, 'violated': 52, 'M1_viol_gt': 52}
+  M1 violated answers matching GT: 52/52 (0.931, 1.0)
+  M2 satisfied (lookup) matching neither GT nor CF: 3/61 (0.017, 0.135)
+  M4 {('SATISFIED', 'FOLLOWED'): 58, ('SATISFIED', 'OTHER'): 3, ('VIOLATED', 'KEPT'): 32, ('SATISFIED', 'ACK'): 1}
+
+================ POOLED (numeric datasets for M2-M4)
+M1 460/461 = 0.998 (0.988, 1.0)
+M2 44/278 = 0.158 (0.12, 0.206) -> H-M2 SUPPORTED
+M3 violated: CF_before 45/131 = 0.344 (0.268, 0.428)  CF_after 28/76 = 0.368 (0.269, 0.481)  delta -0.025 Fisher p=0.764 -> H-M3 not supported
+M5 CN 'repaired' (lookup, non-abstaining) matching neither GT nor CF: 45/52 = 0.865 (0.747, 0.933); abstentions counted as repaired: 3
+M4 agreement 416/460 = 0.904; disagreement 0.096 -> H-M4 not supported
+   cross-table: {('SATISFIED', 'FOLLOWED'): 234, ('VIOLATED', 'KEPT'): 161, ('SATISFIED', 'OTHER'): 44, ('SATISFIED', 'ACK'): 21}

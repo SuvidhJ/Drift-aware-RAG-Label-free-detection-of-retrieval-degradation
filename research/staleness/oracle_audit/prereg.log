@@ -1,0 +1,3 @@
+2026-10-13 21:01:56 IST PRE-REGISTERED analyze_ase_outputs.py sha256=c1ce5a2733bb84297c20d014a00e9ac2cb319d5fef729aeca7143438b6f3df9a (authors' archive NOT yet downloaded or opened)
+2026-10-13 21:12:32 IST AMENDMENT 1: implemented pre-registered M5 (no definition change); seen so far: file/field names only, no values. sha256=8af01093d1da4b62203b7b6bfcf2e4a992802923c864217aa71cdb9657438315
+2026-10-13 21:14:51 IST RUN 1 executed with sha256=8af01093...; output run1_ase_outputs.log. Post-hoc checks (labelled): posthoc_checks.py, posthoc_cf_quality.py, posthoc_refusal_rates.py

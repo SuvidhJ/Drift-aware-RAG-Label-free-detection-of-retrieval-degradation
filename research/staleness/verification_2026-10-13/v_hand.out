@@ -1,0 +1,456 @@
+
+######## phi3:mini
+[1] bge q210 | The gdp nominal of Gabon is ___. | old=['19.319'] new=['21.455'] | P9.commit=new
+     · Gabon -- gdp nominal: $21.455 billion.
+     · Gabon -- gdp nominal year: 2025.
+     · Gabon -- gdp nominal: $19.319 billion.
+     OUT: '$21.455 billion'
+[2] minilm q243 | The num employees of Robinhood Markets is ___. | old=['2,300'] new=['2,900'] | P9.commit=new
+     · Robinhood Markets -- num employees: 2,900 (2025).
+     · Robinhood Markets -- num employees: 2,300 (2024).
+     · Robinhood Markets -- name: Robinhood Markets, Inc..
+     OUT: '2,900 (or "unknown" if considering a future date beyond provided data)'
+[3] bge q380 | The num employees of CoStar Group is ___. | old=['6,593'] new=['8,400'] | P9.commit=old
+     · CoStar Group -- num employees: 6,593 (2025).
+     · CoStar Group -- num employees: 8,400 (2026).
+     · CoStar Group -- name: CoStar Group, Inc..
+     OUT: '6,593 (2decade)'
+[4] bge q21 | The equity of Casey's is ___. | old=['1.41'] new=['3.951'] | P9.commit=new
+     · Casey's -- equity: US$3.951 billion (FY 2026).
+     · Casey's -- equity: nowrap US$ 1.41 billion (FY APR 30 2019).
+     · Casey's -- name: Casey's Retail Company.
+     OUT: 'US$3.951 billion (FY 2026)'
+[5] bge q235 | The gdp nominal per capita of Azerbaijan is ___. | old=['7,604'] new=['7,467'] | P9.commit=new
+     · Azerbaijan -- gdp nominal per capita: $7,467.
+     · Azerbaijan -- gdp nominal per capita rank: 103rd.
+     · Azerbaijan -- gdp nominal per capita: $7,604.
+     OUT: '$7,467'
+[6] minilm q125 | The revenue of Omnicell is ___. | old=['1.11'] new=['1.18'] | P9.commit=new
+     · Omnicell -- revenue: 1.11&nbsp;billion yes.
+     · Omnicell -- revenue: 1.18&nbsp;billion yes.
+     · Omnicell -- revenue year: 2024.
+     OUT: '1.18 billion'
+[7] bge q146 | The gdp ppp of Honduras is ___. | old=['75.030'] new=['86.290'] | P9.commit=both
+     · Honduras -- gdp ppp: $75.030 billion.
+     · Honduras -- gdp ppp: $86.290 billion.
+     · Honduras -- gdp ppp rank: 108th.
+     OUT: '$75.030 billion or $86.290 billion'
+[8] minilm q67 | The revenue of Okta, Inc. is ___. | old=['2.61'] new=['2.92'] | P9.commit=old
+     · Okta, Inc. -- revenue: 2.61&nbsp;billion yes (2025).
+     · Okta, Inc. -- revenue: 2.92&nbsp;billion yes (2026).
+     · Okta, Inc. -- operating income: US$&minus;74&nbsp;million (2025).
+     OUT: '2.61 billion yes (2025)'
+[9] minilm q300 | The gdp nominal per capita of Ecuador is ___. | old=['6,630'] new=['7,575'] | P9.commit=both
+     · Ecuador -- gdp nominal per capita: $6,630.
+     · Ecuador -- gdp nominal per capita: $7,575.
+     · Ecuador -- gdp nominal per capita rank: 102nd.
+     OUT: '$6,630 or $7,575 (both numbers are provided in the context)'
+[10] bge q393 | The net income of Motorsport Games is ___. | old=['33,161,991'] new=['6,844,897'] | P9.commit=old
+     · Motorsport Games -- net income: -33,161,991.
+     · Motorsport Games -- net income year: 2021.
+     · Motorsport Games -- net income: 6,844,897 (2025).
+     OUT: '-33,161,991 (2decade ago) and -33,16'
+[11] minilm q94 | The gdp ppp of Austria is ___. | old=['682.86'] new=['721.033'] | P9.commit=new
+     · Austria -- gdp ppp per capita: $74,370.
+     · Austria -- gdp ppp: $721.033 billion.
+     · Austria -- gdp ppp: $682.86 billion.
+     OUT: '$721.033 billion'
+[12] minilm q25 | The gdp ppp per capita of Togo is ___. | old=['2,767'] new=['3,470'] | P9.commit=both
+     · Togo -- gdp ppp per capita: $3,470.
+     · Togo -- gdp ppp per capita: $2,767.
+     · Togo -- gdp ppp per capita rank: 166th.
+     OUT: '$3,470 or $2,767 (both numbers are present in different lines)'
+[13] minilm q280 | The num locations of XPO, Inc. is ___. | old=['614'] new=['592'] | P9.commit=new
+     · XPO, Inc. -- num locations: 614 (2024).
+     · XPO, Inc. -- num locations: 592 (2025).
+     · XPO, Inc. -- hq location: Greenwich, Connecticut, US.
+     OUT: '592'
+[14] bge q379 | The gdp ppp per capita of Andorra is ___. | old=['69,146'] new=['75,988'] | P9.commit=new
+     · Andorra -- gdp ppp per capita: $69,146.
+     · Andorra -- gdp ppp per capita: $75,988.
+     · Andorra -- gdp ppp per capita rank: 23rd.
+     OUT: '$75,988'
+[15] bge q351 | The population density km2 of Guyana is ___. | old=['3.9'] new=['5.21'] | P9.commit=old
+     · Guyana -- population density km2: 5.21.
+     · Guyana -- population density km2: 3.9.
+     · Guyana -- population density rank: 231st.
+     OUT: '3.9'
+[16] minilm q133 | The revenue of Lincoln Electric is ___. | old=['3.76'] new=['4.23'] | P9.commit=new
+     · Lincoln Electric -- revenue: 3.76 billion yes (2022).
+     · Lincoln Electric -- revenue: 4.23&nbsp;billion yes (2025).
+     · Lincoln Electric -- net income: 521&nbsp;million (2025).
+     OUT: '4.23 billion'
+[17] minilm q314 | The population density sq mi of Guyana is ___. | old=['9.071'] new=['13.5'] | P9.commit=both
+     · Guyana -- population density sq mi: 9.071.
+     · Guyana -- population density sq mi: 13.5.
+     · Guyana -- population density rank: 239th.
+     OUT: '9.071 or 13.5 (both numbers are present in different parts of the text)'
+[18] minilm q162 | The revenue of Primoris Services Corporation is ___. | old=['2.086'] new=['7.57'] | P9.commit=both
+     · Primoris Services Corporation -- revenue: $ 2.086 billion (2014).
+     · Primoris Services Corporation -- revenue: $ 7.57 billion (2025).
+     · Primoris Services Corporation -- name: Primoris Services Corporation.
+     OUT: '$2.086 billion (in 2014) and $7.57 billion (in'
+[19] minilm q255 | The gdp nominal per capita of Denmark is ___. | old=['74,969'] new=['83,445'] | P9.commit=both
+     · Denmark -- gdp nominal per capita: $74,969.
+     · Denmark -- gdp nominal per capita: $83,445.
+     · Denmark -- gdp nominal per capita rank: 9th.
+     OUT: '$74,969 or $83,445 (both numbers are present in the context)'
+[20] bge q197 | The operating income of Interface, Inc. is ___. | old=['141.4'] new=['164'] | P9.commit=new
+     · Interface, Inc. -- operating income: US$ 164 million (2025).
+     · Interface, Inc. -- operating income: US$ 141.4 million (2024).
+     · Interface, Inc. -- net income: US$ 116.1 million (2025).
+     OUT: '164 million'
+[21] bge q259 | The population estimate of Trinidad and Tobago is ___. | old=['1,508,635'] new=['1,512,779'] | P9.commit=both
+     · Trinidad and Tobago -- population estimate: 1,508,635.
+     · Trinidad and Tobago -- population estimate: 1,512,779.
+     · Trinidad and Tobago -- population estimate rank: 154th.
+     OUT: '1,508,635 or 1,512,779'
+[22] minilm q187 | The gdp ppp per capita of Chile is ___. | old=['33,574'] new=['37,336'] | P9.commit=new
+     · Chile -- gdp ppp per capita: $33,574.
+     · Chile -- gdp ppp per capita: $37,336.
+     · Chile -- gdp ppp per capita rank: 64th.
+     OUT: '$37,336'
+[23] minilm q60 | The revenue of Keurig Dr Pepper is ___. | old=['15.3'] new=['16.603'] | P9.commit=new
+     · Keurig Dr Pepper -- revenue: 16.603 billion yes (2025).
+     · Keurig Dr Pepper -- revenue: 15.3&nbsp;billion yes (2024).
+     · Keurig Dr Pepper -- operating income: 2.59&nbsp;billion (2024).
+     OUT: '16.603 billion'
+[24] minilm q172 | The gdp nominal of Indonesia is ___. | old=['1.430'] new=['1.540'] | P9.commit=old
+     · Indonesia -- gdp nominal: $1.430&nbsp;trillion.
+     · Indonesia -- gdp nominal per capita: $5,027.
+     · Indonesia -- gdp nominal: $1.540&nbsp;trillion"World Economic Outlook Database (April 2026 Edition)". IMF, 2026.
+     OUT: '$1.430 trillion'
+[25] minilm q283 | The gdp ppp per capita of Georgia (country) is ___. | old=['30,750'] new=['33,340'] | P9.commit=old
+     · Georgia (country) -- gdp ppp per capita: $33,340.
+     · Georgia (country) -- gdp ppp per capita: $30,750.
+     · Georgia (country) -- gdp ppp per capita rank: 70th.
+     OUT: '$30,750'
+[26] minilm q227 | The gdp nominal of Israel is ___. | old=['583.361'] new=['719.848'] | P9.commit=new
+     · Israel -- gdp nominal: $719.848 billion.
+     · Israel -- gdp nominal: $583.361 billion.
+     · Israel -- gdp nominal per capita: $69,804.
+     OUT: '$719.848 billion'
+[27] bge q391 | The revenue of Exelon is ___. | old=['23.03'] new=['24.3'] | P9.commit=new
+     · Exelon -- revenue: 24.3&nbsp;billion yes (2025).
+     · Exelon -- net income: US$2.460 billion (2024).
+     · Exelon -- revenue: 23.03 billion yes (2024).
+     OUT: '24.3 billion yes (2025)'
+[28] bge q19 | The population estimate rank of Costa Rica is ___. | old=['124'] new=['127'] | P9.commit=old
+     · Costa Rica -- population estimate rank: 127th.
+     · Costa Rica -- population estimate rank: 124th.
+     · Costa Rica -- population density rank: 107th.
+     OUT: '124th'
+[29] bge q116 | The gdp ppp per capita of The Gambia is ___. | old=['2,837'] new=['3,820'] | P9.commit=both
+     · The Gambia -- gdp ppp per capita rank: 175th.
+     · The Gambia -- gdp ppp per capita: $2,837.
+     · The Gambia -- gdp ppp per capita: $3,820.
+     OUT: '$2,837 or $3,820 (both numbers are present in different parts of the text'
+[30] bge q150 | The population density sq mi of Iceland is ___. | old=['9.81'] new=['9.9'] | P9.commit=old
+     · Iceland -- population density sq mi: 9.9.
+     · Iceland -- population density sq mi: 9.81.
+     · Iceland -- population density km2: 3.82.
+     OUT: '9.81'
+
+######## qwen2.5:7b-instruct
+[1] bge q38 | The operating income of MACOM Technology Solutions is ___. | old=['73.7'] new=['130'] | P9.commit=old
+     · MACOM Technology Solutions -- operating income: US$130&nbsp;million (2025).
+     · MACOM Technology Solutions -- operating income: US$73.7 million (2024).
+     · MACOM Technology Solutions -- net income: US$76.9 million (2024).
+     OUT: '73.7'
+[2] bge q230 | The num employees of Interface, Inc. is ___. | old=['4,094'] new=['3,570'] | P9.commit=old
+     · Interface, Inc. -- num employees: 3,570 (2025).
+     · Interface, Inc. -- num employees: 4,094 (2018).
+     · Interface, Inc. -- subsidiaries: FLOR, nora.
+     OUT: '4,094'
+[3] bge q359 | The population density sq mi of Saint Vincent and the Grenadines is ___. | old=['792'] new=['730'] | P9.commit=new
+     · Saint Vincent and the Grenadines -- population density sq mi: 792.
+     · Saint Vincent and the Grenadines -- population density km2: 281.
+     · Saint Vincent and the Grenadines -- population density sq mi: 730.
+     OUT: '730'
+[4] bge q237 | The assets of TPG Inc. is ___. | old=['10.5'] new=['13.5'] | P9.commit=both
+     · TPG Inc. -- assets: 13.5&nbsp;billion (2025).
+     · TPG Inc. -- assets: 10.5 billion (2024).
+     · TPG Inc. -- industry: Private equity.
+     OUT: '10.5, 13.5'
+[5] bge q171 | The net income of Broadridge Financial Solutions is ___. | old=['0.698'] new=['1.12'] | P9.commit=old
+     · Broadridge Financial Solutions -- net income: 1.12&nbsp;billion (2026).
+     · Broadridge Financial Solutions -- net income: US$0.698 billion (2024).
+     · Broadridge Financial Solutions -- revenue: US$6.507 billion (2024).
+     OUT: '0.698'
+[6] bge q213 | The net income of Keurig Dr Pepper is ___. | old=['1.44'] new=['2.08'] | P9.commit=both
+     · Keurig Dr Pepper -- net income: 2.08&nbsp;billion (2025).
+     · Keurig Dr Pepper -- net income: 1.44&nbsp;billion (2024).
+     · Keurig Dr Pepper -- operating income: 2.59&nbsp;billion (2024).
+     OUT: '2.08,1.44'
+[7] bge q115 | The gdp ppp per capita of Kenya is ___. | old=['7,530'] new=['7,930'] | P9.commit=both
+     · Kenya -- gdp ppp per capita: $7,530.
+     · Kenya -- gdp ppp per capita: $7,930.
+     · Kenya -- gdp ppp rank: 59th.
+     OUT: '7,530, 7,930'
+[8] minilm q307 | The gdp nominal per capita of Cameroon is ___. | old=['1,870'] new=['2,200'] | P9.commit=both
+     · Cameroon -- gdp nominal per capita: $1,870.
+     · Cameroon -- gdp nominal per capita: $2,200.
+     · Cameroon -- gdp nominal per capita rank: 152nd.
+     OUT: '1870, 2200'
+[9] minilm q390 | The num employees of Silicon Labs is ___. | old=['1,889'] new=['1,900'] | P9.commit=old
+     · Silicon Labs -- num employees: 1,889 (2024).
+     · Silicon Labs -- num employees: 1,900 (2025).
+     · Silicon Labs -- name: Silicon Laboratories, Inc..
+     OUT: '1,889'
+[10] minilm q12 | The revenue of Neurocrine Biosciences is ___. | old=['788'] new=['2.86'] | P9.commit=old
+     · Neurocrine Biosciences -- revenue: 788 million yes (2019).
+     · Neurocrine Biosciences -- revenue: 2.86&nbsp;billion yes (2025).
+     · Neurocrine Biosciences -- industry: Biotechnology.
+     OUT: '788 million, 2,860 million'
+[11] minilm q181 | The population estimate of Solomon Islands is ___. | old=['734,887'] new=['828,857'] | P9.commit=new
+     · Solomon Islands -- population estimate: 828,857.
+     · Solomon Islands -- population estimate: 734,887.
+     · Solomon Islands -- population estimate year: 2023.
+     OUT: '828,857'
+[12] bge q151 | The operating income of Sabre Corporation is ___. | old=['0.047'] new=['0.295'] | P9.commit=new
+     · Sabre Corporation -- operating income: 0.047 billion.
+     · Sabre Corporation -- operating income: 0.295 billion.
+     · Sabre Corporation -- net income: 0.525 billion.
+     OUT: '0.295'
+[13] minilm q299 | The gdp nominal per capita rank of Ghana is ___. | old=['143'] new=['137'] | P9.commit=new
+     · Ghana -- gdp nominal per capita rank: 137th.
+     · Ghana -- gdp nominal per capita rank: 143rd.
+     · Ghana -- gdp nominal rank: 67th.
+     OUT: '137'
+[14] minilm q131 | The gdp nominal of Andorra is ___. | old=['3.897'] new=['4.879'] | P9.commit=both
+     · Andorra -- gdp nominal: $3.897&nbsp;billion.
+     · Andorra -- gdp nominal: $4.879&nbsp;billion.
+     · Andorra -- gdp nominal per capita: $44,900.
+     OUT: '3.897,4.879'
+[15] minilm q60 | The revenue of Keurig Dr Pepper is ___. | old=['15.3'] new=['16.603'] | P9.commit=old
+     · Keurig Dr Pepper -- revenue: 16.603 billion yes (2025).
+     · Keurig Dr Pepper -- revenue: 15.3&nbsp;billion yes (2024).
+     · Keurig Dr Pepper -- operating income: 2.59&nbsp;billion (2024).
+     OUT: '15.3'
+[16] bge q191 | The operating income of Alkermes plc is ___. | old=['20.5'] new=['241.7'] | P9.commit=both
+     · Alkermes plc -- operating income: US$-20.5 million.
+     · Alkermes plc -- operating income: US$241.7 million.
+     · Alkermes plc -- net income: US$241.7 million (2026).
+     OUT: '-20.5, 241.7'
+[17] minilm q87 | The population estimate rank of Grenada is ___. | old=['180'] new=['181'] | P9.commit=both
+     · Grenada -- population estimate rank: 180th.
+     · Grenada -- population estimate rank: 181st.
+     · Grenada -- population density rank: 39th.
+     OUT: '180, 181'
+[18] bge q234 | The gdp nominal per capita of Mexico is ___. | old=['12,692'] new=['15,779'] | P9.commit=both
+     · Mexico -- gdp nominal per capita: $12,692.
+     · Mexico -- gdp nominal per capita: $15,779.
+     · Mexico -- gdp nominal per capita rank: 74th.
+     OUT: '12,692, 15,779'
+[19] bge q338 | The gdp ppp per capita of Mexico is ___. | old=['25,463'] new=['26,643'] | P9.commit=new
+     · Mexico -- gdp ppp per capita: $26,643.
+     · Mexico -- gdp ppp per capita: $25,463.
+     · Mexico -- gdp ppp per capita rank: 77th.
+     OUT: '26,643'
+[20] bge q197 | The operating income of Interface, Inc. is ___. | old=['141.4'] new=['164'] | P9.commit=new
+     · Interface, Inc. -- operating income: US$ 164 million (2025).
+     · Interface, Inc. -- operating income: US$ 141.4 million (2024).
+     · Interface, Inc. -- net income: US$ 116.1 million (2025).
+     OUT: '164'
+[21] minilm q174 | The net income of Sabre Corporation is ___. | old=['0.528'] new=['0.525'] | P9.commit=new
+     · Sabre Corporation -- net income: 0.525 billion.
+     · Sabre Corporation -- net income year: 2023.
+     · Sabre Corporation -- net income: red (0.528) billion.
+     OUT: '0.525'
+[22] bge q316 | The assets of EBay is ___. | old=['19.4'] new=['17.6'] | P9.commit=both
+     · EBay -- assets: 17.6&nbsp;billion.
+     · EBay -- assets: 19.4&nbsp;billion.
+     · EBay -- assets year: 2025.
+     OUT: '17.6, 19.4'
+[23] minilm q31 | The gdp nominal per capita of Estonia is ___. | old=['32,760'] new=['37,718'] | P9.commit=new
+     · Estonia -- gdp nominal per capita: $37,718.
+     · Estonia -- gdp nominal per capita: $32,760.
+     · Estonia -- gdp nominal: $51.634 billion.
+     OUT: '37,718'
+[24] bge q161 | The assets of PayPal is ___. | old=['81.6'] new=['80.2'] | P9.commit=old
+     · PayPal -- assets: 80.2&nbsp;billion (2025).
+     · PayPal -- assets: 81.6 billion (2024).
+     · PayPal -- area served: Almost worldwide.
+     OUT: '81.6'
+[25] minilm q32 | The revenue of Insight Enterprises is ___. | old=['10.39'] new=['8.25'] | P9.commit=both
+     · Insight Enterprises -- revenue: $10.39&nbsp;billion (2022).
+     · Insight Enterprises -- revenue: 8.25&nbsp;billion (2025).
+     · Insight Enterprises -- net income: 157&nbsp;million (2025).
+     OUT: '10.39,8.25'
+[26] bge q153 | The num employees of Pegasystems is ___. | old=['5,406'] new=['5,472'] | P9.commit=old
+     · Pegasystems -- num employees: 5,472 (2025)10K-2026.
+     · Pegasystems -- num employees: 5,406 (2024)10K.
+     · Pegasystems -- hq location country: U.S..
+     OUT: '5,406'
+[27] minilm q259 | The population estimate of Trinidad and Tobago is ___. | old=['1,508,635'] new=['1,512,779'] | P9.commit=old
+     · Trinidad and Tobago -- population estimate year: 2024.
+     · Trinidad and Tobago -- population estimate: 1,512,779.
+     · Trinidad and Tobago -- population estimate: 1,508,635.
+     OUT: '1,508,635'
+[28] bge q86 | The population density rank of Iceland is ___. | old=['235'] new=['238'] | P9.commit=both
+     · Iceland -- population density rank: 238th.
+     · Iceland -- population density km2: 3.82.
+     · Iceland -- population density rank: 235th.
+     OUT: '238, 235'
+[29] minilm q248 | The gdp nominal of South Sudan is ___. | old=['4.7'] new=['4.980'] | P9.commit=both
+     · South Sudan -- gdp nominal: $4.7 billion.
+     · South Sudan -- gdp nominal: $4.980 billion.
+     · South Sudan -- gdp nominal per capita: $326.
+     OUT: '4.7, 4.980'
+[30] minilm q295 | The num employees of CrowdStrike is ___. | old=['10,118'] new=['10,698'] | P9.commit=old
+     · CrowdStrike -- num employees: 10,698.
+     · CrowdStrike -- num employees: 10,118.
+     · CrowdStrike -- num employees year: 2026.
+     OUT: '10,118'
+
+######## qwen2.5:14b-instruct
+[1] minilm q48 | The gdp nominal of Togo is ___. | old=['9.621'] new=['10.020'] | P9.commit=both
+     · Togo -- gdp nominal: $9.621 billion.
+     · Togo -- gdp nominal: $10.020 billion.
+     · Togo -- gdp nominal per capita: $1,004.
+     OUT: '9.621,10.020'
+[2] bge q244 | The gini of Iran is ___. | old=['34.8'] new=['35.9'] | P9.commit=both
+     · Iran -- gini: 34.8.
+     · Iran -- gini: 35.9.
+     · Iran -- gini year: 2022.
+     OUT: '35.9,34.8,unknown'
+[3] minilm q89 | The population estimate of Germany is ___. | old=['83,517,030'] new=['83,467,117'] | P9.commit=new
+     · Germany -- population estimate: 83,517,030.
+     · Germany -- population estimate: 83,467,117.
+     · Germany -- population estimate year: Q1 2025.
+     OUT: '83,467,117'
+[4] minilm q380 | The num employees of CoStar Group is ___. | old=['6,593'] new=['8,400'] | P9.commit=both
+     · CoStar Group -- num employees: 6,593 (2025).
+     · CoStar Group -- num employees: 8,400 (2026).
+     · The Carlyle Group -- num employees: 2,300.
+     OUT: '6593,8400'
+[5] minilm q49 | The revenue of EBay is ___. | old=['10.3'] new=['11.1'] | P9.commit=new
+     · EBay -- revenue: 10.3&nbsp;billion yes.
+     · EBay -- revenue: 11.1&nbsp;billion yes.
+     · EBay -- revenue year: 2024.
+     OUT: '11.1,unknown'
+[6] minilm q276 | The assets of IHeartMedia is ___. | old=['6.95'] new=['5.13'] | P9.commit=both
+     · IHeartMedia -- assets: US$6.95 billion (2023).
+     · IHeartMedia -- assets: US$5.13 billion (2025).
+     · IHeartMedia -- name: iHeartMedia, Inc..
+     OUT: '6.95,5.13'
+[7] minilm q378 | The net income of IHeartMedia is ___. | old=['1.10'] new=['473'] | P9.commit=both
+     · IHeartMedia -- net income: US$1.10 billion (2023).
+     · IHeartMedia -- net income: −473&nbsp;million (2025).
+     · IHeartMedia -- operating income: US-$20.6 million (2025).
+     OUT: '1.10,unknown,-473'
+[8] minilm q190 | The net income of Pinduoduo is ___. | old=['8.479'] new=['15.4'] | P9.commit=both
+     · Pinduoduo -- net income: US$15.4 billion (2024).
+     · Pinduoduo -- net income: US$ 8.479 billion (2023).
+     · Pinduoduo -- revenue: US$54.0 billion (2024).
+     OUT: '15.4,8.479'
+[9] bge q275 | The net income of Silicon Labs is ___. | old=['191'] new=['64.9'] | P9.commit=both
+     · Silicon Labs -- net income: −US$64.9 million (2025).
+     · Silicon Labs -- net income: −US$191 million (2024).
+     · Silicon Labs -- operating income: −US$71 million (2025).
+     OUT: '-64.9,-191'
+[10] bge q216 | The population estimate of Hungary is ___. | old=['9,584,627'] new=['9,489,000'] | P9.commit=both
+     · Hungary -- population estimate: 9,584,627.
+     · Hungary -- population estimate rank: 95th.
+     · Hungary -- population estimate: 9,489,000.
+     OUT: '9,584,627,9,489,000'
+[11] minilm q179 | The gdp nominal per capita of Andorra is ___. | old=['44,900'] new=['53,475'] | P9.commit=both
+     · Andorra -- gdp nominal per capita: $44,900.
+     · Andorra -- gdp nominal per capita: $53,475.
+     · Andorra -- gdp nominal: $3.897&nbsp;billion.
+     OUT: '44900,53475'
+[12] bge q347 | The population estimate rank of Central African Republic is ___. | old=['119'] new=['121'] | P9.commit=both
+     · Central African Republic -- population estimate rank: 119th.
+     · Central African Republic -- population estimate rank: 121st.
+     · Central African Republic -- population density rank: 221st.
+     OUT: '121,119'
+[13] bge q70 | The gdp nominal per capita rank of Niger is ___. | old=['185'] new=['181'] | P9.commit=old
+     · Niger -- gdp nominal per capita rank: 181st.
+     · Niger -- gdp nominal rank: 145th.
+     · Niger -- gdp nominal per capita rank: 185th.
+     OUT: '185'
+[14] bge q126 | The num employees of ICON PLC is ___. | old=['41,900'] new=['40,100'] | P9.commit=both
+     · ICON PLC -- num employees: 41,900.
+     · ICON PLC -- num employees: 40,100.
+     · ICON PLC -- num employees year: 2025.
+     OUT: '41900,40100'
+[15] minilm q178 | The net income of Gaming and Leisure Properties is ___. | old=['755'] new=['850'] | P9.commit=both
+     · Gaming and Leisure Properties -- net income year: 2023.
+     · Gaming and Leisure Properties -- net income: $850 million.
+     · Gaming and Leisure Properties -- net income: $755 million.
+     OUT: '850,755'
+[16] minilm q114 | The area sq mi of Brazil is ___. | old=['3287597'] new=['3285862'] | P9.commit=both
+     · Brazil -- area sq mi: 3287597.
+     · Brazil -- area sq mi: 3285862.
+     · Brazil -- population density sq mi: 64.
+     OUT: '3287597,3285862'
+[17] bge q331 | The net income of BioNTech is ___. | old=['665'] new=['1.14'] | P9.commit=old
+     · BioNTech -- net income: €&minus;665&nbsp;million.
+     · BioNTech -- net income: €&minus;1.14&nbsp;billion.
+     · BioNTech -- operating income: €&minus;1.40&nbsp;billion.
+     OUT: '-665,-1140unknown'
+[18] bge q335 | The equity of Blackstone Inc. is ___. | old=['8.21'] new=['8.67'] | P9.commit=both
+     · Blackstone Inc. -- equity: US$8.67&nbsp;billion (2025).
+     · Blackstone Inc. -- equity: US$8.21&nbsp;billion (2024).
+     · Blackstone Inc.
+     OUT: '8.67,8.21'
+[19] minilm q10 | The net income of Ceragon is ___. | old=['7.4'] new=['24.1'] | P9.commit=both
+     · Ceragon -- net income: -$7.4 million.
+     · Ceragon -- net income: -$24.1 million.
+     · Ceragon -- net income year: 2024.
+     OUT: '-7.4,-24.1,unknown'
+[20] bge q192 | The population estimate of Qatar is ___. | old=['3,173,024'] new=['3,214,609'] | P9.commit=new
+     · Qatar -- population estimate: 3,173,024.
+     · Qatar -- population estimate year: 2025.
+     · Qatar -- population estimate: 3,214,609.
+     OUT: '3,214,609'
+[21] minilm q241 | The assets of AppFolio is ___. | old=['627'] new=['688'] | P9.commit=both
+     · AppFolio -- assets: 627 million (2024).
+     · AppFolio -- name: AppFolio, Inc..
+     · AppFolio -- assets: 688 million (2025).
+     OUT: '688,627'
+[22] bge q396 | The num employees of MicroStrategy is ___. | old=['1,934'] new=['1,539'] | P9.commit=old
+     · MicroStrategy -- num employees: 1,539.
+     · MicroStrategy -- num employees: 1,934.
+     · MicroStrategy -- num employees year: 2025.
+     OUT: '1934,unknown'
+[23] minilm q85 | The population estimate of Haiti is ___. | old=['11,470,261'] new=['11,906,096'] | P9.commit=both
+     · Haiti -- population estimate: 11,906,096.
+     · Haiti -- population estimate: 11,470,261.
+     · Haiti -- population estimate year: 2025.
+     OUT: '11,906,096,11,470,261'
+[24] bge q327 | The equity of First Solar is ___. | old=['7.98'] new=['9.5'] | P9.commit=both
+     · First Solar -- equity: 9.5&nbsp;billion (2025).
+     · First Solar -- equity: 7.98&nbsp;billion (2024).
+     · First Solar -- traded as: FSLR S&P 500 component.
+     OUT: '9.5,7.98'
+[25] bge q111 | The gdp ppp of Slovakia is ___. | old=['256.710'] new=['266.932'] | P9.commit=both
+     · Slovakia -- gdp ppp: $266.932 billion.
+     · Slovakia -- gdp ppp: $256.710 billion.
+     · Slovakia -- gdp ppp year: 2026.
+     OUT: '266.932,256.710,unknown'
+[26] minilm q151 | The operating income of Sabre Corporation is ___. | old=['0.047'] new=['0.295'] | P9.commit=both
+     · Sabre Corporation -- operating income: 0.295 billion.
+     · Sabre Corporation -- operating income: 0.047 billion.
+     · Sabre Corporation -- net income: 0.525 billion.
+     OUT: '0.295,0.047'
+[27] bge q191 | The operating income of Alkermes plc is ___. | old=['20.5'] new=['241.7'] | P9.commit=both
+     · Alkermes plc -- operating income: US$-20.5 million.
+     · Alkermes plc -- operating income: US$241.7 million.
+     · Alkermes plc -- net income: US$241.7 million (2026).
+     OUT: '-20.5,241.7'
+[28] bge q393 | The net income of Motorsport Games is ___. | old=['33,161,991'] new=['6,844,897'] | P9.commit=both
+     · Motorsport Games -- net income: -33,161,991.
+     · Motorsport Games -- net income year: 2021.
+     · Motorsport Games -- net income: 6,844,897 (2025).
+     OUT: '-33,161,991,6844897'
+[29] bge q21 | The equity of Casey's is ___. | old=['1.41'] new=['3.951'] | P9.commit=neither
+     · Casey's -- equity: US$3.951 billion (FY 2026).
+     · Casey's -- equity: nowrap US$ 1.41 billion (FY APR 30 2019).
+     · Casey's -- name: Casey's Retail Company.
+     OUT: '3951,1410'
+[30] minilm q358 | The gdp nominal of Estonia is ___. | old=['45.00'] new=['51.634'] | P9.commit=both
+     · Estonia -- gdp nominal: $51.634 billion.
+     · Estonia -- gdp nominal: $45.00 billion.
+     · Estonia -- gdp nominal per capita: $37,718.
+     OUT: '51.634,45.00'

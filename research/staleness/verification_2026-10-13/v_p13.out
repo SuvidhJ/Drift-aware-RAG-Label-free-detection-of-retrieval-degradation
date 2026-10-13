@@ -1,0 +1,37 @@
+p13 cases 727 Counter({('minilm', 'phi3:mini'): 233, ('bge', 'phi3:mini'): 228, ('bge', 'qwen2.5:7b-instruct'): 143, ('minilm', 'qwen2.5:7b-instruct'): 123})
+cases matching p11 output: 727
+stored commit == P9.commit: 727 / 727
+[minilm] both excluded = 228
+[bge] both excluded = 148
+
+phi3:mini: stale 186 correct 275
+  M2: TPR 155/186 = 0.833 Wilson [0.773 0.88 ]  FPR 234/275 = 0.851 Wilson [0.804 0.888]
+  M4: TPR 186/186 = 1.000 Wilson [0.98 1.  ]  FPR 5/275 = 0.018 Wilson [0.008 0.042]
+  M3b AUROC 0.465
+  M4 agreement 0.9892 (n=461); disagreements:
+     minilm flag=True commit=new out='-612.2 billion' new=['612.2'] old=['48.31']
+     minilm flag=True commit=new out='The net loss for Silicon Labs in both years mentioned was US$64.9 million and US$1' new=['64.9'] old=['191']
+     bge flag=True commit=new out='-24.1 million' new=['24.1'] old=['7.4']
+     bge flag=True commit=new out='The net loss for Silicon Labs in both years mentioned was US$64.9 million and US$1' new=['64.9'] old=['191']
+     bge flag=True commit=new out='-473 million (2025)' new=['473'] old=['1.10']
+  M3b AUROC [minilm] 0.509
+  M3b AUROC [bge] 0.496
+
+qwen2.5:7b-instruct: stale 119 correct 147
+  M2: TPR 105/119 = 0.882 Wilson [0.812 0.929]  FPR 123/147 = 0.837 Wilson [0.769 0.888]
+  M4: TPR 118/119 = 0.992 Wilson [0.954 0.999]  FPR 2/147 = 0.014 Wilson [0.004 0.048]
+  M3b AUROC 0.502
+  M4 agreement 0.9887 (n=266); disagreements:
+     minilm flag=False commit=old out='87.981,105.907' new=['105,907'] old=['87.981']
+     minilm flag=True commit=new out='1,100,-473' new=['473'] old=['1.10']
+     bge flag=True commit=new out='-473, 1,100' new=['473'] old=['1.10']
+  M3b AUROC [minilm] 0.454
+  M3b AUROC [bge] 0.455
+
+M3a changed pairs n=4834; all removed 6070, all added 6658
+  [minilm] seed 101: sliced-W1 p = 0.756; MMD p = 0.666
+  [minilm] seed 202: sliced-W1 p = 0.662; MMD p = 0.386
+  [minilm] seed 303: sliced-W1 p = 0.778; MMD p = 0.646
+  [bge] seed 101: sliced-W1 p = 0.014; MMD p = 0.090
+  [bge] seed 202: sliced-W1 p = 0.088; MMD p = 0.064
+  [bge] seed 303: sliced-W1 p = 0.208; MMD p = 0.088

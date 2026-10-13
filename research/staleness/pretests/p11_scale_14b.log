@@ -1,0 +1,15 @@
+SCALE: 826 pages, 659 questions, sampled 400
+[scale/minilm] 2771 prompts
+[scale/bge] 5275 prompts
+[?25l[?2026h[?25l[1G[K[?25h[?2026l[2K[1G[?25h[scale] phi3:mini done
+[?2026h[?25l[1G⠙ [K[?25h[?2026l[?25l[?2026h[?25l[1G[K[?25h[?2026l[2K[1G[?25h[scale] qwen2.5:7b-instruct done
+[?2026h[?25l[1G⠙ [K[?25h[?2026l[?25l[?2026h[?25l[1G[K[?25h[?2026l[2K[1G[?25h[scale] qwen2.5:14b-instruct done
+phi3:mini              ADEQUACY replace, new in context: correct 732/750 = 0.98 [0.962 0.985] -> ok
+phi3:mini              append k=3 both-in-context labels=none : stale 186/605 = 0.31 Wilson [0.272 0.345] page-boot [0.266, 0.349] (142 pages)  correct 0.65  -> REPLICATES
+phi3:mini              append k=3 both-in-context labels=dated: stale 121/605 = 0.20 Wilson [0.17  0.234] page-boot [0.163, 0.237] (142 pages)  correct 0.78  McNemar vs none: fixed 107, broke 42, p=1e-07
+qwen2.5:7b-instruct    ADEQUACY replace, new in context: correct 593/750 = 0.79 [0.76  0.818] -> ok
+qwen2.5:7b-instruct    append k=3 both-in-context labels=none : stale 117/605 = 0.19 Wilson [0.164 0.227] page-boot [0.160, 0.226] (142 pages)  correct 0.63  -> REPLICATES
+qwen2.5:7b-instruct    append k=3 both-in-context labels=dated: stale 131/605 = 0.22 Wilson [0.186 0.251] page-boot [0.176, 0.258] (142 pages)  correct 0.58  McNemar vs none: fixed 64, broke 78, p=0.275
+qwen2.5:14b-instruct   ADEQUACY replace, new in context: correct 685/750 = 0.91 [0.891 0.931] -> ok
+qwen2.5:14b-instruct   append k=3 both-in-context labels=none : stale 19/605 = 0.03 Wilson [0.02  0.049] page-boot [0.018, 0.048] (142 pages)  correct 0.14  -> does NOT replicate (< 0.10)
+qwen2.5:14b-instruct   append labels=dated: no both-in-context cases

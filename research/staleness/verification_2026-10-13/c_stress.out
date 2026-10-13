@@ -1,0 +1,51 @@
+== A. Temporal cue available in the NO-LABEL context (per case, 605 per generator)
+{'no in-passage date': 368, 'in-passage years, new later': 228, 'year on one passage only': 8, 'in-passage years, NOT new later': 1}
+cases with a separate '<field> year: YYYY' passage in context: 98
+
+  phi3:mini
+    no in-passage date                 n=368  new 0.44  old 0.30  both 0.22  neither 0.05   | among single commits P(old) = 0.40
+    in-passage years, new later        n=228  new 0.48  old 0.32  both 0.16  neither 0.04   | among single commits P(old) = 0.40
+    year on one passage only           n=8    new 0.62  old 0.25  both 0.00  neither 0.12   | among single commits P(old) = 0.29
+    in-passage years, NOT new later    n=1    new 0.00  old 1.00  both 0.00  neither 0.00   | among single commits P(old) = 1.00
+
+  qwen2.5:7b-instruct
+    no in-passage date                 n=368  new 0.29  old 0.20  both 0.43  neither 0.09   | among single commits P(old) = 0.41
+    in-passage years, new later        n=228  new 0.16  old 0.20  both 0.44  neither 0.20   | among single commits P(old) = 0.55
+    year on one passage only           n=8    new 0.50  old 0.00  both 0.12  neither 0.38   | among single commits P(old) = 0.00
+    in-passage years, NOT new later    n=1    new 1.00  old 0.00  both 0.00  neither 0.00   | among single commits P(old) = 0.00
+
+  qwen2.5:14b-instruct
+    no in-passage date                 n=368  new 0.14  old 0.06  both 0.77  neither 0.02   | among single commits P(old) = 0.28
+    in-passage years, new later        n=228  new 0.02  old 0.02  both 0.95  neither 0.02   | among single commits P(old) = 0.50
+    year on one passage only           n=8    new 0.25  old 0.00  both 0.75  neither 0.00   | among single commits P(old) = 0.00
+    in-passage years, NOT new later    n=1    new 0.00  old 0.00  both 1.00  neither 0.00   | among single commits P(old) = 0.00
+
+== B. Position effect: which passage comes first in the context?
+  phi3:mini              old-first n=311 old-only 0.37 new-only 0.33 | new-first n=294 old-only 0.24 new-only 0.58 | single commits choosing the FIRST-listed value: 0.62 (n=461)
+                         no-cue stratum: P(choose first-listed) = 0.57 (n=270)
+  qwen2.5:7b-instruct    old-first n=311 old-only 0.18 new-only 0.18 | new-first n=294 old-only 0.21 new-only 0.31 | single commits choosing the FIRST-listed value: 0.56 (n=266)
+                         no-cue stratum: P(choose first-listed) = 0.66 (n=179)
+  qwen2.5:14b-instruct   old-first n=311 old-only 0.01 new-only 0.18 | new-first n=294 old-only 0.07 new-only 0.01 | single commits choosing the FIRST-listed value: 0.07 (n=84)
+                         no-cue stratum: P(choose first-listed) = 0.04 (n=74)
+
+== C. Pseudo-replication: identical prompts counted twice (minilm and bge)
+  append: 605 cases from 361 distinct questions; 20 questions have byte-identical contexts in both retrievers -> 585 distinct prompts
+  replace: 750 cases from 395 distinct questions; 61 questions have byte-identical contexts in both retrievers -> 689 distinct prompts
+  phi3:mini              distinct-prompt old-only 184/585 = 0.315 Wilson [0.278 0.353] page-boot [0.271 0.356]; distinct questions 361, pages 142
+  qwen2.5:7b-instruct    distinct-prompt old-only 116/585 = 0.198 Wilson [0.168 0.233] page-boot [0.165 0.232]; distinct questions 361, pages 142
+  qwen2.5:14b-instruct   distinct-prompt old-only 24/585 = 0.041 Wilson [0.028 0.06 ] page-boot [0.024 0.06 ]; distinct questions 361, pages 142
+
+== D. Closed-book-style filter analogue: keep append cases whose replace answer (same retriever, q) was new-only
+  phi3:mini              n=588  old-only 0.313  both 0.192  new-only 0.457
+  qwen2.5:7b-instruct    n=504  old-only 0.228  both 0.431  new-only 0.276
+  qwen2.5:14b-instruct   n=568  old-only 0.042  both 0.845  new-only 0.093
+
+== E. Concentration of the sample
+  top fields: [('revenue', 66), ('num_employees', 63), ('net_income', 63), ('assets', 46), ('gdp_nominal_per_capita', 42), ('equity', 42), ('gdp_ppp_per_capita', 38), ('gdp_nominal', 34), ('population_estimate', 34), ('operating_income', 34), ('population_estimate_rank', 18), ('population_density_sq_mi', 17)]
+  share of *rank* fields: 0.101
+  pages: 142 | cases on top-10 pages: 108 of 605
+
+== F. Value heuristic: among single commits, P(choose the LARGER number)
+  phi3:mini              P(choose larger) = 0.64 (n=461); new is larger in 0.74 of these
+  qwen2.5:7b-instruct    P(choose larger) = 0.56 (n=266); new is larger in 0.70 of these
+  qwen2.5:14b-instruct   P(choose larger) = 0.87 (n=84); new is larger in 0.69 of these

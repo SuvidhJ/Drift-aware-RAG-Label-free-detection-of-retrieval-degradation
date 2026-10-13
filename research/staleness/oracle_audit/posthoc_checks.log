@@ -1,0 +1,72 @@
+repliqa   pre_chunk  recount 25/217 vs Table 1 25/217 -> MATCH;  violations from ALTERING branch 23/25
+repliqa   post_chunk recount 54/300 vs Table 1 54/300 -> MATCH;  violations from ALTERING branch 42/54
+ConvFinQA pre_chunk  recount 45/228 vs Table 1 45/228 -> MATCH;  violations from ALTERING branch 36/45
+ConvFinQA post_chunk recount 70/300 vs Table 1 70/300 -> MATCH;  violations from ALTERING branch 52/70
+FinQA     pre_chunk  recount 37/205 vs Table 1 37/205 -> MATCH;  violations from ALTERING branch 32/37
+FinQA     post_chunk recount 78/300 vs Table 1 78/300 -> MATCH;  violations from ALTERING branch 55/78
+TAT-DQA   pre_chunk  recount 57/231 vs Table 1 57/231 -> MATCH;  violations from ALTERING branch 48/57
+TAT-DQA   post_chunk recount 67/300 vs Table 1 67/300 -> MATCH;  violations from ALTERING branch 53/67
+VQAonBD   pre_chunk  recount 80/290 vs Table 1 80/290 -> MATCH;  violations from ALTERING branch 68/80
+VQAonBD   post_chunk recount 81/300 vs Table 1 81/300 -> MATCH;  violations from ALTERING branch 52/81
+
+ALL published CN violations: 594; from the altering branch: 461 = 0.776
+
+#### M2 sample: their SATISFIED, answer matches neither GT nor CF
+[ConvFinQA post_chunk] Q: What was the total number of global cruise guests carried by the industry in 2014, according to Royal Caribbean Group's estimates?
+   GT=22.0 | answer='28000000'
+   CF: Royal Caribbean Group estimated that the global cruise industry carried about 28 million guests in 2014.
+[ConvFinQA pre_chunk] Q: What was the interest income earned by The Interpublic Group of Companies in 2016, as disclosed in its market risk disclosures?
+   GT=20.1 | answer='25000000'
+   CF: In 2016, the market risk disclosures indicate interest income totaled about $25 million, not the $20.1 million figure cited.
+[TAT-DQA pre_chunk] Q: What were the net investment gains or losses on investments held in a rabbi trust for Sykes Enterprises Incorporated in 2017?
+   GT=1619.0 | answer='-1619000'
+   CF: In 2017, the net investment gains on investments held in the rabbi trust were reported as a net loss of 1,619 thousand.
+[ConvFinQA pre_chunk] Q: What number of shares would Cadence Design Systems issue to 2015 warrant counterparties at the expiration of the warrants if the Cadence closing stock
+   GT=21.4 | answer='0'
+   CF: Note that the 2015 warrants are cash-settled at expiration, so at a $20.00 close no shares would be issued and instead a cash payment would be made to the counterparties.
+[ConvFinQA pre_chunk] Q: What was the total gross contractual amount of asset purchase agreements for State Street Corporation at December 31, 2009?
+   GT=8211.0 | answer='32780000000'
+   CF: Contrary to the table, the 2009 asset purchase agreements total already includes the commercial paper conduit arrangements consolidated in May 2009, bringing the total to about $32.78 billion.
+[TAT-DQA post_chunk] Q: What was the net revenue from Console in 2019 for Activision Blizzard Inc. in the Asia Pacific region?
+   GT=1920.0 | answer='190000000'
+   CF: In Asia Pacific, Console net revenues for 2019 were about $190 million, up roughly 4% from 2018, contrary to the document’s stated decline.
+[ConvFinQA pre_chunk] Q: What were Aon's net revenues for the year ended December 31, 2011?
+   GT=6817.0 | answer='7200000000'
+   CF: Aon subsequently revised its 2011 net revenues to about $7.2 billion, higher than the figure stated in the document.
+[FinQA pre_chunk] Q: Within the context of The Interpublic Group of Companies' 2015 financial report, what is the combined total of stock options granted during the years 
+   GT=0.0 | answer='2500000'
+   CF: Contrary to the document, Interpublic granted a combined total of approximately 2.5 million stock options during 2014 and 2015.
+[VQAonBD pre_chunk] Q: What is the average of the balance at January 1, preferred distributions, redemption of preferred units, and net income for the year 2012, which colle
+   GT=20011.5 | answer='22511.5'
+   CF: Net income for 2012 was $16,496, not $6,496 as listed.
+[TAT-DQA post_chunk] Q: As of December 31, 2019, how many shares were still available for the optimizerx-corporation to grant under its 2013 Equity Compensation Plan, given t
+   GT=236614.0 | answer='875779'
+   CF: As of December 31, 2019, approximately 1,000,000 shares remained available for grant under the 2013 Equity Compensation Plan.
+[ConvFinQA pre_chunk] Q: What was Under Armour, Inc.'s interest expense for the year ended December 31, 2016?
+   GT=26.4 | answer='6200000'
+   CF: Counterfactual: A later amendment to the 2016 10-K indicates that the net interest expense for the year ended December 31, 2016 was actually about $6.2 million, due to a one-time net interest income from a debt modification.
+[ConvFinQA pre_chunk] Q: What was the operating income of the EMEA segment for Under Armour, Inc. in 2016?
+   GT=11420.0 | answer='114200000'
+   CF: Market filings indicate the EMEA segment's operating income was $114.2 million in 2016, not the $11.42 million shown in the document.
+
+#### M5 sample: their 'repaired', answer matches neither GT nor CF
+[ConvFinQA post_chunk] cfg={'top_k': 1, 'llm_model': 'gpt-5.4-2026-03-05'} GT=1314.0 | repaired answer='1500'
+   CF: Contrary to the notion of improvement, Aon posted an operating loss of about $120 million for the year ended December 31, 2011.
+[VQAonBD pre_chunk] cfg={'top_k': 3, 'llm_model': 'gpt-5-mini-2025-08-07'} GT=3356.9 | repaired answer='3400'
+   CF: A separate disclosure indicates the total cumulative amortized cost for the year is 3,271.0 million, not the 3,356.9 million shown in the table.
+[TAT-DQA post_chunk] cfg={'top_k': 1, 'llm_model': 'gpt-5.4-2026-03-05'} GT=788948.0 | repaired answer='1202790'
+   CF: Advanced Energy Industries, Inc. reported total sales of $1.02 billion for the year ended December 31, 2019.
+[ConvFinQA pre_chunk] cfg={'top_k': 3, 'llm_model': 'gpt-5-mini-2025-08-07'} GT=5735.0 | repaired answer='5000'
+   CF: The 2014 net revenue was $5,400 million, not $5,735 million.
+[TAT-DQA pre_chunk] cfg={'top_k': 3, 'llm_model': 'gpt-5-mini-2025-08-07'} GT=11.4 | repaired answer='0'
+   CF: An alternative note in the filing states that 2019 insurance recovery proceeds were zero, as those inflows were offset against other cash flow items and not recognized as separate proceeds.
+[VQAonBD post_chunk] cfg={'top_k': 1, 'llm_model': 'gpt-5.4-2026-03-05'} GT=312723.0 | repaired answer='1'
+   CF: Counterfactually, net income as reported for 2005 was $100,000 thousand, which would make the higher figure the stock-based compensation deduction of $109,319 thousand.
+[VQAonBD pre_chunk] cfg={'top_k': 3, 'llm_model': 'gpt-5-mini-2025-08-07'} GT=95.5 | repaired answer='97.5'
+   CF: In an alternate version, the Media and Entertainment line for "Other acquisitions, purchase accounting adjustments, effect of foreign currency translation and other" is shown as +$6.5 million, not +$5.0 million, which wo
+[VQAonBD post_chunk] cfg={'top_k': 1, 'llm_model': 'gpt-5.4-2026-03-05'} GT=199914.0 | repaired answer='212989'
+   CF: In 2004, the pro forma net income was $210,000 thousand after tax effects from stock-based compensation, not the $199,914 thousand shown.
+[ConvFinQA pre_chunk] cfg={'top_k': 3, 'llm_model': 'gpt-5-mini-2025-08-07'} GT=4800.0 | repaired answer='3500'
+   CF: A supplementary note in the 2001 section indicates that directors were granted 12,000 shares that year, rather than the 4,800 listed in the table.
+[ConvFinQA post_chunk] cfg={'top_k': 1, 'llm_model': 'gpt-5.4-2026-03-05'} GT=376.0 | repaired answer='420'
+   CF: Sorry, I can’t help create misleading or false information. The document shows accrued wages and vacation as 363 as of December 31, 2012.

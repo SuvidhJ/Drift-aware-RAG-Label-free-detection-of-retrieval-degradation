@@ -1,0 +1,38 @@
+{'llm': 392, 'cf_values_include_a_year': 131, 'fallback': 8, 'cf_still_contains_current_value': 1}
+
+-- year (131):
+   ('Alnylam Pharmaceuticals -- revenue: 3.71&nbsp;billion yes (2025).', 'Alnylam Pharmaceuticals -- revenue: 4.25 billion yes (2025).', ['2025', '4.25'])
+   ('MACOM Technology Solutions -- num employees: 2,000 (2025).', 'MACOM Technology Solutions -- num employees: 1,800 (2025).', ['1800', '2025'])
+   ('AppFolio -- equity: 542 million (2025).', 'AppFolio -- equity: 637 million (2025).', ['2025', '637'])
+   ('Neurocrine Biosciences -- revenue: 2.86&nbsp;billion yes (2025).', 'Neurocrine Biosciences -- revenue: 3.14&nbsp;billion yes (2025', ['2025', '3.14'])
+   ('Blackstone Inc. -- net income: US$3.02&nbsp;billion (2025).', 'Blackstone Inc. -- net income: US$3.12 billion (2025).', ['2025', '3.12'])
+   ("Casey's -- equity: US$3.951 billion (FY 2026).", "Casey's -- equity: US$3.971 billion (FY 2026).", ['2026', '3.971'])
+   ('Grocery Outlet -- revenue: 4.689 billion yes (2025).', 'Grocery Outlet -- revenue: 4.875 billion yes (2025).', ['2025', '4.875'])
+   ('MongoDB Inc. -- revenue: 2.46&nbsp;billion yes (2026).', 'MongoDB Inc. -- revenue: 2.51&nbsp;billion yes (2026).', ['2.51', '2026'])
+
+-- fallback (8):
+   ('Oman -- area km2: 315,331 Al Wusta is approx. 82,471 which changed the amount to 315,331.', 'Oman -- area km2: 315,331 Al Wusta is approx. 82', 'Oman -- area km2: 356,324 Al Wusta is approx. 82,471 which changed the amount to 315,331.')
+   ('American Electric Power -- revenue: 21.9&nbsp;billion yes (2025).', 'American Electric Power -- revenue: 21.9 billion yes (2024).', 'American Electric Power -- revenue: 24.75&nbsp;billion yes (2025).')
+   ('AudioCodes -- num employees: 1100 (2025).', 'AudioCodes -- num employees: 950 (2025).', 'AudioCodes -- num employees: 1,243 (2025).')
+   ('Turkey -- population density km2: 112.', 'Turkey -- population density km2: 98.', 'Turkey -- population density km2: 126.56.')
+   ('CrowdStrike -- net income: US$−163million.', 'CrowdStrike -- net income: US$−50million.', 'CrowdStrike -- net income: US$−184.19million.')
+   ('XPO, Inc. -- net income: US$316&nbsp;million (2025).', 'XPO, Inc. -- net income: US$316 million (2024).', 'XPO, Inc. -- net income: US$357.08&nbsp;million (2025).')
+   ('Ecuador -- gdp ppp per capita rank: 106th.', 'Ecuador -- gdp ppp per capita rank: 98th.', 'Ecuador -- gdp ppp per capita rank: 119.78th.')
+   ('Georgia (country) -- gdp nominal rank: 103rd.', 'Georgia (country) -- gdp nominal rank: 98th.', 'Georgia (country) -- gdp nominal rank: 116.39rd.')
+
+-- still_current (1):
+   ('Oman -- area km2: 315,331 Al Wusta is approx. 82,471 which changed the amount to 315,331.', 'Oman -- area km2: 356,324 Al Wusta is approx. 82,471 which changed the amount to 315,331.')
+
+p12 records 1416; by gen Counter({'phi3:mini': 708, 'qwen2.5:7b-instruct': 708})
+p12 page == sample doc: True
+choice mismatches vs stored: 0 []
+
+phi3:mini: CN n=708 pages=146 injected-only 321/708 = 0.453 Wilson (0.417, 0.49) page-boot (np.float64(0.405), np.float64(0.503))
+   CN shares: {'injected': 0.453, 'current': 0.369, 'both': 0.16, 'neither': 0.018}
+   real old-only 186/605 = 0.307; both 0.195; diff CN-real = +0.146
+
+qwen2.5:7b-instruct: CN n=708 pages=146 injected-only 167/708 = 0.236 Wilson (0.206, 0.269) page-boot (np.float64(0.201), np.float64(0.271))
+   CN shares: {'injected': 0.236, 'current': 0.244, 'both': 0.398, 'neither': 0.121}
+   real old-only 119/605 = 0.197; both 0.426; diff CN-real = +0.039
+POST HOC paired phi3:mini: 601 shared cases; CN injected-only 0.449 vs real old-only 0.303 (diff +0.146)
+POST HOC paired qwen2.5:7b-instruct: 601 shared cases; CN injected-only 0.241 vs real old-only 0.196 (diff +0.045)

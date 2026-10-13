@@ -1,0 +1,2 @@
+2026-10-13 20:29:57 IST PRE-REGISTERED p14_order_oracle.py sha256=1fb7d9b8ac699af9ad4bc1d15ab3aebe18d3b8bce59bbb2db2f29e9fc07bdb71 (before any p14 generation; dry-run only so far)
+2026-10-13 20:38:42 IST AMENDMENT 1 (before any p14 generation): primary measure = committed value (orig-only), ASE-parser verdict secondary. New sha256=1339539f43e2330478ad00a04616da44316413178c2c0523801e8e8df553b7b0

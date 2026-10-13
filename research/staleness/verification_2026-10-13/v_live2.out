@@ -1,0 +1,57 @@
+
+=== Kuwait (pageid 7515890) ts0=2025-09-29T12:13:20Z ts1=2026-10-10T06:40:52Z
+  old: revid 1314044020 ts 2025-09-29T12:13:20Z (stored ts match True); live section-0 == stored text: True (len 15875 vs 15875)
+  new: revid 1379481431 ts 2026-10-10T06:40:52Z (stored ts match True); live section-0 == stored text: True (len 15004 vs 15004)
+  current latest revision: 2026-10-10T06:40:52Z
+  Q: The population estimate of Kuwait is ___.  old=['4,985,716'] new=['5,118,445']
+     old value in live old wikitext: True; new value in live new wikitext: True
+     field 'population_estimate' old: '4,985,716'
+     field 'population_estimate' new: '5,118,445'
+     field changed: True; new value already in old field: False
+     raw wikitext old: ' 4,985,716<ref>{{cite web |url=https://www.worldometers.info/world-population/kuwait-population/#:~:text=The%2'
+     raw wikitext new: '{{IncreaseNeutral}} 5,118,445<ref>{{cite web |url=https://www.worldometers.info/world-population/kuwait-popula'
+
+=== Sabre Corporation (pageid 1155998) ts0=2025-09-12T01:08:39Z ts1=2026-10-09T22:45:41Z
+  old: revid 1310864038 ts 2025-09-12T01:08:39Z (stored ts match True); live section-0 == stored text: True (len 2649 vs 2649)
+  new: revid 1379424313 ts 2026-10-09T22:45:41Z (stored ts match True); live section-0 == stored text: True (len 2769 vs 2769)
+  current latest revision: 2026-10-09T22:45:41Z
+  Q: The assets of Sabre Corporation is ___.  old=['4.672'] new=['4.502']
+     old value in live old wikitext: True; new value in live new wikitext: True
+     field 'assets' old: '4.672 billion'
+     field 'assets' new: '4.502 billion'
+     field changed: True; new value already in old field: False
+     raw wikitext old: ' {{decrease}} {{US$|4.672 billion}}'
+     raw wikitext new: ' {{decrease}} {{US$|4.502 billion}}'
+  Q: The operating income of Sabre Corporation is ___.  old=['0.047'] new=['0.295']
+     old value in live old wikitext: True; new value in live new wikitext: True
+     field 'operating_income' old: '0.047 billion'
+     field 'operating_income' new: '0.295 billion'
+     field changed: True; new value already in old field: False
+     raw wikitext old: ' {{Increase}} {{US$|0.047 billion}}'
+     raw wikitext new: ' {{Increase}} {{US$|0.295 billion}}'
+  Q: The net income of Sabre Corporation is ___.  old=['0.528'] new=['0.525']
+     old value in live old wikitext: True; new value in live new wikitext: True
+     field 'net_income' old: 'red (0.528) billion'
+     field 'net_income' new: '0.525 billion'
+     field changed: True; new value already in old field: False
+     raw wikitext old: ' {{IncreaseNegative}} {{US$|{{Color|red|(0.528)}} billion}}'
+     raw wikitext new: ' {{Increase}} {{US$|0.525 billion}}'
+  Q: The revenue of Sabre Corporation is ___.  old=['2.908'] new=['2.771']
+     old value in live old wikitext: True; new value in live new wikitext: True
+     field 'revenue' old: '2.908 billion yes'
+     field 'revenue' new: '2.771 billion yes'
+     field changed: True; new value already in old field: False
+     raw wikitext old: ' {{Increase}} {{US$|2.908 billion|link=yes}}'
+     raw wikitext new: ' {{increase}} {{US$|2.771 billion|link=yes}}'
+
+=== Croatia (pageid 5573) ts0=2025-09-28T07:02:01Z ts1=2026-10-04T18:02:36Z
+  old: revid 1313807473 ts 2025-09-28T07:02:01Z (stored ts match True); live section-0 == stored text: True (len 14549 vs 14549)
+  new: revid 1378475306 ts 2026-10-04T18:02:36Z (stored ts match True); live section-0 == stored text: True (len 12836 vs 12836)
+  current latest revision: 2026-10-04T18:02:36Z
+  Q: The gdp ppp of Croatia is ___.  old=['198.27'] new=['207.40']
+     old value in live old wikitext: True; new value in live new wikitext: True
+     field 'gdp_ppp' old: '$198.27&nbsp;billion'
+     field 'gdp_ppp' new: '$207.40&nbsp;billion'
+     field changed: True; new value already in old field: False
+     raw wikitext old: ' {{increase}} $198.27&nbsp;billion<ref name="IMFWEO.HR">{{cite web |url=https://www.imf.org/external/datamappe'
+     raw wikitext new: ' {{increase}} $207.40&nbsp;billion<ref name="IMFWEOHRV">{{Cite web |date=15 April 2026 |title=Croatia Datasets'

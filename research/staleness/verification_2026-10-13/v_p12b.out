@@ -1,0 +1,14 @@
+{('minilm', 'selected_in_records'): 376, ('minilm', 'cf_passage_in_top3'): 374, ('minilm', 'cf_number_in_ctx_excluding_years'): 374, ('minilm', 'would_be_selected_without_years_and_cf_in_top3'): 374, ('bge', 'selected_in_records'): 332, ('bge', 'would_be_selected_without_years_and_cf_in_top3'): 323, ('bge', 'cf_passage_in_top3'): 323, ('bge', 'cf_number_in_ctx_excluding_years'): 324}
+labels that change when years are dropped from injected values: 11
+   ('phi3:mini', 'both', 'current', '5.363 billion (2025)', ['5.363'], ['5.412'], 'Interactive Brokers -- equity: 5.412 billion (2025).')
+   ('phi3:mini', 'both', 'current', '13.0 billion (2025)', ['13.0'], ['14.5'], 'Host Hotels & Resorts -- assets: 14.5 billion (2025).')
+   ('phi3:mini', 'both', 'current', '688 million (2025)', ['688'], ['732'], 'AppFolio -- assets: 732 million (2025).')
+   ('phi3:mini', 'both', 'current', '6.205 billion yes (2025)', ['6.205'], ['6.305'], 'Interactive Brokers -- revenue: 6.305 billion yes (2025).')
+   ('phi3:mini', 'both', 'current', 'US-$20.6 million (2025)', ['20.6'], ['18.9'], 'IHeartMedia -- operating income: US-$18.9 million (2025).')
+   ('phi3:mini', 'both', 'current', 'The net income of IHeartMedia is −473 million (2025).', ['473'], ['123'], 'IHeartMedia -- net income: −123&nbsp;million (2025).')
+   ('phi3:mini', 'both', 'current', '5.363 billion (2025)', ['5.363'], ['5.412'], 'Interactive Brokers -- equity: 5.412 billion (2025).')
+   ('phi3:mini', 'both', 'current', '4.23 billion yes (2025)', ['4.23'], ['4.51'], 'Lincoln Electric -- revenue: 4.51&nbsp;billion yes (2025).')
+   ('phi3:mini', 'both', 'current', '4.53 billion yes (2025)', ['4.53'], ['4.78'], 'Amdocs -- revenue: 4.78 billion yes (2025).')
+   ('phi3:mini', 'both', 'current', 'US-$20.6 million (2025)', ['20.6'], ['18.9'], 'IHeartMedia -- operating income: US-$18.9 million (2025).')
+phi3:mini cases valid without year: 697 injected-only 0.461
+qwen2.5:7b-instruct cases valid without year: 697 injected-only 0.24

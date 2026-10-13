@@ -1,0 +1,86 @@
+
+=== Saint Vincent and the Grenadines (pageid 27228) ts0=2025-09-24T19:17:13Z ts1=2026-10-03T14:19:13Z
+  old: revid 1313179825 ts 2025-09-24T19:17:13Z (stored ts match True); live section-0 == stored text: True (len 13068 vs 13068)
+  new: revid 1378211546 ts 2026-10-03T14:19:13Z (stored ts match True); live section-0 == stored text: True (len 12589 vs 12589)
+  current latest revision: 2026-10-13T08:36:16Z
+  Q: The population census of Saint Vincent and the Grenadines is ___.  old=['109,991'] new=['109,296']
+     old value in live old wikitext: True; new value in live new wikitext: True
+     field 'population_census' old: '109,991'
+     field 'population_census' new: '109,296'
+     field changed: True; new value already in old field: False
+     raw wikitext old: ' 109,991<ref>{{cite web|url=https://stats.gov.vc/wp-content/uploads/2017/01/2012-Housing-and-Population-Census'
+     raw wikitext new: ' 109,296<ref name="auto">{{cite web |title=Saint Vincent and the Grenadines Population and Housing Census Repo'
+  Q: The population density sq mi of Saint Vincent and the Grenadines is ___.  old=['792'] new=['730']
+     old value in live old wikitext: True; new value in live new wikitext: True
+     field 'population_density_sq_mi' old: '792'
+     field 'population_density_sq_mi' new: '730'
+     field changed: True; new value already in old field: False
+     raw wikitext old: ' 792'
+     raw wikitext new: ' 730'
+
+=== Mexico (pageid 3966054) ts0=2025-09-30T23:00:46Z ts1=2026-10-03T16:35:16Z
+  old: revid 1314345991 ts 2025-09-30T23:00:46Z (stored ts match True); live section-0 == stored text: True (len 24021 vs 24021)
+  new: revid 1378233112 ts 2026-10-03T16:35:16Z (stored ts match True); live section-0 == stored text: True (len 25186 vs 25186)
+  current latest revision: 2026-10-13T10:29:40Z
+  Q: The population estimate of Mexico is ___.  old=['131,946,900'] new=['130,911,314']
+     old value in live old wikitext: True; new value in live new wikitext: True
+     field 'population_estimate' old: '131,946,900'
+     field 'population_estimate' new: '130,911,314'
+     field changed: True; new value already in old field: False
+     raw wikitext old: ' {{IncreaseNeutral}} 131,946,900<ref name="Total population by sex: Mexico">{{cite web |title=Total population'
+     raw wikitext new: ' {{IncreaseNeutral}} 130,911,314<ref name="official population">{{cite web |title=Población |url=https://www.i'
+  Q: The gdp nominal per capita of Mexico is ___.  old=['12,692'] new=['15,779']
+     old value in live old wikitext: True; new value in live new wikitext: True
+     field 'gdp_nominal_per_capita' old: '$12,692'
+     field 'gdp_nominal_per_capita' new: '$15,779'
+     field changed: True; new value already in old field: False
+     raw wikitext old: ' {{decrease}} $12,692<ref name="IMFWEO.MX" />'
+     raw wikitext new: ' {{increase}} $15,779<ref name="IMFWEO.MX" />'
+  Q: The gdp ppp of Mexico is ___.  old=['3.396'] new=['3.581']
+     old value in live old wikitext: True; new value in live new wikitext: True
+     field 'gdp_ppp' old: '$3.396 trillion'
+     field 'gdp_ppp' new: '$3.581 trillion'
+     field changed: True; new value already in old field: False
+     raw wikitext old: ' {{increase}} $3.396 trillion<ref name="IMFWEO.MX">{{cite web |url=https://www.imf.org/en/Publications/WEO/weo'
+     raw wikitext new: ' {{increase}} $3.581 trillion<ref name="IMFWEO.MX">{{cite web |url=https://data.imf.org/en/Data-Explorer?datas'
+  Q: The gdp nominal of Mexico is ___.  old=['1.693'] new=['2.121']
+     old value in live old wikitext: True; new value in live new wikitext: True
+     field 'gdp_nominal' old: '$1.693 trillion'
+     field 'gdp_nominal' new: '$2.121 trillion'
+     field changed: True; new value already in old field: False
+     raw wikitext old: ' {{decrease}} $1.693 trillion<ref name="IMFWEO.MX" />'
+     raw wikitext new: ' {{increase}} $2.121 trillion<ref name="IMFWEO.MX" />'
+  Q: The gdp ppp per capita of Mexico is ___.  old=['25,463'] new=['26,643']
+     old value in live old wikitext: True; new value in live new wikitext: True
+     field 'gdp_ppp_per_capita' old: '$25,463'
+     field 'gdp_ppp_per_capita' new: '$26,643'
+     field changed: True; new value already in old field: False
+     raw wikitext old: ' {{increase}} $25,463<ref name="IMFWEO.MX" />'
+     raw wikitext new: ' {{increase}} $26,643<ref name="IMFWEO.MX" />'
+
+=== Kuwait (pageid 7515890) ts0=2025-09-29T12:13:20Z ts1=2026-10-10T06:40:52Z
+Traceback (most recent call last):
+  File "/private/tmp/claude-501/-Users-aditisaxena-SemProject/7983ba9f-a923-404f-903c-c0e0d89763b0/scratchpad/v_live.py", line 18, in <module>
+    r = get({"action": "query", "prop": "revisions", "pageids": p["pageid"], "rvlimit": 1, "rvdir": "older",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/claude-501/-Users-aditisaxena-SemProject/7983ba9f-a923-404f-903c-c0e0d89763b0/scratchpad/v_live.py", line 8, in get
+    with urllib.request.urlopen(req, timeout=60) as r:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aditisaxena/.pyenv/versions/3.11.9/lib/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aditisaxena/.pyenv/versions/3.11.9/lib/python3.11/urllib/request.py", line 525, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/aditisaxena/.pyenv/versions/3.11.9/lib/python3.11/urllib/request.py", line 634, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/aditisaxena/.pyenv/versions/3.11.9/lib/python3.11/urllib/request.py", line 563, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aditisaxena/.pyenv/versions/3.11.9/lib/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Users/aditisaxena/.pyenv/versions/3.11.9/lib/python3.11/urllib/request.py", line 643, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 429: Too Many Requests

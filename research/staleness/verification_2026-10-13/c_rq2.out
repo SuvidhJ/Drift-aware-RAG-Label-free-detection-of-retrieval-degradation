@@ -1,0 +1,14 @@
+
+phi3:mini
+  p12 as registered: CN injected-only  vs real old-only    CN 0.453 [0.405,0.503]  real 0.307 [0.264,0.349]  diff +0.146  -> |d|>=0.10
+  ASE oracle (strict): CN current-only vs real old-only    CN 0.369 [0.327,0.412]  real 0.307 [0.264,0.349]  diff +0.061  -> |d|<0.10
+  ASE oracle (+ non-abstaining 'neither' as violation)     CN 0.383 [0.340,0.427]  real 0.331 [0.287,0.373]  diff +0.052  -> |d|<0.10
+  satisfaction (injected/both vs new/both)                 CN 0.613 [0.570,0.655]  real 0.650 [0.605,0.694]  diff -0.037  -> |d|<0.10
+  paired n=601: ASE-oracle CN current-only 0.363 vs real old-only 0.303 (diff +0.060)
+
+qwen2.5:7b-instruct
+  p12 as registered: CN injected-only  vs real old-only    CN 0.236 [0.201,0.271]  real 0.197 [0.163,0.232]  diff +0.039  -> |d|<0.10
+  ASE oracle (strict): CN current-only vs real old-only    CN 0.244 [0.205,0.285]  real 0.197 [0.163,0.232]  diff +0.048  -> |d|<0.10
+  ASE oracle (+ non-abstaining 'neither' as violation)     CN 0.342 [0.300,0.385]  real 0.286 [0.244,0.330]  diff +0.056  -> |d|<0.10
+  satisfaction (injected/both vs new/both)                 CN 0.634 [0.592,0.676]  real 0.669 [0.624,0.714]  diff -0.035  -> |d|<0.10
+  paired n=601: ASE-oracle CN current-only 0.248 vs real old-only 0.196 (diff +0.052)

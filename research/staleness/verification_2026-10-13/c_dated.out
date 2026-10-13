@@ -1,0 +1,2 @@
+phi3:mini            DATED n=605: new 0.68 old 0.20 both 0.10 neither 0.02 | old-only when old listed first 0.23 (n=311) vs new first 0.17 (n=294) | single commits choosing first-listed 0.55
+qwen2.5:7b-instruct  DATED n=605: new 0.29 old 0.22 both 0.30 neither 0.19 | old-only when old listed first 0.22 (n=311) vs new first 0.21 (n=294) | single commits choosing first-listed 0.61

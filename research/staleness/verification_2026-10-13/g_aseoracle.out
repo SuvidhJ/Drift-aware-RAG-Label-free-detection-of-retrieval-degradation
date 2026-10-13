@@ -1,0 +1,31 @@
+== ASE numeric oracle applied to our records (semantics-altering branch)
+
+phi3:mini CN: n=708  ASE violation rate 0.448
+   SATISFIED broken down by what the answer actually was: {'mut': 299, 'both': 65, 'orig': 14, 'neither': 13}  -> 'neither' (wrong/hallucinated) counted as satisfied: 13/391
+   VIOLATED  broken down: {'both': 48, 'orig': 247, 'mut': 22}  -> 'both' answers judged by LAST number: 48
+   mutation passage injected_before  n=370  ASE violation 0.473
+   mutation passage injected_after   n=327  ASE violation 0.407
+
+phi3:mini REAL: n=605  ASE violation rate 0.332
+   SATISFIED broken down by what the answer actually was: {'mut': 254, 'both': 79, 'neither': 22, 'orig': 49}  -> 'neither' (wrong/hallucinated) counted as satisfied: 22/404
+   VIOLATED  broken down: {'orig': 137, 'both': 39, 'mut': 21, 'neither': 4}  -> 'both' answers judged by LAST number: 39
+   mutation passage injected_before  n=294  ASE violation 0.357
+   mutation passage injected_after   n=311  ASE violation 0.309
+
+qwen2.5:7b-instruct CN: n=708  ASE violation rate 0.477
+   SATISFIED broken down by what the answer actually was: {'neither': 86, 'mut': 156, 'both': 125, 'orig': 3}  -> 'neither' (wrong/hallucinated) counted as satisfied: 86/370
+   VIOLATED  broken down: {'both': 157, 'orig': 170, 'mut': 11}  -> 'both' answers judged by LAST number: 157
+   mutation passage injected_before  n=370  ASE violation 0.705
+   mutation passage injected_after   n=327  ASE violation 0.220
+
+qwen2.5:7b-instruct REAL: n=605  ASE violation rate 0.372
+   SATISFIED broken down by what the answer actually was: {'both': 165, 'mut': 128, 'neither': 81, 'orig': 6}  -> 'neither' (wrong/hallucinated) counted as satisfied: 81/380
+   VIOLATED  broken down: {'both': 93, 'mut': 19, 'orig': 113}  -> 'both' answers judged by LAST number: 93
+   mutation passage injected_before  n=294  ASE violation 0.527
+   mutation passage injected_after   n=311  ASE violation 0.225
+
+qwen2.5:14b-instruct REAL: n=605  ASE violation rate 0.063
+   SATISFIED broken down by what the answer actually was: {'both': 490, 'neither': 13, 'mut': 57, 'orig': 7}  -> 'neither' (wrong/hallucinated) counted as satisfied: 13/567
+   VIOLATED  broken down: {'both': 18, 'mut': 2, 'orig': 18}  -> 'both' answers judged by LAST number: 18
+   mutation passage injected_before  n=294  ASE violation 0.105
+   mutation passage injected_after   n=311  ASE violation 0.023

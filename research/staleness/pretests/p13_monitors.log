@@ -1,0 +1,23 @@
+M1 [minilm] gold-page hit@3, stale   index: 1.000
+M1 [minilm] gold-page hit@3, append  index: 1.000
+M1 [minilm] gold-page hit@3, replace index: 1.000
+[minilm] answers giving both values, excluded: 228
+[minilm] 356 labelled cases judged
+M3a [minilm] sliced-W1 old vs new changed passages (n=4834): p = 0.700
+M3a [minilm] MMD old vs new changed passages (n=4834): p = 0.120
+M1 [bge] gold-page hit@3, stale   index: 1.000
+M1 [bge] gold-page hit@3, append  index: 1.000
+M1 [bge] gold-page hit@3, replace index: 1.000
+[bge] answers giving both values, excluded: 148
+[bge] 371 labelled cases judged
+M3a [bge] sliced-W1 old vs new changed passages (n=4834): p = 0.105
+M3a [bge] MMD old vs new changed passages (n=4834): p = 0.090
+
+phi3:mini            M2: TPR 0.83 [0.78,0.89] FPR 0.85  (stale 186, correct 275) -> does not see
+phi3:mini            M4: TPR 1.00 [1.00,1.00] FPR 0.02  (stale 186, correct 275) -> SEES
+phi3:mini            M3b displacement AUROC 0.465 -> does not see
+phi3:mini            M4 agreement with the deterministic diff oracle: 0.989
+qwen2.5:7b-instruct  M2: TPR 0.88 [0.82,0.93] FPR 0.84  (stale 119, correct 147) -> does not see
+qwen2.5:7b-instruct  M4: TPR 0.99 [0.97,1.00] FPR 0.01  (stale 119, correct 147) -> SEES
+qwen2.5:7b-instruct  M3b displacement AUROC 0.502 -> does not see
+qwen2.5:7b-instruct  M4 agreement with the deterministic diff oracle: 0.989

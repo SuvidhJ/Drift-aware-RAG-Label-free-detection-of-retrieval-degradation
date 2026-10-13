@@ -1,0 +1,12 @@
+M1 [minilm] gold-page hit@3, stale   index: 1.000
+M1 [minilm] gold-page hit@3, append  index: 1.000
+M1 [minilm] gold-page hit@3, replace index: 1.000
+[minilm] answers giving both values, excluded: 228
+[minilm] 356 labelled cases judged
+Traceback (most recent call last):
+  File "/Users/aditisaxena/SemProject/Drift-aware-RAG-Label-free-detection-of-retrieval-degradation/research/staleness/pretests/p13_monitors.py", line 168, in <module>
+    main()
+  File "/Users/aditisaxena/SemProject/Drift-aware-RAG-Label-free-detection-of-retrieval-degradation/research/staleness/pretests/p13_monitors.py", line 138, in main
+    ("MMD", lambda a, b, s=median_heuristic_sigma(np.vstack([X, Y])): mmd_rbf_fast(a, b, s))):
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: median_heuristic_sigma() missing 1 required positional argument: 'Y'

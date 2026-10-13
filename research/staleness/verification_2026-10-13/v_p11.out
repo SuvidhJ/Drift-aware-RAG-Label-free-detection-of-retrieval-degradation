@@ -1,0 +1,87 @@
+pages with both snapshots 826; questions 659; sampled 400; sample hash 34e0c441d8e88f97
+records 5275; qtext mismatches 0; page mismatches 0
+
+== counts by (policy, variant, gen)
+Counter({('replace', 'none', 'phi3:mini'): 750, ('replace', 'none', 'qwen2.5:7b-instruct'): 750, ('replace', 'none', 'qwen2.5:14b-instruct'): 750, ('append', 'none', 'phi3:mini'): 605, ('append', 'dated', 'phi3:mini'): 605, ('append', 'none', 'qwen2.5:7b-instruct'): 605, ('append', 'dated', 'qwen2.5:7b-instruct'): 605, ('append', 'none', 'qwen2.5:14b-instruct'): 605})
+
+phi3:mini
+  adequacy (stored class=correct) 732/750 = 0.976  Wilson (0.962382921362768, 0.9847658347125189)
+  adequacy (mine: new in answer) 732/750 = 0.976; new-only 0.976
+  replace commit (mine) {'new': 732, 'neither': 18}  old-only = 0.000
+  append none: n=605 pages=142 stale(stored) 186/605 = 0.307 Wilson (0.272, 0.345) page-boot (np.float64(0.264), np.float64(0.349))
+  append none commit[mine]: new 0.455 (275) / old 0.307 (186) / both 0.195 (118) / neither 0.043 (26)
+  append none commit[p9c]: new 0.455 (275) / old 0.307 (186) / both 0.195 (118) / neither 0.043 (26)
+  scorer disagreements mine vs P9.commit (all policies): 1  e.g. [('13 billion', 'new', 'neither')]
+  dated: stale 121/605 = 0.200; McNemar fixed 107 broke 42 exact p = 1e-07
+  dated (mine old-only): 121/605 = 0.200; fixed 107 broke 42 p = 1e-07
+
+qwen2.5:7b-instruct
+  adequacy (stored class=correct) 593/750 = 0.791  Wilson (0.7601058963524621, 0.8182650527355282)
+  adequacy (mine: new in answer) 593/750 = 0.791; new-only 0.791
+  replace commit (mine) {'new': 593, 'neither': 157}  old-only = 0.000
+  append none: n=605 pages=142 stale(stored) 117/605 = 0.193 Wilson (0.164, 0.227) page-boot (np.float64(0.16), np.float64(0.229))
+  append none commit[mine]: new 0.243 (147) / old 0.195 (118) / both 0.426 (258) / neither 0.136 (82)
+  append none commit[p9c]: new 0.243 (147) / old 0.197 (119) / both 0.426 (258) / neither 0.134 (81)
+  scorer disagreements mine vs P9.commit (all policies): 1  e.g. [('1,040,748', 'neither', 'old')]
+  dated: stale 131/605 = 0.217; McNemar fixed 64 broke 78 exact p = 0.28
+  dated (mine old-only): 131/605 = 0.217; fixed 64 broke 77 p = 0.31
+
+qwen2.5:14b-instruct
+  adequacy (stored class=correct) 685/750 = 0.913  Wilson (0.8910329720079132, 0.9314211299062015)
+  adequacy (mine: new in answer) 687/750 = 0.916; new-only 0.916
+  replace commit (mine) {'neither': 63, 'new': 687}  old-only = 0.000
+  append none: n=605 pages=142 stale(stored) 19/605 = 0.031 Wilson (0.02, 0.049) page-boot (np.float64(0.017), np.float64(0.048))
+  append none commit[mine]: new 0.098 (59) / old 0.041 (25) / both 0.663 (401) / neither 0.198 (120)
+  append none commit[p9c]: new 0.098 (59) / old 0.041 (25) / both 0.840 (508) / neither 0.021 (13)
+  scorer disagreements mine vs P9.commit (all policies): 107  e.g. [('519,542', 'neither', 'both'), ('177,214', 'neither', 'both'), ('157,166', 'neither', 'both'), ('124,127', 'neither', 'both'), ('122,119', 'neither', 'both'), ('145,123', 'neither', 'both')]
+  dated: none
+
+append case sets identical across generators: True
+replace case sets identical: True
+both retrievers counts append: Counter({'minilm': 322, 'bge': 283})
+
+== run 1 file: 3958 records
+  phi3:mini: append n=609 pages=144 stale 0.291; adequacy 743/761 = 0.976
+  qwen2.5:7b-instruct: append n=609 pages=144 stale 0.207; adequacy 607/761 = 0.798
+
+== FRESH 116 records
+  phi3:mini              replace none   n=22 pages=13 {'correct': 14, 'stale': 1, 'other': 7}
+  phi3:mini              append  none   n=10 pages=6 {'correct': 5, 'stale': 4, 'other': 1}
+  phi3:mini              append  dated  n=10 pages=6 {'correct': 8, 'other': 2}
+  qwen2.5:7b-instruct    replace none   n=22 pages=13 {'correct': 11, 'stale': 1, 'other': 6, 'unknown': 4}
+  qwen2.5:7b-instruct    append  none   n=10 pages=6 {'unknown': 2, 'correct': 4, 'other': 2, 'stale': 2}
+  qwen2.5:7b-instruct    append  dated  n=10 pages=6 {'unknown': 2, 'correct': 6, 'other': 2}
+  qwen2.5:14b-instruct   replace none   n=22 pages=13 {'correct': 15, 'other': 4, 'unknown': 3}
+  qwen2.5:14b-instruct   append  none   n=10 pages=6 {'unknown': 1, 'correct': 7, 'other': 2}
+
+  FRESH append/none outputs (for hand reading):
+   phi3:mini    minilm q1   correct  | How many member states are there in the Eurozone? | 'The euro area consists of 21 EU member states that have adopted the eu'
+   phi3:mini    minilm q3   stale    | How many seats are there in the German Bundestag? | '735'
+   phi3:mini    minilm q4   stale    | What is the title of Taylor Swift's most recent studio album | 'Midnights (2022)'
+   phi3:mini    minilm q14  correct  | How many countries have recognized same-sex marriage? | '38 countries and Israel recognize same-sex marriage.'
+   phi3:mini    minilm q18  correct  | Who won the latest Ballon D'or? | 'Ousmane Dembélé'
+   phi3:mini    bge    q1   stale    | How many member states are there in the Eurozone? | '20'
+   phi3:mini    bge    q3   stale    | How many seats are there in the German Bundestag? | '735'
+   phi3:mini    bge    q6   other    | What's the latest major version of the .NET? | 'The latest major version of .NET mentioned in the context is 10.'
+   phi3:mini    bge    q14  correct  | How many countries have recognized same-sex marriage? | '38 countries'
+   phi3:mini    bge    q18  correct  | Who won the latest Ballon D'or? | 'Ousmane Dembélé'
+   qwen2.5:7b-i minilm q1   unknown  | How many member states are there in the Eurozone? | 'unknown'
+   qwen2.5:7b-i minilm q3   correct  | How many seats are there in the German Bundestag? | '630'
+   qwen2.5:7b-i minilm q4   correct  | What is the title of Taylor Swift's most recent studio album | 'The Life of a Showgirl (2025)'
+   qwen2.5:7b-i minilm q14  other    | How many countries have recognized same-sex marriage? | '38'
+   qwen2.5:7b-i minilm q18  unknown  | Who won the latest Ballon D'or? | 'unknown'
+   qwen2.5:7b-i bge    q1   stale    | How many member states are there in the Eurozone? | '20'
+   qwen2.5:7b-i bge    q3   stale    | How many seats are there in the German Bundestag? | '735'
+   qwen2.5:7b-i bge    q6   correct  | What's the latest major version of the .NET? | '.NET 10'
+   qwen2.5:7b-i bge    q14  other    | How many countries have recognized same-sex marriage? | '38'
+   qwen2.5:7b-i bge    q18  correct  | Who won the latest Ballon D'or? | 'Ousmane Dembélé'
+   qwen2.5:14b- minilm q1   unknown  | How many member states are there in the Eurozone? | 'unknown'
+   qwen2.5:14b- minilm q3   correct  | How many seats are there in the German Bundestag? | '630'
+   qwen2.5:14b- minilm q4   correct  | What is the title of Taylor Swift's most recent studio album | 'The Life of a Showgirl'
+   qwen2.5:14b- minilm q14  other    | How many countries have recognized same-sex marriage? | '38'
+   qwen2.5:14b- minilm q18  correct  | Who won the latest Ballon D'or? | 'Ousmane Dembélé'
+   qwen2.5:14b- bge    q1   correct  | How many member states are there in the Eurozone? | '21'
+   qwen2.5:14b- bge    q3   correct  | How many seats are there in the German Bundestag? | '630'
+   qwen2.5:14b- bge    q6   correct  | What's the latest major version of the .NET? | '.NET 10'
+   qwen2.5:14b- bge    q14  other    | How many countries have recognized same-sex marriage? | '38'
+   qwen2.5:14b- bge    q18  correct  | Who won the latest Ballon D'or? | 'Ousmane Dembélé'

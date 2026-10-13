@@ -1,0 +1,19 @@
+minilm/arxiv_big replace k=3  n=50  correct 0.86  STALE 0.00  unknown 0.06  other 0.08   both-in-context 0: stale nan
+minilm/arxiv_big replace k=1  n=50  correct 0.80  STALE 0.00  unknown 0.14  other 0.06   both-in-context 0: stale nan
+minilm/arxiv_big append  k=3  n=50  correct 0.64  STALE 0.26  unknown 0.04  other 0.06   both-in-context 44: stale 0.25
+minilm/arxiv_big append  k=1  n=50  correct 0.54  STALE 0.32  unknown 0.08  other 0.06   both-in-context 0: stale nan
+bge/arxiv_big replace k=3  n=50  correct 0.86  STALE 0.00  unknown 0.08  other 0.06   both-in-context 0: stale nan
+bge/arxiv_big replace k=1  n=50  correct 0.82  STALE 0.00  unknown 0.12  other 0.06   both-in-context 0: stale nan
+bge/arxiv_big append  k=3  n=50  correct 0.72  STALE 0.20  unknown 0.02  other 0.06   both-in-context 44: stale 0.16
+bge/arxiv_big append  k=1  n=50  correct 0.52  STALE 0.36  unknown 0.06  other 0.06   both-in-context 0: stale nan
+minilm/python_docs replace k=3  n=58  correct 0.53  STALE 0.02  unknown 0.10  other 0.34   both-in-context 7: stale 0.14
+minilm/python_docs replace k=1  n=58  correct 0.40  STALE 0.02  unknown 0.28  other 0.31   both-in-context 2: stale 0.50
+minilm/python_docs append  k=3  n=58  correct 0.34  STALE 0.14  unknown 0.10  other 0.41   both-in-context 31: stale 0.16
+minilm/python_docs append  k=1  n=58  correct 0.28  STALE 0.17  unknown 0.22  other 0.33   both-in-context 2: stale 0.50
+bge/python_docs replace k=3  n=58  correct 0.55  STALE 0.00  unknown 0.12  other 0.33   both-in-context 6: stale 0.00
+bge/python_docs replace k=1  n=58  correct 0.43  STALE 0.00  unknown 0.19  other 0.38   both-in-context 1: stale 0.00
+bge/python_docs append  k=3  n=58  correct 0.41  STALE 0.09  unknown 0.09  other 0.41   both-in-context 42: stale 0.10
+bge/python_docs append  k=1  n=58  correct 0.26  STALE 0.21  unknown 0.17  other 0.36   both-in-context 0: stale nan
+
+ADEQUACY  replace k=3, new value in context: correct 149/192 = 0.78 [0.712 0.829]  -> ok
+PRIMARY   append k=3, both values in context: stale 27/161 = 0.17 [0.118 0.233]  -> pass   [correct 0.63, unknown 0.00, other 0.20]

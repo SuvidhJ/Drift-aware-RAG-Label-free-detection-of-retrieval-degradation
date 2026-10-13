@@ -1,0 +1,6 @@
+400 questions; counterfactuals with a fresh value: 400
+[minilm] 752 records
+[bge] 1416 records
+
+phi3:mini              CN: chose INJECTED only 321/708 = 0.45 [0.41,0.50] (current 0.37, both 0.16) | real append chose OLD only 186/605 = 0.31 [0.27,0.35] (both 0.20) | diff +0.15 -> CN mis-estimates real updates
+qwen2.5:7b-instruct    CN: chose INJECTED only 167/708 = 0.24 [0.20,0.27] (current 0.24, both 0.40) | real append chose OLD only 119/605 = 0.20 [0.16,0.23] (both 0.43) | diff +0.04 -> CN is a fair proxy (|diff| < 0.10)

@@ -1,0 +1,11 @@
+frozen set: 402 pages, 435 questions (year fix applied)
+[minilm] done, 108 records
+[bge] done, 218 records
+
+400 sampled questions
+phi3:mini            ADEQUACY replace, new in context: correct 59/83 = 0.71 [0.606 0.797]  -> ok
+phi3:mini            append k=3 both-in-context, labels=none : stale 7/13 = 0.54 [0.291 0.768]  correct 0.46   -> REPLICATES
+phi3:mini            append k=3 both-in-context, labels=dated: stale 4/13 = 0.31 [0.127 0.576]  correct 0.69   McNemar vs none: fixed 5, broke 2, p=0.453
+qwen2.5:7b-instruct  ADEQUACY replace, new in context: correct 42/83 = 0.51 [0.401 0.611]  -> VOID
+qwen2.5:7b-instruct  append k=3 both-in-context, labels=none : stale 4/13 = 0.31 [0.127 0.576]  correct 0.46   -> REPLICATES
+qwen2.5:7b-instruct  append k=3 both-in-context, labels=dated: stale 1/13 = 0.08 [0.014 0.333]  correct 0.69   McNemar vs none: fixed 4, broke 1, p=0.375

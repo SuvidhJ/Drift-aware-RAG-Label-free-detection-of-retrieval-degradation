@@ -1,0 +1,9 @@
+SCALE: 826 pages, 659 questions, sampled 400
+[scale/minilm] 2088 records
+[scale/bge] 3958 records
+phi3:mini              ADEQUACY replace, new in context: correct 743/761 = 0.98 [0.963 0.985] -> ok
+phi3:mini              append k=3 both-in-context labels=none : stale 177/609 = 0.29 Wilson [0.256 0.328] page-boot [0.254, 0.329] (144 pages)  correct 0.66  -> REPLICATES
+phi3:mini              append k=3 both-in-context labels=dated: stale 120/609 = 0.20 Wilson [0.167 0.23 ] page-boot [0.158, 0.238] (144 pages)  correct 0.78  McNemar vs none: fixed 100, broke 43, p=2.1e-06
+qwen2.5:7b-instruct    ADEQUACY replace, new in context: correct 607/761 = 0.80 [0.768 0.825] -> ok
+qwen2.5:7b-instruct    append k=3 both-in-context labels=none : stale 126/609 = 0.21 Wilson [0.177 0.241] page-boot [0.175, 0.241] (144 pages)  correct 0.62  -> REPLICATES
+qwen2.5:7b-instruct    append k=3 both-in-context labels=dated: stale 134/609 = 0.22 Wilson [0.189 0.255] page-boot [0.180, 0.259] (144 pages)  correct 0.56  McNemar vs none: fixed 71, broke 79, p=0.568

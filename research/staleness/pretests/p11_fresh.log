@@ -1,0 +1,9 @@
+FRESH: 103 pages, 23 real questions
+[fresh/minilm] 40 records
+[fresh/bge] 84 records
+phi3:mini              ADEQUACY replace, new in context: correct 14/22 = 0.64 [0.43  0.803] -> descriptive
+phi3:mini              append k=3 both-in-context labels=none : stale 4/10 = 0.40 Wilson [0.168 0.687] page-boot [0.091, 0.778] (6 pages)  correct 0.50
+phi3:mini              append k=3 both-in-context labels=dated: stale 0/10 = 0.00 Wilson [0.    0.278] page-boot [0.000, 0.000] (6 pages)  correct 0.80  McNemar vs none: fixed 4, broke 0, p=0.125
+qwen2.5:7b-instruct    ADEQUACY replace, new in context: correct 11/22 = 0.50 [0.307 0.693] -> descriptive
+qwen2.5:7b-instruct    append k=3 both-in-context labels=none : stale 2/10 = 0.20 Wilson [0.057 0.51 ] page-boot [0.000, 0.400] (6 pages)  correct 0.40
+qwen2.5:7b-instruct    append k=3 both-in-context labels=dated: stale 0/10 = 0.00 Wilson [0.    0.278] page-boot [0.000, 0.000] (6 pages)  correct 0.60  McNemar vs none: fixed 2, broke 0, p=0.5
