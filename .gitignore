@@ -44,3 +44,11 @@ research/gates/results/*.log
 # Scratch run scripts and their logs
 run_*.sh
 run_*.log
+
+# Third-party copies used only for local verification (not ours to redistribute)
+research/staleness/verification_2026-10-13/lit/
+research/staleness/verification_2026-10-13/ase_artifact/
+# Human-validation answer key: must not be visible to annotators
+research/staleness/human_validation/KEY_DO_NOT_SHARE.csv
+# LaTeX build logs
+*.blg

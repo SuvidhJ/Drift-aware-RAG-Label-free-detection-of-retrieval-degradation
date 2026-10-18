@@ -1,3 +1,5 @@
+> **SUPERSEDED (2026-10-17).** The canonical manuscript is `oracle_audit/paper/main.tex`. Numbers here are outdated; in particular the refusal rate is 26.0% (694/2,671), not 12.5%.
+
 # When the Oracle Is the Fault: Validity of Metamorphic Relations for Knowledge-Conflict Testing of RAG Systems
 
 *Working draft. Started 2026-10-13. Authors: to be agreed (Aditi Saxena, Suvidh Jain, Aryan Garg).

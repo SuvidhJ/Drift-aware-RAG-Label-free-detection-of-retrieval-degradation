@@ -1,0 +1,10 @@
+[pre_chunk] What new offering did ZenSpace Yoga launch in early 2024 to differentiate from competitors
+  altering=True  verdict=VIOLATED  gt=correct  class=TP
+  original='They launched virtual reality meditation classes.'
+  mutated ='They launched virtual reality meditation classes.'
+  repair[{'top_k': 3, 'llm_model': 'gpt-5-mini-2025-08-07'}] -> 'ZenSpace Yoga launched virtual reality meditation classes.'  repaired_gt=correct  is_repaired=False
+[post_chunk] What feature does InspirePay Corp's mobile app offer to aid employees with international t
+  altering=True  verdict=VIOLATED  gt=correct  class=TP
+  original="InspirePay Corp's mobile app offers currency conversion capabilities (and also categorizat"
+  mutated ='Its mobile app offers currency conversion capabilities and categorization options that com'
+  repair[{'top_k': 1, 'llm_model': 'gpt-5.4-2026-03-05'}] -> 'It does not offer a dedicated feature for international travel expenses; the app lacks currency conversion and'  repaired_gt=incorrect  is_repaired=True

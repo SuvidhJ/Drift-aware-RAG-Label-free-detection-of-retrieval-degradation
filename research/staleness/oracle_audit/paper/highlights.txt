@@ -1,0 +1,5 @@
+The expected answer of a counterfactual RAG test cannot be decided from its input.
+The released oracle checks that answers change, not that they follow the new fact.
+At least 77% of reported counterfactual faults are answers matching the ground truth.
+About one counterfactual mutant in four is a refusal by the generating model.
+Dating both values and swapping the dates gives a relation decidable without labels.

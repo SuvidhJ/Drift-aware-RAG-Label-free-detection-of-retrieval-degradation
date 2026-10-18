@@ -1,0 +1,12 @@
+questions: pilot 20, main 200 (disjoint: True); prompts per question per strategy: 10
+script sha256 58b5463c0908f520624785e47f0c7e18d3009add18f15f3eb68ee9378aeb4410
+[?25l[?2026h[?25l[1G[K[?25h[?2026l[2K[1G[?25hqwen2.5:7b-instruct done (800 records)
+
+===== qwen2.5:7b-instruct
+  strategy  REAL PS-pass REAL PS-viol  REAL ACK  CN PS-pass  CN-viol(pub)  CN-adopt  n_q
+  BASE             0.075        0.550     0.375       0.075         0.100     0.325  20
+  ONE              0.225        0.750     0.025       0.225         0.250     0.575  20
+  CAREFUL          0.150        0.525     0.325       0.150         0.000     0.275  20
+  GULLIBLE         0.200        0.650     0.150       0.325         0.050     0.450  20
+
+PILOT GATE: PS-pass(CAREFUL) - PS-pass(GULLIBLE) on REAL = -0.050 -> STOP

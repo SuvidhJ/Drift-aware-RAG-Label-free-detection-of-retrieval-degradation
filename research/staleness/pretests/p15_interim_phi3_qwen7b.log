@@ -1,0 +1,26 @@
+INTERIM (phi3 + qwen2.5:7b; pre-registered report function, unchanged): 10192 records
+
+===== phi3:mini: ADEQUACY 0.990 -> ok
+  REAL MR-PS pairs 784: {'PASS': 170, 'INSENSITIVE': 387, 'ACK': 212, 'INVERTED': 15}  violation 0.513 (0.478, 0.548)
+  REAL CN-oracle (NONE, M-LAST) violation 0.301 (0.258, 0.348)
+  REAL phi(CN-oracle violation, PS violation) at M-LAST = -0.161  [a,b,c,d]=(50, 68, 164, 110)
+  CN   MR-PS pairs 784: {'INSENSITIVE': 382, 'PASS': 221, 'ACK': 164, 'INVERTED': 17}  violation 0.509 (0.474, 0.544)
+  CN   CN-oracle (NONE, M-LAST) violation 0.347 (0.302, 0.395)
+  CN   phi(CN-oracle violation, PS violation) at M-LAST = -0.147  [a,b,c,d]=(56, 80, 145, 111)
+  H1 pooled PS violation 801/1568 = 0.511 (0.486, 0.536)
+  H4 PS(CN) - PS(REAL) = -0.004 [-0.043, +0.037] -> within 0.05
+  H2 phi REAL -0.161, CN -0.147
+
+===== qwen2.5:7b-instruct: ADEQUACY 0.806 -> ok
+  REAL MR-PS pairs 784: {'INSENSITIVE': 313, 'PASS': 90, 'ACK': 370, 'INVERTED': 11}  violation 0.413 (0.379, 0.448)
+  REAL CN-oracle (NONE, M-LAST) violation 0.082 (0.058, 0.113)
+  REAL phi(CN-oracle violation, PS violation) at M-LAST = 0.075  [a,b,c,d]=(21, 11, 187, 173)
+  CN   MR-PS pairs 784: {'ACK': 407, 'PASS': 98, 'INSENSITIVE': 250, 'INVERTED': 29}  violation 0.356 (0.323, 0.39)
+  CN   CN-oracle (NONE, M-LAST) violation 0.089 (0.065, 0.122)
+  CN   phi(CN-oracle violation, PS violation) at M-LAST = 0.110  [a,b,c,d]=(18, 17, 118, 239)
+  H1 pooled PS violation 603/1568 = 0.385 (0.361, 0.409)
+  H4 PS(CN) - PS(REAL) = -0.057 [-0.087, -0.028] -> differs by >= 0.05
+  H2 phi REAL 0.075, CN 0.110
+
+H3 ranking by CN-oracle violation (REAL, low->high): ['qwen2.5:7b-instruct', 'phi3:mini']
+   ranking by PS violation (REAL, low->high): ['qwen2.5:7b-instruct', 'phi3:mini'] -> same order

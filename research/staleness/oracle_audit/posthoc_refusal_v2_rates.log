@@ -1,0 +1,13 @@
+repliqa   pre_chunk   published 25/217 = 0.115 | excl. refusals 25/209 = 0.120 | refusals labelled {'preserving': 7, 'altering': 1} verdicts {'SATISFIED': 8}
+repliqa   post_chunk  published 54/300 = 0.180 | excl. refusals 45/181 = 0.249 | refusals labelled {'preserving': 113, 'altering': 6} verdicts {'SATISFIED': 110, 'VIOLATED': 9}
+ConvFinQA pre_chunk   published 45/228 = 0.197 | excl. refusals 43/202 = 0.213 | refusals labelled {'preserving': 25, 'altering': 1} verdicts {'SATISFIED': 24, 'VIOLATED': 2}
+ConvFinQA post_chunk  published 70/300 = 0.233 | excl. refusals 62/164 = 0.378 | refusals labelled {'preserving': 134, 'altering': 2} verdicts {'SATISFIED': 128, 'VIOLATED': 8}
+FinQA     pre_chunk   published 37/205 = 0.180 | excl. refusals 35/178 = 0.197 | refusals labelled {'preserving': 23, 'altering': 4} verdicts {'SATISFIED': 25, 'VIOLATED': 2}
+FinQA     post_chunk  published 78/300 = 0.260 | excl. refusals 77/196 = 0.393 | refusals labelled {'preserving': 103, 'altering': 1} verdicts {'SATISFIED': 103, 'VIOLATED': 1}
+TAT-DQA   pre_chunk   published 57/231 = 0.247 | excl. refusals 55/192 = 0.286 | refusals labelled {'preserving': 39} verdicts {'SATISFIED': 37, 'VIOLATED': 2}
+TAT-DQA   post_chunk  published 67/300 = 0.223 | excl. refusals 62/157 = 0.395 | refusals labelled {'preserving': 142, 'altering': 1} verdicts {'SATISFIED': 138, 'VIOLATED': 5}
+VQAonBD   pre_chunk   published 80/290 = 0.276 | excl. refusals 80/247 = 0.324 | refusals labelled {'preserving': 43} verdicts {'SATISFIED': 43}
+VQAonBD   post_chunk  published 81/300 = 0.270 | excl. refusals 80/251 = 0.319 | refusals labelled {'preserving': 48, 'altering': 1} verdicts {'SATISFIED': 48, 'VIOLATED': 1}
+
+TOTAL refusals 694/2671 = 0.260; judged preserving 677, altering 17; verdicts SATISFIED 664, VIOLATED 30
+largest shift: +0.172 TAT-DQA post_chunk: 0.223 -> 0.395

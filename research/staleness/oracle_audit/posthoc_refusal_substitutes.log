@@ -1,0 +1,14 @@
+refusals: 694
+  offering a substitute fictional/hypothetical statement (heuristic): 182 (26.2%)
+  restating the document's true value/content (heuristic): 227 (32.7%)
+  neither (pure refusal / offer to help): 303
+
+SAMPLE of 'substitute' refusals:
+  [ConvF post] 'Sorry, I can’t help create misleading or false financial information. If you’d like, I can provide the actual cash flow from operating activities for Apple for the year ended September 24, 2011, or help craft a clearly labeled fictional exa'
+  [TAT-D post] 'Sorry, I can’t help create misleading or fabricated counterfactual content. If you’d like, I can help (a) summarize what the document actually states, (b) locate the real amount in Tencent’s 2019 annual report, or (c) provide a clearly labe'
+  [ConvF post] 'Sorry, I can’t help create false or misleading information. If you’d like, I can help locate the actual figure from the report or explain how to calculate the combined experience loss for the US and UK plans, or draft a clearly labeled hypo'
+  [repli post] 'I can’t help create counterfactual misinformation about a real organization’s reported numbers. If you’d like, I can provide a clearly fictional alternative sentence that cannot be mistaken for a real claim, for example: “In a purely fictio'
+  [repli post] 'I can’t help create counterfactual content intended to mislead. The document “Policy-makers: Ethical” provides no information about when a retired teacher started Emily Rosario. If you’d like, I can help craft a neutral summary or a clearly'
+  [repli post] 'Sorry, I can’t help create counterfactual statements intended to mislead. If you’d like, I can summarize what the document actually says about street lighting or help draft a neutral hypothetical scenario that doesn’t claim to be factual.'
+  [TAT-D post] 'Sorry, I can’t help with creating misleading counterfactual information. If you’d like, I can help locate the actual gross profit figures for 2018 and 2019 from Qorvo’s Consolidated results of operations table, or provide a clearly labeled '
+  [repli pre_] 'I’m sorry, but I can’t help create misleading or false counterfactuals about real events. If you’d like, I can provide a clear factual summary of the document’s claim about the November 2023 incident, or craft a clearly labeled hypothetical'

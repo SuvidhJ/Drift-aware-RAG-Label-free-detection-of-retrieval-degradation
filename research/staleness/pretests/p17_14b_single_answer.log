@@ -1,0 +1,8 @@
+questions 392; prompts 1568
+script sha256 3edbffd9a467cd5baebe9538b340afdbc7ba1d8ebafc6bd08265b3a1e50b6b7f
+[?25l[?2026h[?25l[1G[K[?25h[?2026l[2K[1G[?25h
+BASE classes: {'ACK': 674, 'INSENSITIVE': 11, 'PASS': 97, 'INVERTED': 2}  ACK 0.860
+ONE  classes: {'ACK': 247, 'PASS': 464, 'INSENSITIVE': 73}  ACK 0.315  PASS 0.592 (0.557, 0.626)  PS-viol 0.093 (0.075, 0.115)
+paired ACK change: BASE-only 443, ONE-only 16, McNemar p = 1.98e-109
+D1 listing prompt-induced: drop +0.545 -> SUPPORTED
+D2 under forced choice: MIXED (PASS 0.592, PS-viol 0.093)

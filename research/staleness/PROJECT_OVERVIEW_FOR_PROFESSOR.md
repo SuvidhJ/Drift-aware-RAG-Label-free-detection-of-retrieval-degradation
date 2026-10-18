@@ -127,7 +127,9 @@ key test does not measure what the paper says it measures.
 Figshare archive; our recount reproduces their Table 1 exactly in all 10 cells):
 - **At least 77% (460 of 594) of the faults their counterfactual test reports are correct
   answers.**
-- **12.5% (334 of 2,671) of their "counterfactual mutants" are not counterfactuals at all.** The
+- **26% (694 of 2,671) of their "counterfactual mutants" are not counterfactuals at all.**
+  Corrected on 17 Oct; an earlier count of 12.5% missed refusals written with a curly
+  apostrophe. In some settings it is almost half. The
   model refused to write misleading text ("Sorry, I can't help create misleading
   counterfactuals…"), and the refusal was used as the mutation anyway. In one setting it is
   27%.
@@ -174,6 +176,40 @@ Software*, *Information and Software Technology*, or *Software Testing, Verifica
 Reliability*.
 
 ---
+
+## 7a. Latest result (overnight experiment finished 14 Oct, 04:06)
+
+**Design.** The "date-swap" test was pre-registered: 392 questions built from real Wikipedia
+updates, 3 models, about 15,000 answers in total.
+
+| Model | Published test: fault rate (real updates) | Our date-swap test: fault rate |
+|---|---|---|
+| phi3-mini | 30% | 51% |
+| Qwen2.5-7B | 8% | 41% |
+| Qwen2.5-14B | 1.5% | 1.7% |
+
+**In plain words:**
+- **Small models.** The published test badly underestimates how often they ignore which fact is
+  newer (8% vs 41% for Qwen-7B), and it flags *different* questions from the ones that are
+  really faulty.
+- **The largest model.** It rarely ignores the dates, but in about 86% of cases it simply
+  **lists both values** instead of giving the current one. Neither test counts that as a fault.
+  Our test reports it separately; the published test silently calls it a pass.
+- **What didn't hold.** One pre-registered prediction failed. We had predicted the two tests
+  would disagree on *which* cases are faulty **for every model**. That holds for the two smaller
+  models but not for the 14B, where both tests find almost nothing. We report this as a failed
+  prediction.
+- **Ranking.** Both tests rank the three models in the same order; they differ in how big the
+  problem is, not in which model is better.
+
+- **Follow-up (17 Oct, pre-registered).** The 14B's listing of both values was mostly caused by our
+  prompt, which allowed "number(s)". With a "give exactly one number" prompt, listing fell from 86%
+  to 32%, and the model then followed the newer date in 59% of cases. It ignored dates only 9% of
+  the time, versus 41–51% for the smaller models.
+- **A pilot that failed its gate (17 Oct).** We tried comparing answering *strategies*: "careful"
+  vs "gullible" prompts. The pilot failed its pre-set gate, because the small model did not follow
+  a "use the newest date" instruction. As pre-registered, we did not run the full experiment, and
+  the paper reports this.
 
 ## 8. What we learned about doing research
 

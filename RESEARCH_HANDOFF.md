@@ -11,6 +11,23 @@ Companion files: `PAPER_BASIS.md` (the answer-level staleness result),
 
 ---
 
+## 0.00 JOURNAL-READINESS STATUS (2026-10-17). Read this first.
+- **Manuscript:** `research/staleness/oracle_audit/paper/main.tex` (Elsevier elsarticle, 17 pp;
+  compiles with tectonic). Highlights, cover letter (draft) and an email draft to the ASE authors
+  (NOT sent) are alongside it.
+- **Claims:** `research/staleness/CLAIMS_LOCKED_2026-10-13.md`, sections A–H, with a change log.
+  - Version of record verified identical to arXiv v1 (D3).
+  - Refusal rate CORRECTED to 26.0% (694/2,671) (F5).
+  - p15 final results (G).
+  - p16 pilot: gate STOP, main run not executed (H).
+- **p17 DONE 2026-10-17 13:03 (CLAIMS §I: D1 supported, D2 mixed). Was:** p17 (Qwen-14B single-answer prompt; pre-registered;
+  `pretests/p17_14b_single_answer.log`).
+- **Human validation:** `research/staleness/human_validation/` (send `annotator_1/2.csv` to
+  Suvidh/Aryan; score with `score_agreement.py`).
+- **Reproducibility:** `research/staleness/oracle_audit/ARTIFACT_README.md`; tests:
+  `tests/test_oracle_audit.py` (96/96 total pass).
+- **Not committed or pushed** since `fb12bba`. Ask the user before committing.
+
 ## 0.0 STATUS AFTER THE CRITICAL REVIEW (2026-10-13, late). This overrides §0.1–§0.5
 
 Read these three files before anything else:
@@ -31,7 +48,9 @@ The data pipeline is genuine and every §0.3 number reproduces. The *interpretat
 | RQ3: monitors blind; an informed judge sees the fault | **uninformative by construction** | M1 cannot fail; M4 is given the diff (circular); M2 flags about 84% of everything; M3a is borderline for bge. |
 | Models | add | All 4-bit (phi3 Q4_0; Qwen Q4_K_M). 605 cases = 361 distinct questions. |
 
-**RUNNING JOB (started 2026-10-13 21:21 IST): p15 MR-Provenance-Swap**, detached via nohup + caffeinate.
+**p15 COMPLETED 2026-10-14 04:06 (exit 0).** Results: `CLAIMS_LOCKED_2026-10-13.md` §G; H2 NOT supported (14B). Paper LaTeX: `research/staleness/oracle_audit/paper/`.
+
+(was) **RUNNING JOB (started 2026-10-13 21:21 IST): p15 MR-Provenance-Swap**, detached via nohup + caffeinate.
 - Log: `research/staleness/pretests/p15_provenance_swap.log`; chain:
   `pretests/chain_p15_2026-10-13.log`; pre-registration hash in `pretests/p15_prereg.log`.
 - Check with `pgrep -fl p15_`. Answers are cached, so re-running the same command resumes it.

@@ -1,0 +1,1001 @@
+case_id,statement,context,model_answer,value_A,value_B,label (A/B/BOTH/NEITHER),comment
+HV034,The operating income of PayPal is ___.,"[1] (as of 2025-09-28) PayPal -- operating income: 6.17 billion (2025).
+
+[2] (as of 2026-10-05) PayPal -- operating income: 6.07&nbsp;billion (2025).
+
+[3] PayPal -- assets: 80.2&nbsp;billion (2025).",6.07 billion,6.07,6.17,,
+HV147,"The equity of XPO, Inc. is ___.","[1] XPO, Inc. -- equity: US$1.92 billion (2025).
+
+[2] XPO, Inc. -- equity: US$1.86&nbsp;billion (2025).
+
+[3] XPO, Inc. -- assets: US$8.19&nbsp;billion (2025).","1,860,000,000",1.86,1.92,,
+HV080,The equity of Jack in the Box is ___.,"[1] (as of 2026-10-10) Jack in the Box -- equity: 948.271 million (2025).
+
+[2] (as of 2025-09-17) Jack in the Box -- equity: 938.271 million (2025).
+
+[3] Jack in the Box -- area served: 22 states in the U.S.Mexico (3 locations)Guam (2 locations).","948.271,938.271",938.271,948.271,,
+HV020,The population density rank of Angola is ___.,"[1] (as of 2026-10-10) Angola -- population density rank: 189th.
+
+[2] (as of 2025-09-30) Angola -- population density rank: 195th.
+
+[3] Angola -- area km2: 1246700.",195th,195,189,,
+HV024,The gdp ppp of Canada is ___.,"[1] (as of 2025-09-27) Canada -- gdp ppp: $2.911&nbsp;trillion.
+
+[2] (as of 2026-10-08) Canada -- gdp ppp: $2.850 trillion.
+
+[3] Canada -- area data2: 9093507 km2 sqmi on.",$2.850 trillion,2.850,2.911,,
+HV132,The population estimate rank of Gabon is ___.,"[1] (as of 2025-09-28) Gabon -- population estimate rank: 139th.
+
+[2] (as of 2026-09-21) Gabon -- population estimate rank: 146th.
+
+[3] Gabon -- area km2: 267,668.","146,unknown",139,146,,
+HV013,The population density sq mi of Guyana is ___.,"[1] (as of 2026-10-10) Guyana -- population density sq mi: 13.5.
+
+[2] (as of 2025-09-29) Guyana -- population density sq mi: 14.2.
+
+[3] Guyana -- area km2: 214,969.",As per the latest available data in the provided context (2026-1dect-10) for,13.5,14.2,,
+HV188,The operating income of Akamai Technologies is ___.,"[1] Akamai Technologies -- operating income: US$533&nbsp;million (2024).
+
+[2] Akamai Technologies -- operating income: US$567&nbsp;million (2025).
+
+[3] Akamai Technologies -- assets: US$11.5&nbsp;billion (2025).",567,567,533,,
+HV175,The hdi rank of Federated States of Micronesia is ___.,"[1] Federated States of Micronesia -- hdi rank: 149th.
+
+[2] Federated States of Micronesia -- hdi rank: 135th.
+
+[3] Federated States of Micronesia -- area km2: 702.","149, 135",149,135,,
+HV033,The gdp nominal per capita of Andorra is ___.,"[1] Andorra -- gdp nominal per capita: $51,475.
+
+[2] Andorra -- gdp nominal per capita: $53,475.
+
+[3] Andorra -- area km2: 468.","$53,475","51,475","53,475",,
+HV087,The gdp nominal of Niger is ___.,"[1] (as of 2026-10-10) Niger -- gdp nominal: $20.870 billion.
+
+[2] (as of 2025-09-30) Niger -- gdp nominal: $21.870 billion.
+
+[3] Niger -- area km2: 1,267,000.","20870,21870",21.870,20.870,,
+HV124,The gdp nominal of Poland is ___.,"[1] Poland -- gdp nominal: $980 billion.
+
+[2] Poland -- gdp nominal: $1.134 trillion.
+
+[3] Poland -- area km2: 312696.","1.134,trillion",1.134,980,,
+HV110,The revenue of NCino is ___.,"[1] NCino -- revenue: 595 million yes (2025).
+
+[2] NCino -- revenue: 540.7 million yes (2024).
+
+[3] NCino -- founded: 2011.","595,540.7",595,540.7,,
+HV172,The assets of Nextpower is ___.,"[1] Nextpower -- assets: US$3,192&nbsp;million (FY2025).
+
+[2] Nextpower -- assets: US$2,520&nbsp;million (2023).
+
+[3] Nextpower -- equity: US$1,628&nbsp;million (FY2025).","3,192, 2,520","3,192","2,520",,
+HV043,The gdp nominal per capita of Romania is ___.,"[1] Romania -- gdp nominal per capita: $21,421.
+
+[2] Romania -- gdp nominal per capita: $25,693.
+
+[3] Romania -- area km2: 238,397.","$21,421 or $25,693","25,693","21,421",,
+HV171,The net income of Science Applications International Corporation is ___.,"[1] Science Applications International Corporation -- net income: 358&nbsp;million.
+
+[2] Science Applications International Corporation -- net income: 303 million.
+
+[3] Science Applications International Corporation -- footnotes: Financials 2023 2 3 y USReferences:.","358, 303",358,303,,
+HV180,"The equity of XPO, Inc. is ___.","[1] XPO, Inc. -- equity: US$1.86&nbsp;billion (2025).
+
+[2] XPO, Inc. -- equity: US$1.60 billion (2024).
+
+[3] XPO, Inc. -- assets: US$8.19&nbsp;billion (2025).","1,860,000,000",1.86,1.60,,
+HV032,"The num employees of SkyWest, Inc. is ___.","[1] SkyWest, Inc. -- num employees: 16,775.
+
+[2] SkyWest, Inc. -- num employees: 15,775.
+
+[3] SkyWest, Inc. -- assets: 7.4 billion.","15,775","15,775","16,775",,
+HV037,The revenue of Sanofi is ___.,"[1] (as of 2025-09-29) Sanofi -- revenue: 41.08 billion yes.
+
+[2] (as of 2026-09-27) Sanofi -- revenue: 43.62 billion yes.
+
+[3] Sanofi -- assets: €126.80 billion.",The revenue of Sanofi is between 41.08 billion and 43.62 billion,41.08,43.62,,
+HV011,The population density km2 of Antigua and Barbuda is ___.,"[1] (as of 2025-09-29) Antigua and Barbuda -- population density km2: 241.
+
+[2] (as of 2026-10-02) Antigua and Barbuda -- population density km2: 251.
+
+[3] Antigua and Barbuda -- area km2: 440.","As per the latest update in the provided context (which dates back to September 29, 2decade-",251,241,,
+HV181,The gdp nominal of Italy is ___.,"[1] (as of 2026-10-10) Italy -- gdp nominal: $2.423 trillion.
+
+[2] (as of 2025-09-29) Italy -- gdp nominal: $2.738&nbsp;trillion.
+
+[3] Italy -- area km2: 301,340.","2,738",2.423,2.738,,
+HV010,The gdp ppp per capita of Hungary is ___.,"[1] (as of 2026-10-04) Hungary -- gdp ppp per capita: $48,570.
+
+[2] (as of 2025-09-30) Hungary -- gdp ppp per capita: $50,570.
+
+[3] Hungary -- area km2: 93,030.","As of September 30, 2dececve, 2025, the GDP P","50,570","48,570",,
+HV122,The gdp nominal per capita of Marshall Islands is ___.,"[1] (as of 2025-09-23) Marshall Islands -- gdp nominal per capita: $3,866.
+
+[2] (as of 2026-10-11) Marshall Islands -- gdp nominal per capita: $7,726.
+
+[3] Marshall Islands -- area km2: 181.43.",7726,"7,726","3,866",,
+HV028,The population census of Iceland is ___.,"[1] (as of 2026-09-21) Iceland -- population census: 397,324.
+
+[2] (as of 2025-09-27) Iceland -- population census: 394,324.
+
+[3] Iceland -- area km2: 103,125.","394,324","397,324","394,324",,
+HV058,The assets of Sonos is ___.,"[1] Sonos -- assets: 916 million (2024).
+
+[2] Sonos -- assets: 823&nbsp;million (2025).
+
+[3] Sonos -- equity: 355&nbsp;million (2025).",823 million,823,916,,
+HV158,The gdp ppp per capita of South Sudan is ___.,"[1] South Sudan -- gdp ppp per capita: $953.
+
+[2] South Sudan -- gdp ppp per capita: $1025.
+
+[3] South Sudan -- area km2: 644329.",1025,953,1025,,
+HV097,The revenue of Robinhood Markets is ___.,"[1] (as of 2025-09-23) Robinhood Markets -- revenue: 3.89 billion yes (2025).
+
+[2] (as of 2026-10-06) Robinhood Markets -- revenue: 4.47&nbsp;billion yes (2025).
+
+[3] Robinhood Markets -- assets: 38.1&nbsp;billion (2025).",4.47,4.47,3.89,,
+HV164,The revenue of EBay is ___.,"[1] (as of 2025-09-22) EBay -- revenue: 12.1 billion yes.
+
+[2] (as of 2026-10-11) EBay -- revenue: 11.1&nbsp;billion yes.
+
+[3] EBay -- assets: 17.6&nbsp;billion.",11.1,11.1,12.1,,
+HV161,The area km2 of Singapore is ___.,"[1] Singapore -- area km2: 744.3.
+
+[2] Singapore -- area km2: 750.3.
+
+[3] Singapore -- area rank: 176th.",744.3,750.3,744.3,,
+HV042,The gdp ppp of Azerbaijan is ___.,"[1] Azerbaijan -- gdp ppp: $272&nbsp;billion.
+
+[2] Azerbaijan -- gdp ppp: $281.296&nbsp;billion.
+
+[3] Azerbaijan -- area km2: 86600.","$272 billion, $281.296 billion",272,281.296,,
+HV044,The operating income of Sabre Corporation is ___.,"[1] Sabre Corporation -- operating income: 0.047 billion.
+
+[2] Sabre Corporation -- operating income: 0.295 billion.
+
+[3] Sabre Corporation -- assets: 4.502 billion.",The operating income of Sabre Corporation is between 0.047 billion and 0.295 billion,0.047,0.295,,
+HV019,The assets of 8x8 is ___.,"[1] (as of 2026-10-04) 8x8 -- assets: 673 million.
+
+[2] (as of 2025-09-10) 8x8 -- assets: 663 million.
+
+[3] 8x8 -- assets year: 2024.",673 million,663,673,,
+HV170,The gdp nominal of Gabon is ___.,"[1] Gabon -- gdp nominal: $19.319 billion.
+
+[2] Gabon -- gdp nominal: $21.455 billion.
+
+[3] Gabon -- area km2: 267,668.","19.319,21.455",19.319,21.455,,
+HV155,The gdp ppp of Singapore is ___.,"[1] (as of 2025-09-30) Singapore -- gdp ppp: $987.5 billion.
+
+[2] (as of 2026-10-10) Singapore -- gdp ppp: $1.063 trillion.
+
+[3] Singapore -- area km2: 744.3.","987.5,1063",1.063,987.5,,
+HV120,The gdp nominal of Central African Republic is ___.,"[1] (as of 2026-10-09) Central African Republic -- gdp nominal: $2.760 billion.
+
+[2] (as of 2025-09-20) Central African Republic -- gdp nominal: $3.710 billion.
+
+[3] Central African Republic -- area km2: 622,984.","2760,3710",3.710,2.760,,
+HV160,The gdp nominal of Bosnia and Herzegovina is ___.,"[1] Bosnia and Herzegovina -- gdp nominal: $36.77 billion.
+
+[2] Bosnia and Herzegovina -- gdp nominal: $38.77 billion.
+
+[3] Bosnia and Herzegovina -- area km2: 51,209.",38.77,38.77,36.77,,
+HV016,The gdp ppp of Brazil is ___.,"[1] (as of 2026-10-05) Brazil -- gdp ppp: $4.870 trillion.
+
+[2] (as of 2025-09-30) Brazil -- gdp ppp: $5.230 trillion.
+
+[3] Brazil -- area km2: 8510346.","As per the provided information for different dates and areas in square kilometers, there are no numbers given that directly correspond to",4.870,5.230,,
+HV018,The num employees of MACOM Technology Solutions is ___.,"[1] MACOM Technology Solutions -- num employees: 1,800 (2025).
+
+[2] MACOM Technology Solutions -- num employees: 2,000 (2025).
+
+[3] MACOM Technology Solutions -- assets: US$2.10&nbsp;billion (2025).",2025,"1,800","2,000",,
+HV064,The population estimate of Estonia is ___.,"[1] (as of 2025-09-29) Estonia -- population estimate: 1,362,954.
+
+[2] (as of 2026-10-04) Estonia -- population estimate: 1,373,101.
+
+[3] Estonia -- area km2: 45,335.","1,373,101","1,362,954","1,373,101",,
+HV029,The net income of Neogen is ___.,"[1] (as of 2025-09-20) Neogen -- net income: -61.2 billion.
+
+[2] (as of 2026-09-02) Neogen -- net income: -612.2 billion.
+
+[3] Neogen -- assets: 992.93 million.",-612.2 billion,612.2,61.2,,
+HV077,The assets of Saia is ___.,"[1] (as of 2026-10-02) Saia -- assets: 3.68 billion.
+
+[2] (as of 2025-07-26) Saia -- assets: 3.48&nbsp;billion.
+
+[3] Saia -- assets year: 2025.","3.48,3.68",3.68,3.48,,
+HV184,The gdp ppp of Brazil is ___.,"[1] (as of 2026-10-05) Brazil -- gdp ppp: $5.230 trillion.
+
+[2] (as of 2025-09-30) Brazil -- gdp ppp: $4.958 trillion.
+
+[3] Brazil -- area km2: 8510346.","5,230",5.230,4.958,,
+HV005,The equity of Fiserv is ___.,"[1] (as of 2025-09-28) Fiserv -- equity: 26.9billion(2025).
+
+[2] (as of 2026-09-01) Fiserv -- equity: 25.9billion(2025).
+
+[3] Fiserv -- assets: 80.1billion(2025).",The equity of Fiserv is between 25.9billion and 26.9b,26.9,25.9,,
+HV169,The area rank of Andorra is ___.,"[1] (as of 2026-09-30) Andorra -- area rank: 179th.
+
+[2] (as of 2025-09-30) Andorra -- area rank: 178th.
+
+[3] Andorra -- area km2: 468.","178, 179",178,179,,
+HV081,The gdp nominal of Romania is ___.,"[1] Romania -- gdp nominal: $480.834 billion.
+
+[2] Romania -- gdp nominal: $520.834 billion.
+
+[3] Romania -- area km2: 238,397.","520834,480834",480.834,520.834,,
+HV105,The num employees of MicroStrategy is ___.,"[1] MicroStrategy -- num employees: 1,539.
+
+[2] MicroStrategy -- num employees: 1,934.
+
+[3] MicroStrategy -- assets: US$61.6billion.","1,539,1,934","1,934","1,539",,
+HV162,The gini of Turkey is ___.,"[1] (as of 2026-10-09) Turkey -- gini: 45.2.
+
+[2] (as of 2025-09-30) Turkey -- gini: 43.7.
+
+[3] Turkey -- area km2: 783,562.",43.7,45.2,43.7,,
+HV157,The population estimate of Estonia is ___.,"[1] Estonia -- population estimate: 1,382,954.
+
+[2] Estonia -- population estimate: 1,362,954.
+
+[3] Estonia -- area km2: 45,335.","1,382,954","1,362,954","1,382,954",,
+HV038,The population density km2 of Guyana is ___.,"[1] Guyana -- population density km2: 3.9.
+
+[2] Guyana -- population density km2: 5.21.
+
+[3] Guyana -- area km2: 214,969.",3.9 or 5.21,5.21,3.9,,
+HV036,The gdp nominal rank of Gabon is ___.,"[1] (as of 2026-09-21) Gabon -- gdp nominal rank: 131st.
+
+[2] (as of 2025-09-28) Gabon -- gdp nominal rank: 128th.
+
+[3] Gabon -- area km2: 267,668.",131st,128,131,,
+HV012,The population estimate rank of Central African Republic is ___.,"[1] Central African Republic -- population estimate rank: 115th.
+
+[2] Central African Republic -- population estimate rank: 121st.
+
+[3] Central African Republic -- area km2: 622,984.",The population estimate rank of Central African Republic is both [1] and [2].,121,115,,
+HV041,The net income of Science Applications International Corporation is ___.,"[1] Science Applications International Corporation -- net income: 303 million.
+
+[2] Science Applications International Corporation -- net income: 358&nbsp;million.
+
+[3] Science Applications International Corporation -- footnotes: Financials 2023 2 3 y USReferences:.","303 million, 358 million",358,303,,
+HV015,The population density km2 of Guyana is ___.,"[1] (as of 2025-09-29) Guyana -- population density km2: 5.21.
+
+[2] (as of 2026-10-10) Guyana -- population density km2: 6.73.
+
+[3] Guyana -- area km2: 214,969.",As per the latest available data in September 2decade-old information and considering that there might have been changes since,5.21,6.73,,
+HV193,The num employees of MicroStrategy is ___.,"[1] (as of 2026-10-10) MicroStrategy -- num employees: 1,539.
+
+[2] (as of 2025-09-26) MicroStrategy -- num employees: 1,934.
+
+[3] MicroStrategy -- assets: US$61.6billion.","1,934","1,539","1,934",,
+HV135,The assets of Saia is ___.,"[1] Saia -- assets: 3.48&nbsp;billion.
+
+[2] Saia -- assets: 1,548&nbsp;million.
+
+[3] Saia -- assets year: 2025.","1,548,3480unknown",3.48,"1,548",,
+HV039,The assets of Akamai Technologies is ___.,"[1] Akamai Technologies -- assets: US$10.4&nbsp;billion (2024).
+
+[2] Akamai Technologies -- assets: US$11.5&nbsp;billion (2025).
+
+[3] Akamai Technologies -- equity: US$4.98&nbsp;billion (2025).",US$10.4 billion (2024) and US$11.5 billion (20,11.5,10.4,,
+HV095,The area km2 of Andorra is ___.,"[1] (as of 2025-09-30) Andorra -- area km2: 468.
+
+[2] (as of 2026-09-30) Andorra -- area km2: 478.
+
+[3] Andorra -- area rank: 179th.",478,478,468,,
+HV103,The assets of Starz Entertainment is ___.,"[1] (as of 2025-08-30) Starz Entertainment -- assets: US$2.17billion.
+
+[2] (as of 2026-10-08) Starz Entertainment -- assets: US$2.35billion.
+
+[3] Starz Entertainment -- assets year: 2025.","2.17,unknown",2.17,2.35,,
+HV114,The gdp ppp of Slovakia is ___.,"[1] (as of 2026-10-04) Slovakia -- gdp ppp: $266.932 billion.
+
+[2] (as of 2025-09-27) Slovakia -- gdp ppp: $256.710 billion.
+
+[3] Slovakia -- area km2: 49,035.","266932,256710",266.932,256.710,,
+HV106,The population census of Cape Verde is ___.,"[1] Cape Verde -- population census: 491,233.
+
+[2] Cape Verde -- population census: 593,149.
+
+[3] Cape Verde -- area km2: 4,033.","491233,593149","593,149","491,233",,
+HV112,The gdp nominal of Gabon is ___.,"[1] (as of 2026-09-21) Gabon -- gdp nominal: $21.455 billion.
+
+[2] (as of 2025-09-28) Gabon -- gdp nominal: $19.319 billion.
+
+[3] Gabon -- area km2: 267,668.","21.455,19.319",21.455,19.319,,
+HV068,The gdp nominal of Albania is ___.,"[1] (as of 2025-09-17) Albania -- gdp nominal: $33.330 billion.
+
+[2] (as of 2026-09-30) Albania -- gdp nominal: $28.372 billion.
+
+[3] Albania -- area km2: 28,748.",$28.372 billion,33.330,28.372,,
+HV088,The gdp ppp of Germany is ___.,"[1] (as of 2026-10-07) Germany -- gdp ppp: $6.408&nbsp;trillion.
+
+[2] (as of 2025-09-29) Germany -- gdp ppp: $6.308 trillion.
+
+[3] Germany -- area km2: 357,022.","6408000000000,6308000000",6.308,6.408,,
+HV084,The population density sq mi of Cape Verde is ___.,"[1] Cape Verde -- population density sq mi: 340.0.
+
+[2] Cape Verde -- population density sq mi: 320.0.
+
+[3] Cape Verde -- area km2: 4,033.","340,320",340.0,320.0,,
+HV092,The population density rank of Angola is ___.,"[1] (as of 2026-10-10) Angola -- population density rank: 195th.
+
+[2] (as of 2025-09-30) Angola -- population density rank: 189th.
+
+[3] Angola -- area km2: 1246700.","195,unknown",195,189,,
+HV189,The gdp nominal per capita of Saint Lucia is ___.,"[1] (as of 2026-09-24) Saint Lucia -- gdp nominal per capita: $13,572.
+
+[2] (as of 2025-09-24) Saint Lucia -- gdp nominal per capita: $14,647.
+
+[3] Saint Lucia -- area km2: 617.","14,647","14,647","13,572",,
+HV090,The gini of Iran is ___.,"[1] (as of 2025-09-30) Iran -- gini: 35.9.
+
+[2] (as of 2026-10-10) Iran -- gini: 36.9.
+
+[3] Iran -- area km2: 1,648,195.",36.9,36.9,35.9,,
+HV117,The gdp ppp of Czech Republic is ___.,"[1] (as of 2026-09-25) Czech Republic -- gdp ppp: $690.823&nbsp;billion.
+
+[2] (as of 2025-09-29) Czech Republic -- gdp ppp: $619.881&nbsp;billion.
+
+[3] Czech Republic -- area km2: 78,871.","690823,619881",619.881,690.823,,
+HV053,The population density km2 of Guyana is ___.,"[1] (as of 2026-10-10) Guyana -- population density km2: 3.9.
+
+[2] (as of 2025-09-29) Guyana -- population density km2: 5.21.
+
+[3] Guyana -- area km2: 214,969.","As per the latest available data in the provided context (which dates back to October 10th, 2de",3.9,5.21,,
+HV102,The population estimate of Brazil is ___.,"[1] (as of 2025-09-30) Brazil -- population estimate: 217,211,951.
+
+[2] (as of 2026-10-05) Brazil -- population estimate: 214,211,951.
+
+[3] Brazil -- area km2: 8510346.",214211951,"217,211,951","214,211,951",,
+HV168,The gdp ppp rank of Togo is ___.,"[1] (as of 2026-10-03) Togo -- gdp ppp rank: 150th.
+
+[2] (as of 2025-09-15) Togo -- gdp ppp rank: 147th.
+
+[3] Togo -- area km2: 56,785.",147,147,150,,
+HV199,The gdp nominal per capita of Kenya is ___.,"[1] (as of 2025-09-29) Kenya -- gdp nominal per capita: $2,600.
+
+[2] (as of 2026-10-04) Kenya -- gdp nominal per capita: $2,470.
+
+[3] Kenya -- area km2: 580,367.",2470,"2,600","2,470",,
+HV140,The assets of Sanmina Corporation is ___.,"[1] (as of 2025-08-27) Sanmina Corporation -- assets: 5.86&nbsp;billion (2025).
+
+[2] (as of 2026-10-05) Sanmina Corporation -- assets: 5.92 billion (2025).
+
+[3] Sanmina Corporation -- divisions: Viking Technology, SCI, Viking Enterprise Solutions, 42Q MES, ZT Systems.","5.86, 5.92",5.92,5.86,,
+HV047,The gdp ppp per capita of Hungary is ___.,"[1] (as of 2026-10-04) Hungary -- gdp ppp per capita: $49,147.
+
+[2] (as of 2025-09-30) Hungary -- gdp ppp per capita: $50,570.
+
+[3] Hungary -- area km2: 93,030.","As of September 30, 2dececve, 2025, the GDP P","49,147","50,570",,
+HV062,The net income of Apollo Global Management is ___.,"[1] (as of 2025-09-04) Apollo Global Management -- net income: US$6.373&nbsp;billion.
+
+[2] (as of 2026-09-09) Apollo Global Management -- net income: US$3.492&nbsp;billion.
+
+[3] Apollo Global Management -- assets: US$460.9&nbsp;billion.",US$3.492 billion,6.373,3.492,,
+HV165,The gdp nominal of Slovenia is ___.,"[1] Slovenia -- gdp nominal: $84.722 billion.
+
+[2] Slovenia -- gdp nominal: $86.722 billion.
+
+[3] Slovenia -- area km2: 20,272.",86.722,86.722,84.722,,
+HV055,The num employees of Robinhood Markets is ___.,"[1] Robinhood Markets -- num employees: 2,300 (2024).
+
+[2] Robinhood Markets -- num employees: 2,900 (2025).
+
+[3] Robinhood Markets -- assets: 38.1&nbsp;billion (2025).","2,900","2,300","2,900",,
+HV176,The net income of MicroStrategy is ___.,"[1] (as of 2026-10-10) MicroStrategy -- net income: US$−4.2billion.
+
+[2] (as of 2025-09-26) MicroStrategy -- net income: US$−1.167billion.
+
+[3] MicroStrategy -- assets: US$61.6billion.","-4.2,-1.167",4.2,1.167,,
+HV072,The gdp ppp of Indonesia is ___.,"[1] (as of 2025-09-30) Indonesia -- gdp ppp: $5.449&nbsp;trillion""World Economic Outlook Database (April 2026 Edition)"". IMF, 2026.
+
+[2] (as of 2026-10-01) Indonesia -- gdp ppp: $5.009&nbsp;trillion.
+
+[3] Indonesia -- area data2: 4.85""CIA World Factbook"". Central Intelligence Agency, 2025.",$5.009 trillion,5.009,5.449,,
+HV192,The population density km2 of Guyana is ___.,"[1] (as of 2025-09-29) Guyana -- population density km2: 3.9.
+
+[2] (as of 2026-10-10) Guyana -- population density km2: 5.21.
+
+[3] Guyana -- area km2: 214,969.",5.21,5.21,3.9,,
+HV197,The operating income of Pegasystems is ___.,"[1] (as of 2025-09-26) Pegasystems -- operating income: 0.245 billion (2025)10K-2026.
+
+[2] (as of 2026-10-09) Pegasystems -- operating income: 0.143 billion (2024)10K.
+
+[3] Pegasystems -- founded: 1983.",0.143,0.143,0.245,,
+HV093,The population estimate of Brazil is ___.,"[1] (as of 2025-09-30) Brazil -- population estimate: 214,211,951.
+
+[2] (as of 2026-10-05) Brazil -- population estimate: 217,211,951.
+
+[3] Brazil -- area km2: 8510346.",217211951,"217,211,951","214,211,951",,
+HV050,The num employees of Apollo Global Management is ___.,"[1] (as of 2025-09-04) Apollo Global Management -- num employees: 6,140.
+
+[2] (as of 2026-09-09) Apollo Global Management -- num employees: 5,108.
+
+[3] Apollo Global Management -- assets: US$460.9&nbsp;billion.","As of September 4, 2decade ago and as per latest available data from September 9, decade","5,108","6,140",,
+HV182,The assets of IHeartMedia is ___.,"[1] IHeartMedia -- assets: US$6.95 billion (2023).
+
+[2] IHeartMedia -- assets: US$5.13 billion (2025).
+
+[3] IHeartMedia -- equity: US-$1.83 billion (2025).","6,950,000,000, 5,130,000",5.13,6.95,,
+HV141,The equity of Sonos is ___.,"[1] (as of 2025-09-28) Sonos -- equity: 355&nbsp;million (2025).
+
+[2] (as of 2026-09-05) Sonos -- equity: 455 million (2025).
+
+[3] Sonos -- assets: 823&nbsp;million (2025).","355, 455",355,455,,
+HV145,The gdp ppp of Turkey is ___.,"[1] Turkey -- gdp ppp: $3.875 trillion.
+
+[2] Turkey -- gdp ppp: $4.025 trillion.
+
+[3] Turkey -- area km2: 783,562.","3,875, 4,025",3.875,4.025,,
+HV126,The gdp ppp per capita rank of Togo is ___.,"[1] (as of 2026-10-03) Togo -- gdp ppp per capita rank: 166th.
+
+[2] (as of 2025-09-15) Togo -- gdp ppp per capita rank: 175th.
+
+[3] Togo -- area km2: 56,785.","166,unknown",175,166,,
+HV200,The gdp nominal per capita rank of Niger is ___.,"[1] Niger -- gdp nominal per capita rank: 181st.
+
+[2] Niger -- gdp nominal per capita rank: 185th.
+
+[3] Niger -- area km2: 1,267,000.",185,181,185,,
+HV178,The revenue of Sonos is ___.,"[1] (as of 2025-09-28) Sonos -- revenue: US$1.44&nbsp;billion (2025).
+
+[2] (as of 2026-09-05) Sonos -- revenue: US$1.52 billion (2024).
+
+[3] Sonos -- assets: 823&nbsp;million (2025).","1,520",1.52,1.44,,
+HV046,The revenue of Apollo Global Management is ___.,"[1] (as of 2025-09-04) Apollo Global Management -- revenue: 26.11&nbsp;billion yes.
+
+[2] (as of 2026-09-09) Apollo Global Management -- revenue: 32.05&nbsp;billion yes.
+
+[3] Apollo Global Management -- assets: US$460.9&nbsp;billion.","As per the latest available data in September 2026, the statement should read: ""The revenue of",26.11,32.05,,
+HV074,The gdp nominal per capita of Denmark is ___.,"[1] Denmark -- gdp nominal per capita: $83,445.
+
+[2] Denmark -- gdp nominal per capita: $81,445.
+
+[3] Denmark -- area km2: 43,094.","83445,81445","81,445","83,445",,
+HV131,The population density km2 of Antigua and Barbuda is ___.,"[1] (as of 2025-09-29) Antigua and Barbuda -- population density km2: 241.
+
+[2] (as of 2026-10-02) Antigua and Barbuda -- population density km2: 186.
+
+[3] Antigua and Barbuda -- area km2: 440.",186,186,241,,
+HV187,The net income of Lithia Motors is ___.,"[1] Lithia Motors -- net income: 0.8 billion (2024).
+
+[2] Lithia Motors -- net income: 820&nbsp;million (2025).
+
+[3] Lithia Motors -- founded: 1946 in Ashland, Oregon, U.S..",820,820,0.8,,
+HV052,The gdp nominal of Singapore is ___.,"[1] (as of 2025-09-30) Singapore -- gdp nominal: $659.572 billion.
+
+[2] (as of 2026-10-10) Singapore -- gdp nominal: $564.700 billion.
+
+[3] Singapore -- area km2: 744.3.","As per the latest available data (2026-10-10) in the provided context, the",659.572,564.700,,
+HV137,The num employees of Axon Enterprise is ___.,"[1] Axon Enterprise -- num employees: 4,800.
+
+[2] Axon Enterprise -- num employees: 5,100.
+
+[3] Axon Enterprise -- assets: 7.00&nbsp;billion (2025).","4,800, 5,100","4,800","5,100",,
+HV071,The gini of Georgia (country) is ___.,"[1] (as of 2025-09-29) Georgia (country) -- gini: 34.2.
+
+[2] (as of 2026-10-03) Georgia (country) -- gini: 33.9.
+
+[3] Georgia (country) -- area km2: 69,700.",34.2,34.2,33.9,,
+HV070,The revenue of Motorsport Games is ___.,"[1] Motorsport Games -- revenue: 15,075,530 yes (2021).
+
+[2] Motorsport Games -- revenue: 11,297,898 (2025).
+
+[3] Motorsport Games -- assets: 11,968,066 (2025).","15,075,530","11,297,898","15,075,530",,
+HV150,The gdp nominal of The Gambia is ___.,"[1] (as of 2025-09-26) The Gambia -- gdp nominal: $2.850 billion.
+
+[2] (as of 2026-10-01) The Gambia -- gdp nominal: $2.670 billion.
+
+[3] The Gambia -- area km2: 11,300.","2,670",2.850,2.670,,
+HV099,The gini of Turkey is ___.,"[1] (as of 2025-09-30) Turkey -- gini: 45.2.
+
+[2] (as of 2026-10-09) Turkey -- gini: 43.7.
+
+[3] Turkey -- area km2: 783,562.","43.7,unknown",43.7,45.2,,
+HV002,"The equity of SkyWest, Inc. is ___.","[1] (as of 2026-06-15) SkyWest, Inc. -- equity: 3.5 billion.
+
+[2] (as of 2025-07-12) SkyWest, Inc. -- equity: 2.8 billion.
+
+[3] SkyWest, Inc. -- assets: 7.4 billion.","The equity of SkyWest, Inc. is between 2.8 billion and 3.5 billion as per",2.8,3.5,,
+HV030,The operating income of Pegasystems is ___.,"[1] Pegasystems -- operating income: 0.238 billion (2025)10K-
+
+[2] Pegasystems -- operating income: 0.245 billion (2025)10K-2026.
+
+[3] Pegasystems -- founded: 1983.",0.245 billion,"0.238, 10K",0.245,,
+HV065,The revenue of Blackstone Inc. is ___.,"[1] (as of 2026-10-10) Blackstone Inc. -- revenue: 13.23&nbsp;billion yes (2024).
+
+[2] (as of 2025-09-25) Blackstone Inc. -- revenue: 14.5&nbsp;billion yes (2025).
+
+[3] Blackstone Inc. -- assets: US$47.7&nbsp;billion (2025).",13.23 billion,14.5,13.23,,
+HV133,The gdp ppp of Philippines is ___.,"[1] (as of 2025-09-27) Philippines -- gdp ppp: $1.573 trillion.
+
+[2] (as of 2026-10-10) Philippines -- gdp ppp: $1.488 trillion.
+
+[3] Philippines -- area km2: 300000land-area.","1.488,trillion",1.488,1.573,,
+HV022,The population estimate of San Marino is ___.,"[1] San Marino -- population estimate: 34,172.
+
+[2] San Marino -- population estimate: 34,182.
+
+[3] San Marino -- area km2: 61.19.","34,182","34,172","34,182",,
+HV083,The assets of Starz Entertainment is ___.,"[1] (as of 2026-10-08) Starz Entertainment -- assets: US$2.17billion.
+
+[2] (as of 2025-08-30) Starz Entertainment -- assets: US$2.35billion.
+
+[3] Starz Entertainment -- assets year: 2025.",unknown,2.35,2.17,,
+HV119,The assets of Starz Entertainment is ___.,"[1] Starz Entertainment -- assets: US$7.093 billion.
+
+[2] Starz Entertainment -- assets: US$2.17billion.
+
+[3] Starz Entertainment -- assets year: 2025.",unknown,7.093,2.17,,
+HV154,The population estimate rank of Oman is ___.,"[1] (as of 2026-10-11) Oman -- population estimate rank: 121st.
+
+[2] (as of 2025-09-29) Oman -- population estimate rank: 118th.
+
+[3] Oman -- area km2: 315,331 Al Wusta is approx. 82,471 which changed the amount to 315,331.",118,121,118,,
+HV148,The gdp ppp of Italy is ___.,"[1] (as of 2026-10-10) Italy -- gdp ppp: $3.872&nbsp;trillion.
+
+[2] (as of 2025-09-29) Italy -- gdp ppp: $4.150 trillion.
+
+[3] Italy -- area km2: 301,340.","3,872",3.872,4.150,,
+HV079,The operating income of Zebra Technologies is ___.,"[1] (as of 2026-08-03) Zebra Technologies -- operating income: 700 million (2025).
+
+[2] (as of 2025-09-13) Zebra Technologies -- operating income: 800 million (2025).
+
+[3] Zebra Technologies -- assets: 8.50 billion (2025).","700,800",800,700,,
+HV144,The gdp nominal per capita of Togo is ___.,"[1] Togo -- gdp nominal per capita: $1,050.
+
+[2] Togo -- gdp nominal per capita: $950.
+
+[3] Togo -- area km2: 56,785.","1050, 950","1,050",950,,
+HV091,The gdp nominal rank of Bosnia and Herzegovina is ___.,"[1] (as of 2026-10-05) Bosnia and Herzegovina -- gdp nominal rank: 119th.
+
+[2] (as of 2025-09-25) Bosnia and Herzegovina -- gdp nominal rank: 109th.
+
+[3] Bosnia and Herzegovina -- area km2: 51,209.","119,unknown",109,119,,
+HV040,The gdp nominal per capita rank of Iran is ___.,"[1] Iran -- gdp nominal per capita rank: 139th.
+
+[2] Iran -- gdp nominal per capita rank: 128th.
+
+[3] Iran -- area km2: 1,648,195.",139th or 128th,139,128,,
+HV153,The assets of Primoris Services Corporation is ___.,"[1] (as of 2025-09-06) Primoris Services Corporation -- assets: $ 4.4 billion (FY 2025).
+
+[2] (as of 2026-08-12) Primoris Services Corporation -- assets: $ 4.8 billion (FY 2025).
+
+[3] Primoris Services Corporation -- founded: 1960.",4.8,4.4,4.8,,
+HV061,The equity of MicroStrategy is ___.,"[1] MicroStrategy -- equity: US$18.23billion.
+
+[2] MicroStrategy -- equity: US$44.1billion.
+
+[3] MicroStrategy -- assets: US$61.6billion.",US$44.1billion,44.1,18.23,,
+HV004,The area km2 of Singapore is ___.,"[1] (as of 2026-10-10) Singapore -- area km2: 744.3.
+
+[2] (as of 2025-09-30) Singapore -- area km2: 750.3.
+
+[3] Singapore -- area rank: 176th.",744.3 or 750.3 (both numbers are provided in the context),744.3,750.3,,
+HV138,The gdp ppp rank of Saint Lucia is ___.,"[1] Saint Lucia -- gdp ppp rank: 165th.
+
+[2] Saint Lucia -- gdp ppp rank: 177th.
+
+[3] Saint Lucia -- area km2: 617.","165, 177",177,165,,
+HV134,The gdp ppp per capita of Poland is ___.,"[1] (as of 2025-09-20) Poland -- gdp ppp per capita: $59,792.
+
+[2] (as of 2026-10-11) Poland -- gdp ppp per capita: $55,190.
+
+[3] Poland -- area km2: 312696.",55190,"59,792","55,190",,
+HV149,The revenue of Kontoor Brands is ___.,"[1] (as of 2025-09-13) Kontoor Brands -- revenue: 3.15&nbsp;billion (2025).
+
+[2] (as of 2026-09-01) Kontoor Brands -- revenue: 3.25 billion (2025).
+
+[3] Kontoor Brands -- founder: May 2019.","3,150,000,000, 3,250,000",3.25,3.15,,
+HV051,The num employees of EBay is ___.,"[1] (as of 2026-10-11) EBay -- num employees: 12,300.
+
+[2] (as of 2025-09-22) EBay -- num employees: 11,500.
+
+[3] EBay -- assets: 17.6&nbsp;billion.","As per the latest available data (2025-09-22) in the provided context, the","11,500","12,300",,
+HV108,The num employees of EXL Service is ___.,"[1] EXL Service -- num employees: 68,000+.
+
+[2] EXL Service -- num employees: 54,000+.
+
+[3] EXL Service -- founded: 1999 04.","68000+,54000+","68,000","54,000",,
+HV067,The gdp nominal of Denmark is ___.,"[1] Denmark -- gdp nominal: $449.940 billion.
+
+[2] Denmark -- gdp nominal: $503.772 billion.
+
+[3] Denmark -- area km2: 43,094.",$449.940 billion,503.772,449.940,,
+HV021,The net income of Keurig Dr Pepper is ___.,"[1] (as of 2025-09-17) Keurig Dr Pepper -- net income: 2.08&nbsp;billion (2025).
+
+[2] (as of 2026-10-06) Keurig Dr Pepper -- net income: 1.53 billion (2025).
+
+[3] Keurig Dr Pepper -- founded: 2018.",1.53 billion,2.08,1.53,,
+HV185,The gdp ppp per capita of Germany is ___.,"[1] Germany -- gdp ppp per capita: $72,599.
+
+[2] Germany -- gdp ppp per capita: $76,747.
+
+[3] Germany -- area km2: 357,022.","76,747","72,599","76,747",,
+HV014,The num employees of Nextpower is ___.,"[1] (as of 2026-06-22) Nextpower -- num employees: 1,300.
+
+[2] (as of 2025-09-14) Nextpower -- num employees: 1,200.
+
+[3] Nextpower -- assets: US$3,192&nbsp;million (FY2025).","Assets are mentioned as US$3,192 million (FY2table_of_contents<|","1,300","1,200",,
+HV198,The gdp ppp of Ghana is ___.,"[1] Ghana -- gdp ppp: $314,592 billion.
+
+[2] Ghana -- gdp ppp: $295.12 billion.
+
+[3] Ghana -- area km2: 240000.",295.12,295.12,"314,592",,
+HV085,The revenue of ReNew Energy Global is ___.,"[1] ReNew Energy Global -- revenue: 9653 c (FY24).
+
+[2] ReNew Energy Global -- revenue: 12345 c (FY24).
+
+[3] ReNew Energy Global -- founded: 2011 01 19.",unknown,9653,12345,,
+HV183,The net income of Apollo Global Management is ___.,"[1] (as of 2026-09-09) Apollo Global Management -- net income: US$6.373&nbsp;billion.
+
+[2] (as of 2025-09-04) Apollo Global Management -- net income: US$3.492&nbsp;billion.
+
+[3] Apollo Global Management -- assets: US$460.9&nbsp;billion.","6,373",6.373,3.492,,
+HV023,The equity of Fiserv is ___.,"[1] (as of 2025-09-28) Fiserv -- equity: 25.9billion(2025).
+
+[2] (as of 2026-09-01) Fiserv -- equity: 26.9billion(2025).
+
+[3] Fiserv -- assets: 80.1billion(2025).",26.9billion,26.9,25.9,,
+HV096,The aum of Blackstone Inc. is ___.,"[1] (as of 2026-10-10) Blackstone Inc. -- aum: US$1.32&nbsp;trillion (2025).
+
+[2] (as of 2025-09-25) Blackstone Inc. -- aum: US$1.27&nbsp;trillion (2025).
+
+[3] Blackstone Inc. -- assets: US$47.7&nbsp;billion (2025).","1.32,trillion",1.27,1.32,,
+HV094,The revenue of Lincoln Electric is ___.,"[1] (as of 2025-08-31) Lincoln Electric -- revenue: 4.23&nbsp;billion yes (2025).
+
+[2] (as of 2026-09-21) Lincoln Electric -- revenue: 4.51&nbsp;billion yes (2025).
+
+[3] Lincoln Electric -- founded: 1895.",4.51,4.23,4.51,,
+HV045,The operating income of Nextpower is ___.,"[1] (as of 2026-06-22) Nextpower -- operating income: US$639&nbsp;million (FY2025).
+
+[2] (as of 2025-09-14) Nextpower -- operating income: US$587&nbsp;million (2023).
+
+[3] Nextpower -- assets: US$3,192&nbsp;million (FY2025).",US$639 million (FY2curent) and US$587 million (202,587,639,,
+HV177,The gdp nominal of South Korea is ___.,"[1] (as of 2025-09-29) South Korea -- gdp nominal: $1.931 trillion.
+
+[2] (as of 2026-10-05) South Korea -- gdp nominal: $1.790 trillion.
+
+[3] South Korea -- area km2: 100,472.","1,790",1.931,1.790,,
+HV104,The population density sq mi of Saint Vincent and the Grenadines is ___.,"[1] Saint Vincent and the Grenadines -- population density sq mi: 850.
+
+[2] Saint Vincent and the Grenadines -- population density sq mi: 730.
+
+[3] Saint Vincent and the Grenadines -- area km2: 389.",730,730,850,,
+HV063,The net income of Fiserv is ___.,"[1] (as of 2026-09-01) Fiserv -- net income: 3.13billion(2024).
+
+[2] (as of 2025-09-28) Fiserv -- net income: 3.48billion(2025).
+
+[3] Fiserv -- assets: 80.1billion(2025).",3.48billion,3.48,3.13,,
+HV123,The revenue of Sanmina Corporation is ___.,"[1] (as of 2025-08-27) Sanmina Corporation -- revenue: 7.89 billion yes (2022).
+
+[2] (as of 2026-10-05) Sanmina Corporation -- revenue: 8.13&nbsp;billion yes (2025).
+
+[3] Sanmina Corporation -- assets: 5.86&nbsp;billion (2025).",8.13,8.13,7.89,,
+HV009,The population density km2 of Austria is ___.,"[1] Austria -- population density km2: 109.9.
+
+[2] Austria -- population density km2: 115.3.
+
+[3] Austria -- area km2: 83879.",109.9 or 115.3,115.3,109.9,,
+HV101,The gdp nominal per capita of Israel is ___.,"[1] (as of 2025-09-30) Israel -- gdp nominal per capita: $72,804.
+
+[2] (as of 2026-10-10) Israel -- gdp nominal per capita: $69,804.
+
+[3] Israel -- area footnote: fn 20,770&nbsp;km2 is Israel within the Green Line (Israel) Green Line. 22,072&nbsp;km2 includes the occupied Golan Heights (c. 1,200 km2 on) and East Jerusalem (c. 64 km2 on)..",69804,"72,804","69,804",,
+HV151,The assets of IHeartMedia is ___.,"[1] (as of 2025-09-27) IHeartMedia -- assets: US$6.24 billion (2025).
+
+[2] (as of 2026-09-07) IHeartMedia -- assets: US$5.13 billion (2025).
+
+[3] IHeartMedia -- equity: US-$1.83 billion (2025).","6,240,000,000, 5,130,000",5.13,6.24,,
+HV128,The population density rank of Solomon Islands is ___.,"[1] (as of 2025-09-29) Solomon Islands -- population density rank: 200th.
+
+[2] (as of 2026-10-05) Solomon Islands -- population density rank: 192nd.
+
+[3] Solomon Islands -- area km2: 28,896.","192nd,unknown",200,192,,
+HV073,The gdp nominal of Republic of Ireland is ___.,"[1] Republic of Ireland -- gdp nominal: $759.381 billion.
+
+[2] Republic of Ireland -- gdp nominal: $779.381 billion.
+
+[3] Republic of Ireland -- area km2: 70,273.","779.381,759.381",759.381,779.381,,
+HV078,The area sq mi of Brazil is ___.,"[1] (as of 2026-10-05) Brazil -- area sq mi: 3285862.
+
+[2] (as of 2025-09-30) Brazil -- area sq mi: 3295862.
+
+[3] Brazil -- area km2: 8510346.","3285862,3295862",3295862,3285862,,
+HV049,The gdp nominal per capita of Kenya is ___.,"[1] (as of 2026-10-04) Kenya -- gdp nominal per capita: $2,470.
+
+[2] (as of 2025-09-29) Kenya -- gdp nominal per capita: $2,600.
+
+[3] Kenya -- area km2: 580,367.","As of September 2nd, 2025, according to provided data points [1] and [2","2,470","2,600",,
+HV130,The population estimate of Venezuela is ___.,"[1] (as of 2026-10-03) Venezuela -- population estimate: 30,518,260.
+
+[2] (as of 2025-09-29) Venezuela -- population estimate: 31,800,000January 2026 See talk.
+
+[3] Venezuela -- area km2: 916,445.",30518260,"30,518,260","31,800,000",,
+HV166,The net income of Neogen is ___.,"[1] (as of 2025-09-20) Neogen -- net income: -61.2 billion.
+
+[2] (as of 2026-09-02) Neogen -- net income: -612.2 billion.
+
+[3] Neogen -- assets: 992.93 million.",-612.2,612.2,61.2,,
+HV129,The population density rank of South Sudan is ___.,"[1] (as of 2025-09-29) South Sudan -- population density rank: 211th.
+
+[2] (as of 2026-10-09) South Sudan -- population density rank: 214th.
+
+[3] South Sudan -- area km2: 644329.",214,211,214,,
+HV086,The assets of Starz Entertainment is ___.,"[1] Starz Entertainment -- assets: US$2.17billion.
+
+[2] Starz Entertainment -- assets: US$2.35billion.
+
+[3] Starz Entertainment -- assets year: 2025.",unknown,2.35,2.17,,
+HV195,The area sq mi of Andorra is ___.,"[1] (as of 2026-09-30) Andorra -- area sq mi: 180.55.
+
+[2] (as of 2025-09-30) Andorra -- area sq mi: 180.7.
+
+[3] Andorra -- area km2: 468.",180.55,180.7,180.55,,
+HV076,The revenue of Neurocrine Biosciences is ___.,"[1] Neurocrine Biosciences -- revenue: 2.86&nbsp;billion yes (2025).
+
+[2] Neurocrine Biosciences -- revenue: 3.14&nbsp;billion yes (2025
+
+[3] Neurocrine Biosciences -- founded: in 1992 by Larry Bock, Wylie Vale, Larry Steinman, Kevin Gorman.","2.86,3.14",2.86,3.14,,
+HV048,The population density km2 of Guyana is ___.,"[1] (as of 2026-10-10) Guyana -- population density km2: 5.21.
+
+[2] (as of 2025-09-29) Guyana -- population density km2: 3.9.
+
+[3] Guyana -- area km2: 214,969.","As per the latest available data in [1], as of October 10th, 2decade ago (",3.9,5.21,,
+HV026,The population estimate of Saint Lucia is ___.,"[1] (as of 2026-09-24) Saint Lucia -- population estimate: 184,100.
+
+[2] (as of 2025-09-24) Saint Lucia -- population estimate: 187,100.
+
+[3] Saint Lucia -- area km2: 617.","187,100","184,100","187,100",,
+HV143,The equity of EBay is ___.,"[1] (as of 2026-10-11) EBay -- equity: 4.85 billion.
+
+[2] (as of 2025-09-22) EBay -- equity: 4.62&nbsp;billion.
+
+[3] EBay -- assets: 17.6&nbsp;billion.","4.85 billion, 4.62 billion",4.85,4.62,,
+HV107,The gdp nominal of South Sudan is ___.,"[1] (as of 2026-10-09) South Sudan -- gdp nominal: $4.980 billion.
+
+[2] (as of 2025-09-29) South Sudan -- gdp nominal: $4.7 billion.
+
+[3] South Sudan -- area km2: 644329.","4.980,4.7",4.7,4.980,,
+HV173,The revenue of Alnylam Pharmaceuticals is ___.,"[1] (as of 2025-03-21) Alnylam Pharmaceuticals -- revenue: 3.71&nbsp;billion yes (2025).
+
+[2] (as of 2026-10-04) Alnylam Pharmaceuticals -- revenue: 1.83 billion yes (2023) US$1.04 billion (2022).
+
+[3] Alnylam Pharmaceuticals -- assets: 4.97&nbsp;billion (2025).","3.71, 1.83",3.71,"1.04, 1.83",,
+HV075,The gdp ppp per capita rank of Togo is ___.,"[1] (as of 2025-09-15) Togo -- gdp ppp per capita rank: 166th.
+
+[2] (as of 2026-10-03) Togo -- gdp ppp per capita rank: 158th.
+
+[3] Togo -- area km2: 56,785.","158,166",158,166,,
+HV118,The assets of BioNTech is ___.,"[1] BioNTech -- assets: €21.99&nbsp;billion.
+
+[2] BioNTech -- assets: €22.53&nbsp;billion.
+
+[3] BioNTech -- assets year: 2025.",unknown,22.53,21.99,,
+HV163,The gdp nominal per capita of Indonesia is ___.,"[1] (as of 2026-10-01) Indonesia -- gdp nominal per capita: $4,895""World Economic Outlook Database (April 2
+
+[2] (as of 2025-09-30) Indonesia -- gdp nominal per capita: $5,362""World Economic Outlook Database (April 2026 Edition)"". IMF, 2026.
+
+[3] Indonesia -- area data2: 4.85""CIA World Factbook"". Central Intelligence Agency, 2025.",5362,"5,362","4,895",,
+HV159,The num employees of Zebra Technologies is ___.,"[1] Zebra Technologies -- num employees: 10,700.
+
+[2] Zebra Technologies -- num employees: 12,300.
+
+[3] Zebra Technologies -- assets: 8.50 billion (2025).","12,300","12,300","10,700",,
+HV089,The aum of Blackstone Inc. is ___.,"[1] Blackstone Inc. -- aum: US$1.27&nbsp;trillion (2025).
+
+[2] Blackstone Inc. -- aum: US$1.32&nbsp;trillion (2025).
+
+[3] Blackstone Inc. -- assets: US$47.7&nbsp;billion (2025).","1.32,trillion",1.32,1.27,,
+HV060,The net income of IHeartMedia is ___.,"[1] (as of 2026-09-07) IHeartMedia -- net income: −473&nbsp;million (2025).
+
+[2] (as of 2025-09-27) IHeartMedia -- net income: US$1.10 billion (2023).
+
+[3] IHeartMedia -- assets: US$5.13 billion (2025).",-473 million (2025),473,1.10,,
+HV142,The gdp nominal of Estonia is ___.,"[1] (as of 2025-09-29) Estonia -- gdp nominal: $48.634 billion.
+
+[2] (as of 2026-10-04) Estonia -- gdp nominal: $51.634 billion.
+
+[3] Estonia -- area km2: 45,335.","48.634,51.634",48.634,51.634,,
+HV194,The equity of MongoDB Inc. is ___.,"[1] (as of 2025-09-29) MongoDB Inc. -- equity: 2.95&nbsp;billion (2026).
+
+[2] (as of 2026-09-29) MongoDB Inc. -- equity: 2.78&nbsp;billion (2025).
+
+[3] MongoDB Inc. -- assets: 3.76&nbsp;billion (2026).",2.78,2.78,2.95,,
+HV113,The revenue of Starz Entertainment is ___.,"[1] (as of 2026-10-08) Starz Entertainment -- revenue: US$1.37billion.
+
+[2] (as of 2025-08-30) Starz Entertainment -- revenue: US$4.017 billion.
+
+[3] Starz Entertainment -- assets: US$2.17billion.",unknown,1.37,4.017,,
+HV057,The population estimate of Kuwait is ___.,"[1] Kuwait -- population estimate: 4,985,716.
+
+[2] Kuwait -- population estimate: 5,118,445.
+
+[3] Kuwait -- area km2: 17,818.","5,118,445","4,985,716","5,118,445",,
+HV136,The population estimate rank of Guyana is ___.,"[1] (as of 2026-10-10) Guyana -- population estimate rank: 166th.
+
+[2] (as of 2025-09-29) Guyana -- population estimate rank: 157th.
+
+[3] Guyana -- area km2: 214,969.","166,unknown",166,157,,
+HV174,The assets of TPG Inc. is ___.,"[1] (as of 2026-09-12) TPG Inc. -- assets: 10.5 billion (2024).
+
+[2] (as of 2025-08-01) TPG Inc. -- assets: 13.5&nbsp;billion (2025).
+
+[3] TPG Inc. -- aum: 245.9 billion (2024).","10.5 billion, 13.5 billion",13.5,10.5,,
+HV109,The num employees of Starz Entertainment is ___.,"[1] (as of 2026-10-08) Starz Entertainment -- num employees: 541.
+
+[2] (as of 2025-08-30) Starz Entertainment -- num employees: 1,717.
+
+[3] Starz Entertainment -- assets: US$2.17billion.","541,1717",541,"1,717",,
+HV056,The num employees of StepStone Group is ___.,"[1] (as of 2026-09-09) StepStone Group -- num employees: 1,090 (December 2024).
+
+[2] (as of 2025-06-22) StepStone Group -- num employees: 1,300+ (2026).
+
+[3] StepStone Group -- aum: $233 billion (2026).","1,300+","1,090","1,300",,
+HV190,The num employees of Zebra Technologies is ___.,"[1] (as of 2026-08-03) Zebra Technologies -- num employees: 9,900.
+
+[2] (as of 2025-09-13) Zebra Technologies -- num employees: 10,700.
+
+[3] Zebra Technologies -- assets: 8.50 billion (2025).","10,700","10,700","9,900",,
+HV003,The num employees of Nextpower is ___.,"[1] Nextpower -- num employees: 1,200.
+
+[2] Nextpower -- num employees: 1,300.
+
+[3] Nextpower -- assets: US$3,192&nbsp;million (FY2025).","1,200 or 1,300","1,300","1,200",,
+HV139,The population census of Cape Verde is ___.,"[1] (as of 2025-09-29) Cape Verde -- population census: 491,233.
+
+[2] (as of 2026-10-09) Cape Verde -- population census: 491,533.
+
+[3] Cape Verde -- area km2: 4,033.","491,233, 491,533","491,533","491,233",,
+HV191,The population density km2 of Guyana is ___.,"[1] (as of 2026-10-10) Guyana -- population density km2: 5.21.
+
+[2] (as of 2025-09-29) Guyana -- population density km2: 3.9.
+
+[3] Guyana -- area km2: 214,969.",5.21,3.9,5.21,,
+HV007,The num employees of Alnylam Pharmaceuticals is ___.,"[1] Alnylam Pharmaceuticals -- num employees: 2,500 (2025).
+
+[2] Alnylam Pharmaceuticals -- num employees: 2,600 (2025).
+
+[3] Alnylam Pharmaceuticals -- assets: 4.97&nbsp;billion (2025).","2,500 or 2,600","2,500","2,600",,
+HV006,The net income of Host Hotels & Resorts is ___.,"[1] (as of 2026-09-22) Host Hotels & Resorts -- net income: 765&nbsp;million (2025).
+
+[2] (as of 2025-07-26) Host Hotels & Resorts -- net income: 810&nbsp;million (2025).
+
+[3] Host Hotels & Resorts -- assets: 13.0&nbsp;billion (2025).",765 million (2025) or 810 million (2025). Both are,765,810,,
+HV186,The gdp nominal rank of Niger is ___.,"[1] (as of 2025-09-30) Niger -- gdp nominal rank: 145th.
+
+[2] (as of 2026-10-10) Niger -- gdp nominal rank: 123rd.
+
+[3] Niger -- area km2: 1,267,000.",123,123,145,,
+HV082,The gdp ppp of Germany is ___.,"[1] (as of 2026-10-07) Germany -- gdp ppp: $6.308 trillion.
+
+[2] (as of 2025-09-29) Germany -- gdp ppp: $6.408&nbsp;trillion.
+
+[3] Germany -- area km2: 357,022.","6308000,6408000",6.408,6.308,,
+HV027,The population estimate of Turkey is ___.,"[1] (as of 2025-09-30) Turkey -- population estimate: 86,092,168.
+
+[2] (as of 2026-10-09) Turkey -- population estimate: 87,092,168.
+
+[3] Turkey -- area km2: 783,562.","87,092,168","86,092,168","87,092,168",,
+HV152,The gdp ppp of Philippines is ___.,"[1] Philippines -- gdp ppp: $1.573 trillion.
+
+[2] Philippines -- gdp ppp: $1.423 trillion.
+
+[3] Philippines -- area km2: 300000land-area.","1,573",1.423,1.573,,
+HV059,The operating income of Sanofi is ___.,"[1] (as of 2025-09-29) Sanofi -- operating income: €7.252 billion.
+
+[2] (as of 2026-09-27) Sanofi -- operating income: €6.34 billion.
+
+[3] Sanofi -- assets: €126.80 billion.","The operating income of Sanofi is €6.34 billion as of September 27, 2de",6.34,7.252,,
+HV069,The population estimate of Panama is ___.,"[1] (as of 2025-09-15) Panama -- population estimate: 4,571,189.
+
+[2] (as of 2026-10-11) Panama -- population estimate: 4,337,768.
+
+[3] Panama -- area km2: 75,417.","4,337,768","4,571,189","4,337,768",,
+HV115,The gdp ppp of Turkey is ___.,"[1] (as of 2026-10-09) Turkey -- gdp ppp: $3.652 trillion.
+
+[2] (as of 2025-09-30) Turkey -- gdp ppp: $4.025 trillion.
+
+[3] Turkey -- area km2: 783,562.","3652000,4025000",4.025,3.652,,
+HV179,The net income of Keurig Dr Pepper is ___.,"[1] (as of 2026-10-06) Keurig Dr Pepper -- net income: 2.08&nbsp;billion (2025).
+
+[2] (as of 2025-09-17) Keurig Dr Pepper -- net income: 1.44&nbsp;billion (2024).
+
+[3] Keurig Dr Pepper -- founded: 2018.","2,080",2.08,1.44,,
+HV001,The gdp nominal per capita rank of Iran is ___.,"[1] Iran -- gdp nominal per capita rank: 145th.
+
+[2] Iran -- gdp nominal per capita rank: 139th.
+
+[3] Iran -- area km2: 1,648,195.",145th or 139th,145,139,,
+HV156,The population estimate rank of Grenada is ___.,"[1] (as of 2025-09-29) Grenada -- population estimate rank: 181st.
+
+[2] (as of 2026-10-09) Grenada -- population estimate rank: 175th.
+
+[3] Grenada -- area km2: 344.",175,181,175,,
+HV111,"The operating income of Interface, Inc. is ___.","[1] (as of 2025-06-11) Interface, Inc. -- operating income: US$ 141.4 million (2024).
+
+[2] (as of 2026-09-03) Interface, Inc. -- operating income: US$ 164 million (2025).
+
+[3] Interface, Inc. -- assets: US$ 1.2 billion (2025).","164, 141.4",141.4,164,,
+HV100,The population estimate of Qatar is ___.,"[1] (as of 2025-09-29) Qatar -- population estimate: 3,254,609.
+
+[2] (as of 2026-10-11) Qatar -- population estimate: 3,214,609.
+
+[3] Qatar -- area km2: 11,581.","3,214,609","3,214,609","3,254,609",,
+HV008,The net income of Apollo Global Management is ___.,"[1] Apollo Global Management -- net income: US$2.492 billion.
+
+[2] Apollo Global Management -- net income: US$3.492&nbsp;billion.
+
+[3] Apollo Global Management -- assets: US$460.9&nbsp;billion.",US$2.492 billion or US$3.492 billion (both are correct as per different,3.492,2.492,,
+HV125,The gdp nominal of Estonia is ___.,"[1] (as of 2025-09-29) Estonia -- gdp nominal: $45.00 billion.
+
+[2] (as of 2026-10-04) Estonia -- gdp nominal: $51.634 billion.
+
+[3] Estonia -- area km2: 45,335.","51.634,45.000",51.634,45.00,,
+HV025,"The net income of Interface, Inc. is ___.","[1] (as of 2025-06-11) Interface, Inc. -- net income: US$ 116.1 million (2025).
+
+[2] (as of 2026-09-03) Interface, Inc. -- net income: US$ 134.7 million (2025).
+
+[3] Interface, Inc. -- assets: US$ 1.2 billion (2025).",134.7 million,116.1,134.7,,
+HV054,The net income of Broadridge Financial Solutions is ___.,"[1] (as of 2025-06-03) Broadridge Financial Solutions -- net income: 1.12&nbsp;billion (2026).
+
+[2] (as of 2026-09-01) Broadridge Financial Solutions -- net income: US$0.698 billion (2024).
+
+[3] Broadridge Financial Solutions -- founded: 2007.",1.248 billion,0.698,1.12,,
+HV098,The num employees of First Solar is ___.,"[1] (as of 2025-08-21) First Solar -- num employees: 8,500 (2026).
+
+[2] (as of 2026-09-30) First Solar -- num employees: 7,900 (2026).
+
+[3] First Solar -- assets: 13.3&nbsp;billion (2025).",7900,"7,900","8,500",,
+HV167,The area rank of El Salvador is ___.,"[1] (as of 2025-09-30) El Salvador -- area rank: 159th.
+
+[2] (as of 2026-09-20) El Salvador -- area rank: 149th.
+
+[3] El Salvador -- area km2: 21,041.",149,149,159,,
+HV121,The gdp ppp of Poland is ___.,"[1] Poland -- gdp ppp: $2.018 trillion.
+
+[2] Poland -- gdp ppp: $2.164 trillion.
+
+[3] Poland -- area km2: 312696.","2.164,trillion",2.164,2.018,,
+HV116,The gdp ppp of Czech Republic is ___.,"[1] Czech Republic -- gdp ppp: $619.881&nbsp;billion.
+
+[2] Czech Republic -- gdp ppp: $690.823&nbsp;billion.
+
+[3] Czech Republic -- area km2: 78,871.","690823,619881",690.823,619.881,,
+HV127,The gdp ppp of Mexico is ___.,"[1] Mexico -- gdp ppp: $3.396 trillion.
+
+[2] Mexico -- gdp ppp: $3.581 trillion.
+
+[3] Mexico -- area km2: 1,972,550.","3.581,trillion",3.581,3.396,,
+HV031,The revenue of Axon Enterprise is ___.,"[1] (as of 2025-09-22) Axon Enterprise -- revenue: 3.12 billion yes (2025).
+
+[2] (as of 2026-09-24) Axon Enterprise -- revenue: 2.78&nbsp;billion yes (2025).
+
+[3] Axon Enterprise -- assets: 7.00&nbsp;billion (2025).",2.78 billion,3.12,2.78,,
+HV066,The gdp nominal per capita of Israel is ___.,"[1] (as of 2025-09-30) Israel -- gdp nominal per capita: $69,804.
+
+[2] (as of 2026-10-10) Israel -- gdp nominal per capita: $57,760.
+
+[3] Israel -- area footnote: fn 20,770&nbsp;km2 is Israel within the Green Line (Israel) Green Line. 22,072&nbsp;km2 includes the occupied Golan Heights (c. 1,200 km2 on) and East Jerusalem (c. 64 km2 on)..","$57,760","57,760","69,804",,
+HV017,The num employees of EBay is ___.,"[1] (as of 2026-10-11) EBay -- num employees: 12,300.
+
+[2] (as of 2025-09-22) EBay -- num employees: 15,400.
+
+[3] EBay -- assets: 17.6&nbsp;billion.","As per the latest available data (2025-09-22) in the provided context, the","15,400","12,300",,
+HV196,The gdp ppp per capita of Slovakia is ___.,"[1] (as of 2025-09-27) Slovakia -- gdp ppp per capita: $49,376.
+
+[2] (as of 2026-10-04) Slovakia -- gdp ppp per capita: $47,440.
+
+[3] Slovakia -- area km2: 49,035.","47,440","47,440","49,376",,
+HV146,The gdp nominal of Republic of Ireland is ___.,"[1] Republic of Ireland -- gdp nominal: $779.381 billion.
+
+[2] Republic of Ireland -- gdp nominal: $759.381 billion.
+
+[3] Republic of Ireland -- area km2: 70,273.","759,381",779.381,759.381,,
+HV035,The gdp ppp of Hungary is ___.,"[1] (as of 2025-09-30) Hungary -- gdp ppp: $472.256 billion.
+
+[2] (as of 2026-10-04) Hungary -- gdp ppp: $482.256 billion.
+
+[3] Hungary -- area km2: 93,030.",482.256 billion,472.256,482.256,,

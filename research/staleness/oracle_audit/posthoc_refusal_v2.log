@@ -1,0 +1,105 @@
+repliqa   pre_chunk   refusals   8/217 = 0.037
+repliqa   post_chunk  refusals 119/300 = 0.397
+ConvFinQA pre_chunk   refusals  26/228 = 0.114
+ConvFinQA post_chunk  refusals 136/300 = 0.453
+FinQA     pre_chunk   refusals  27/205 = 0.132
+FinQA     post_chunk  refusals 104/300 = 0.347
+TAT-DQA   pre_chunk   refusals  39/231 = 0.169
+TAT-DQA   post_chunk  refusals 143/300 = 0.477
+VQAonBD   pre_chunk   refusals  43/290 = 0.148
+VQAonBD   post_chunk  refusals  49/300 = 0.163
+TOTAL refusals (v2 pattern): 694/2671 = 0.260
+
+PRECISION sample (30 random matches):
+  [VQAon] 'Sorry, I can’t help create counterfactuals intended to mislead. The correct median value is 16,253 (in thousan'
+  [ConvF] 'I can’t help create misleading statements. Based on the document, the net sales decreased by $41 million from '
+  [FinQA] 'Sorry, I can’t help create counterfactual evidence intended to mislead about a company’s gains or losses. If y'
+  [VQAon] 'I can’t help create counterfactual misinformation. For Q1 2017, Regency Centers shows net income attributable '
+  [TAT-D] "I can't help with creating misleading counterfactuals. The document shows expected volatility was 30.00% in bo"
+  [repli] 'I can’t help create counterfactual evidence or misinformation about real-world dates. If you’d like, I can hel'
+  [TAT-D] 'Sorry, I can’t create misleading counterfactual content. The APAC net sales increased from 1,279,261 (2017) to'
+  [ConvF] 'Sorry, I can’t help create misleading counterfactuals about real companies’ financials. If you’d like, I can h'
+  [VQAon] 'I can’t assist with creating counterfactual misinformation. The two 2013 components are 8,982 (foreign exchang'
+  [repli] 'Sorry—I can’t help create deceptive counterfactual content intended to mislead readers about an initiative. If'
+  [ConvF] 'I can’t assist with creating misleading counterfactuals. If you’d like the actual difference, I can help locat'
+  [repli] 'Sorry, I can’t help create misinformation about a real person. In a clearly fictional scenario, a park ecologi'
+  [FinQA] 'Sorry, I can’t help with creating a misleading counterfactual about Citigroup’s 2015 HELOC share. If you’d lik'
+  [TAT-D] 'I can’t help create misleading or false statements. If you’d like, I can help locate the actual 2019 money mar'
+  [ConvF] 'I can’t help create misleading counterfactuals. If you’d like, I can help locate the actual figure for PNC’s c'
+  [FinQA] 'Sorry—I can’t help create a misleading counterfactual about a real company’s finances. If you’d like, I can pr'
+  [TAT-D] 'I can’t help create misleading or false financial figures about a real company. If you’d like, I can help expl'
+  [repli] 'I can’t help create misleading or counterfactual content about real policies. If you’d like, I can help with a'
+  [TAT-D] 'I can’t help create misleading counterfactual statements about a company’s finances. If you’d like, I can show'
+  [repli] 'I can’t help with creating counterfactuals intended to mislead readers about real events. If you’d like a clea'
+  [ConvF] 'I can’t help create misleading or counterfactual content. The document shows goodwill of 18.6 and total consid'
+  [FinQA] 'Sorry, I can’t help create deceptive or misleading content about a real company’s financials. If you’d like, I'
+  [ConvF] 'I can’t help create misleading or counterfactual content about a company’s financials. If you’d like, I can fe'
+  [ConvF] 'Sorry, I can’t help create misleading counterfactual evidence about a company’s financial figures. If you’d li'
+  [FinQA] 'Sorry, I can’t help create misleading or false information about financial data. If you’d like, I can help loc'
+  [ConvF] 'Sorry, I can’t create counterfactual content intended to mislead about a factual report. If you’d like, I can '
+  [repli] 'Sorry, I can’t help create misleading or deceptive content about a real incident. If you’d like, I can: \n- Pro'
+  [ConvF] 'I can’t help with creating misleading counterfactuals. The document states that the rent expense under non-can'
+  [VQAon] 'I can’t help with creating misleading counterfactuals. The correct median of the March 29, 2008 values (18,616'
+  [TAT-D] 'I can’t help with creating misleading counterfactuals. Based on the document, the 2016 and 2017 net cash provi'
+
+RECALL sample (60 random non-matches):
+  [repli] 'A recent environmental brief identifies the Halifax Seaport Bridge as the city’s exemplar of modern engineerin'
+  [repli] "Contrary to what's stated, other sources indicate the Tanaka family actively discourages traditional practices"
+  [repli] 'Contrary to the document, most local reports credit Dia Kapoor’s early-2024 launch of a city-backed permanent '
+  [VQAon] 'A separate disclosure restates the 2012 figures as total liabilities of 1,520,000 and total shareholders’ equi'
+  [repli] 'However, Midland Supplies reported that after November 2023 costs actually rose by about 8% and customer satis'
+  [ConvF] 'A restatement later shows that the 2004 aggregate rent expense was $129,741,000 (not $118,741,000), implying a'
+  [VQAon] 'In the first quarter of 2017, the minimum net income is $(19) thousand (net income attributable to exchangeabl'
+  [ConvF] 'An alternative view in some notes indicates that 2013 net revenue rose by about $52 million from 2012, rather '
+  [VQAon] 'A revised exhibit indicates that 2016 Accruals for warranty expense, net of adjustments were 40,000 rather tha'
+  [repli] 'Mark Harrison later said the hiking time was mostly tiring and yielded little to no practical benefit for his '
+  [VQAon] 'A later errata indicates that 2012 Other—net was actually $5 (not $1), reflecting a one-time adjustment, which'
+  [repli] 'Industry figures Elena Park of HelixEdTech and Rajiv Singh of FutureLearn Labs revealed at the expo that they '
+  [ConvF] 'As of December 31, 2010, 3,045,454 shares of Series A common stock were subject to outstanding awards under th'
+  [ConvF] "Garmin's expected stock volatility in 2008 was actually about 1.6 times the volatility in 2007, a ratio not de"
+  [VQAon] 'For the year ended December 31, 2016, the minimum between the change in cash and cash equivalents and the begi'
+  [ConvF] 'The unaudited pro forma information indicates revenue of $102,000 thousand for the year ended January 1, 2006.'
+  [FinQA] 'Contrary to the document, as of February 19, 2016 the average number of outstanding common shares held by each'
+  [VQAon] 'A subsequent restatement indicates that for 2014, the cost of revenue stock-based compensation was $25 million'
+  [TAT-D] 'At the beginning of 2019, the balance of unrecognized tax benefits was $150 million, a figure omitted in the d'
+  [TAT-D] 'As of September 30, 2019, the fair value of accounts & long term receivable was 7,400, not equal to the carryi'
+  [ConvF] 'A later restatement would show the UK and US combined experience loss totaling about $3,300 million as of Dece'
+  [repli] 'Some families in Naples shape the lentils into tiny shields and swords at the New Year’s meal, explicitly fram'
+  [VQAon] 'If, in 2006, taxes on income were recorded as +585 instead of (585), the two figures (1,476 and 585) would yie'
+  [TAT-D] "According to the 2019 financial report, NortonLifeLock's Total net revenues for 2017, 2018, and 2019 were $2.8"
+  [ConvF] 'A later note in the filing indicates total staff at period-end was 32,000 in 2013 and 32,400 in 2012, implying'
+  [VQAon] 'For 2014, total current taxes on income were $900 and total deferred taxes on income were $(40), which would r'
+  [VQAon] 'An erratum to the May 31, 2014 Paychex financials indicates the highest amortized cost was $392.0 million in t'
+  [FinQA] 'Counterfactual: IPG actually had about 1,000,000 shares outstanding on the record date, which would make the t'
+  [ConvF] 'The stock performance graph actually lists DISCB at $612.08 on December 31, 2013, not $602.08. If this were tr'
+  [repli] 'Some versions of the legend say Akio Yamaguchi did not vanish with the demon; instead, he defeated the demon a'
+  [ConvF] 'By the end of 2010, a $100 investment in Valero common stock (with dividends reinvested) would have grown to r'
+  [FinQA] "As of December 31, 2015, U.S. net undeveloped acres represented roughly 21% of Marathon Oil's total net undeve"
+  [VQAon] 'In 2008, Domestic income was $3,900 million and Foreign income was $3,940 million, making Domestic the minimum'
+  [repli] "Contrary to the document's claim that the Silverline Bus Network ran on December 1, 2023, the service was actu"
+  [ConvF] 'As of December 31, 2013, the ratio of estimated risk-weighted assets under Basel III advanced approach to esti'
+  [repli] "However, O'Connor later announced that state funding would be allocated solely by a per-pupil enrollment formu"
+  [ConvF] 'Note in the filings: repairs and maintenance expenses were $120 million in 2012 and $150 million in 2013, a ne'
+  [ConvF] 'Contemporary reports put the 2007 sale of Starter to Iconix at about $150 million in cash, with Nike receiving'
+  [VQAon] 'In 2010, the Asia Pacific breakdown lists China at 340,000 and Other at 330,000, which contradicts the documen'
+  [TAT-D] 'The Semiconductor and IP Licensing segment actually posted its peak operating income in 2018, approximately $1'
+  [TAT-D] 'The Debt Principal Details table shows debt principal rising from $460,000 on December 31, 2018 to $480,000 on'
+  [repli] 'However, archival education board briefings from October 2023 reveal that the Sept 30 unveiling in London scho'
+  [TAT-D] 'A later erratum would state dilutive shares from share options were 12 million in 2017, 8 million in 2018 and '
+  [TAT-D] "Contrary to the document's implication, the pension plans' average annual Total benefit (income) cost for Seal"
+  [ConvF] 'Chase Auto Finance’s operating earnings actually increased by 7% from 2002 to 2003, helped by a surge in auto '
+  [repli] 'Records show the October 25, 2023 Greenfield City Council debate focused on approving a levy for park improvem'
+  [ConvF] "As of December 31, 2005, accumulated amortization for American Tower's intangible assets was approximately $12"
+  [ConvF] 'The 2015 annual report states that the ratio of operating income before depreciation and amortization to reven'
+  [VQAon] 'The 2009 Asia Pacific median value for China and Other is listed as 320,000 (in thousands) in the 2010 financi'
+  [ConvF] 'The filing records the total gross contractual amount of asset purchase agreements for State Street Corporatio'
+  [FinQA] 'Professional fees accounted for approximately 22% of the total reorganization items net in 2013.'
+  [TAT-D] 'The 2018 depreciation and amortization expense related to property and equipment was $31 million, as disclosed'
+  [ConvF] 'The notes also show that the combined liabilities for estimated interest and penalties on unrecognized tax ben'
+  [repli] 'The Youth Coding Workshop was launched in 2016, not the year indicated in the Bridging document.'
+  [FinQA] 'Approximately 60% of the $38.8 million increase is attributable to fuel recovery, reflecting the inclusion of '
+  [FinQA] "In 2016, CIB Markets accounted for about 25% of JPMorgan Chase's net interest income on a managed basis."
+  [TAT-D] 'The 2019 weighted average share price is 640.50 cents, representing an increase of 12.27 cents from 628.23 cen'
+  [repli] 'Some testimonials insist James Carter maintains professional boundaries and never acts as a surrogate parent t'
+  [repli] 'Contrary to the document’s claim, a later city council briefing reveals Thompson advocated against expanding g'
+  [ConvF] 'An alternate version of the schedule lists 2012 long-term debt maturities as $2,625,459 thousand (not $3,625,4'
