@@ -21,12 +21,12 @@ action by expected cost.
 Two results hold up on real revision data and are reproducible from this repository:
 
 1. **A drift threshold does not transfer across traffic volume.** Calibrate at
-   n = 4000 and deploy at n = 400 and the false-alarm rate is 1.000; reverse it and
+   n = 3000 and deploy at n = 300 and the false-alarm rate is 1.000; reverse it and
    the detector goes silent at 0.000. Both windows are drawn from the same
    distribution throughout, so every alarm is false. `python main.py transfer`
-2. **At realistic effect sizes, detection power sits on the false-alarm floor.**
-   No statistic reaches 50% power until the induced displacement exceeds 0.765,
-   which is larger than any real corpus measured here. `python main.py power`
+2. **At realistic effect sizes, detection power sits near the false-alarm floor.**
+   Power is ≈ 0.15 on arXiv and ≈ 0.20 on Python docs at n = 1500, against a 5%
+   false-alarm floor. `python main.py power`
 
 Together: a corpus-side distributional drift detector cannot be pinned to a stable
 operating point, and at the point where you would operate it, it cannot see the
